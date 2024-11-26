@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010177</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,47 +121,47 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B430+WS7</idno>
               <term>B430+WS7. Helpful jaguar.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">E35</idno>
               <term>E35. Resuscitation from fragments of body.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">E42</idno>
               <term>E42. Resuscitation from ashes of dead man.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F403.2</idno>
               <term>F403.2. Spirits help mortal. Familiar spirits.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F566.1</idno>
               <term>F566.1. Village of men only.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1837</idno>
               <term>K1837. Disguise of woman in man's clothes. (Cf. K1825.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q411.0.2</idno>
               <term>Q411.0.2. Husband kills wife and paramour.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S118</idno>
               <term>S118. Murder by cutting.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S139.2</idno>
               <term>S139.2. Slain person dismembered.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S139.2.2+WS9</idno>
               <term>S139.2.2+WS9. Litter made from slain enemy's skin.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S141</idno>
               <term>S141. Exposure in boat. A person (usually woman or child) set adrift in a boat (chest, basket, cask).</term>
             </item>
