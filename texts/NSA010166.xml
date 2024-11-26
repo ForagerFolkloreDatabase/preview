@@ -19,13 +19,13 @@
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="KB" quantity="26">About 26 kilobytes</measure>
+        <measure unit="KB" quantity="27">About 27 kilobytes</measure>
       </extent>
       <publicationStmt>
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010166</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,123 +121,123 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">A512.4</idno>
               <term>A512.4. Sun as father of culture hero.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">A515.1.1</idno>
               <term>A515.1.1. Twin culture heroes. (Cf. A511.1.2.1.)</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">A751.3</idno>
               <term>A751.3. Frog in moon.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1251+WS</idno>
               <term>A1251+WS. Man carves daughter from tree.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">A1414.2</idno>
               <term>A1414.2. Origin of fire &#8211; found in person's own body.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2782</idno>
               <term>A2782. Origin of combustible property of wood.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">B98</idno>
               <term>B98. Mythical frog.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">B200</idno>
               <term>B200. Animals with human traits. See in general the literature dealing with fables, with the Romance of Reynard, with the bear-fox cycle of Europe, with the rabbit fox cycle of America, etc.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B341</idno>
               <term>B341. Helpful animal's injunctions disobeyed. Disaster follows.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">B530.1</idno>
               <term>B530.1. Mythical frog as host to woman.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">B535.0.6</idno>
               <term>B535.0.6. Frog as nurse for child.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B620</idno>
               <term>B620. Animal suitor.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B784.1.2</idno>
               <term>B784.1.2. Person swallows pebble on beach; snake grows in stomach.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C921</idno>
               <term>C921. Immediate death for breaking tabu. (Cf. C52, C51.3, C453, C533.)</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">D197</idno>
               <term>D197. Transformation: man to lizard.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D420</idno>
               <term>D420. Transformation: animal to object.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H335.5</idno>
               <term>H335.5. Suitor task: to bring back food as a marriage present.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H973</idno>
               <term>H973. Tasks performed by helpful forest spirits.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H1010</idno>
               <term>H1010. Impossible tasks.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H1023.2.1</idno>
               <term>H1023.2.1. Task: carrying water in leaky vessel.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">R135</idno>
               <term>R135. Abandoned children (wife, etc.) find way back by clue (bread-crumb, grain, pebble, etc.). They have dropped the objects while being led away.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">R135.1.1</idno>
               <term>R135.1.1. Feathers left to mark trail blown away by wind.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">S37</idno>
               <term>S37. Cruel foster son. (Cf. S22.1.1.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S112</idno>
               <term>S112. Burning to death. (See notes to K955 and Q414.)</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">T111.2.3</idno>
               <term>T111.2.3. Sun has a woman for his wife.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T471</idno>
               <term>T471. Rape.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">T575.1</idno>
               <term>T575.1. Child speaks in mother's womb.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">T575.1.6</idno>
               <term>T575.1.6. Child in mother's belly guides her.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T575.1.6.1</idno>
               <term>T575.1.6.1. Unborn child directs his mother on journey.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T584.7</idno>
               <term>T584.7. Hero is born by splitting mother's womb.</term>
             </item>
