@@ -19,13 +19,13 @@
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="KB" quantity="9">About 9 kilobytes</measure>
+        <measure unit="KB" quantity="10">About 10 kilobytes</measure>
       </extent>
       <publicationStmt>
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010192</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,23 +121,23 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">G312</idno>
               <term>G312. Cannibal ogre.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K800</idno>
               <term>K800. Killing or maiming by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q243.2.1</idno>
               <term>Q243.2.1. Attempted seduction punished. (Cf. Q424.3, Q431.5.1, Q469.10.1.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R11.2.2</idno>
               <term>R11.2.2. Abduction by demon.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S118.2</idno>
               <term>S118.2. Murder by cutting throat.</term>
             </item>
