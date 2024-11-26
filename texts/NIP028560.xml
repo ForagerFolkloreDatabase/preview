@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NIP028560</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,11 +121,11 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">A2284.1</idno>
               <term>A2284.1. Animal persuaded to amputate limb: therefore lacks it. (Cf. A2371.2.10, A2377.1.)</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">A2284.2</idno>
               <term>A2284.2. Bustard persuaded to kill all but two children: has but two eggs. (Cf. A2486.2.)</term>
             </item>
