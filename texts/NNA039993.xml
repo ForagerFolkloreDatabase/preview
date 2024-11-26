@@ -1,0 +1,144 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Story of the Invisible Daughter-in-law</title>
+        <editor ref="p:Barnum4772" role="collector">Francis Barnum</editor>
+        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="16">About 16 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA039993</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Barnum, Francis (1901): Grammatical Fundamentals of the Innuit Language as Spoken by the Eskimo of the Western Coast of Alaska [Central Alaskan Yup'ik]. Boston/London: Ginn. Quot. pp. 293-299.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="1">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA27735">Qaluyaarmiut</name>
+          <date notAfter="1899" notBefore="1891" type="recorded">Recorded sometime between 1891 and 1899.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>There was a village on the seashore, having a chief and an orphan boy, he having a grandmother. That chief having a son, a boy [the village] having a kazhga [communal house] facing the sea. Beyond was a hillock as large as a kazhga.</p>
+      <p>So then that chief's son finally grew up; having grown up, his father used to urge him to marry, but he did not wish to.</p>
+      <p>Whenever it was night, the son of the chief being sleepless, he cleaned the houses [his folks when they sleep, he going out, the houses he cleaning them].</p>
+      <p>So one time the orphan said to him, addressing him: "Friend, when you go out to-night, the endmost three houses, clean them; when you come out from the third one, you listen; you will see your waited for one." Then he replied, "I do not know of any one I am waiting for." Then the orphan said: "No? my friend, indeed [you will see] the one you await, even if you do not know of her; when you see her you will not turn away. Here, now, you must think of me when you see her." So he assented.</p>
+      <p>Then they went to bed; they having gone to bed, the son of the chief was sleepless. Then they having gone to sleep, he goes out, but only after that orphan was asleep. [It was] in winter, it being moonlight; then he went to those three houses. He went in [the first]; then having come out from that one, he listened carefully; he heard nothing. Then again, he entering the second, then coming out, the careful listener heard nothing. Then he entered the third; having entered, he cleaned it well; having come out from there, he listened; as soon as he listened from down there behind he heard walking.</p>
+      <p>Then as he turned back [to look], a handsome girl [was] coming towards him, carrying some kantaks [wooden dishes], she wearing a <animal>fawn</animal> skin [dress]. Then he approached her, by down there, by the front of the village, she going to the p&#299; [i.e., the mouth of the river], having in her hands those kantaks. Then having come to her, he thought, "See how fair this one is!" He gazed at the beautiful girl; during his looking this one said, <pb n="297"/>"Well, you young man, what are you doing?" Then that youth answered not. So over there she went to the mouth of the river. Then he, after a while, by behind her, went to the mouth; he searched for one was not; in the kazhga, too, he sought her - she was not; and in the houses after that he searched he found her not. Not finding her, he goes to the kazhga, because it was dawn; having entered the kazhga, the orphan, slowly getting up, addressed him: "Friend, you see now what I told you; you saw the one you await; you will not forget her."</p>
+      <p>Then he answered: "Friend, I see for the first time [a person] like this. Whither has she gone? She is not." Then the orphan answers him: "You will find her yourself. Even I know her going to place; here now again to-morrow you watch for her here again; when she speaks to you, you answer her at once."</p>
+      <p>Then he yessed him [said yes]. So he went to bed. When he awoke, already the others were awake; during the whole day he was thinking about that one. Then finally it nighted [night came]; being night to him, the youth was not at all sleepy, because thinking about that one. Then, they having gone to bed, only when they were asleep, he goes out; he having gone out, without cleaning [the houses], he watched for her over there, in his having seen her place, in front of the house.</p>
+      <p>And so he was not there long; then he heard her. When he turned around to look, there she was coming towards him, again carrying kantaks. Then he approached her, and having come to her took her by the arm. Then he said, addressing her, having taken hold of her, "Young girl and these kantaks, whither are you always carrying them?" Then that handsome girl did not reply, although he addressed her [that handsome girl never answered]. Finally, then, she answered: "You youth, although I spoke to you yesterday, you never answered; if I was another I would not answer you, without holding me. Let me go!"</p>
+      <p>Then the youth answered, "After having taken hold of you I will not release you." "Well, even if you are not going to release me, let me carry over [these kantaks]; these my brothers have not eaten yet." Then they both reached the front of the kazhga. Then he said, "And where are your brothers?" Then she said, "There they are."</p>
+      <p>The young man looked behind; when he looked that hillock beyond the kazhga is shining. When they both went to it, it was a kazhga. When the girl was about to enter the youth released her; he entered before her. Then he having entered, he beholds it crowded with young men. There was one tall young man upon the bench in the comer. He [the chief's son] passed right through and got up on the bench near him; as soon as he had gotten up, that handsome girl entered carrying <pb n="298"/>those bowls; then she going up, she laid them down; having laid them down, she distributed them around to those kazhga folks.</p>
+      <p>Then the last dish, she brought it over, she about to pass it to that one near him. That youth grabbed it, taking it before the big fellow; having taken it before him, he [the big one] put on his parka; having put on his parka, jumping down he goes out. Then after that, his going out, the youth began to eat; he having finished, and those folks having finished, [she] collecting those dishes, that handsome girl she went out; that youth followed her.</p>
+      <p>Then he took hold of her; having taken hold of her, he said: "I will not release you; put those dishes down there; let us enter only the house out there." Then that handsome girl said: "You young man, my husband, the one going, whom you sent away by now, he is almost home." "All right! let him go," answered the youth; "you without talking nonsense, let us go in." Although she did not wish it, he brought that girl in; having brought her in, he goes out; here in the night, having gone out, having climbed up to the cache, he brings in some bedding and some clothes.</p>
+      <p>Then he put them on her. Having put them on her, he said, "Well, those two opposite, my parents, I will wake them up." Then the girl said: "Even if you should wake them, it is not likely that they will see me. They will not see me - they will see me finally. You have taken me without consulting them; however, go you to the kazhga." Then he said, "Or I will go to the kazhga." So he went out, and having gone out he entered the kazhga; having entered the kazhga, he went to sleep. It being now near dawn, having laid down, he went to sleep. When he awoke they were already awake; he got up, having awaked. However, he remained awhile, for his father having come into the kazhga, he expected that he would likely allude to his wife, but he went out without referring to her.</p>
+      <p>When he entered [his home] that his wife was there. Then he sat down near her; having seated himself, he said to his mother, "Why is it, I being urged, you do not welcome this one?" [having urged me to marry, why is it you do not welcome my wife?] Then that his mother said, "Well, where is she?" "Here she is here near me!" Then she said: "Where is she? Why is it I do not see her?" "Here she is, visible here, near me." That one, his mother, peered around; she could not see her daughter-in-law. Then her son said, addressing her, "Mother, even if you do not see her, speak to her." Then his mother said, "Maybe she will not hear me." "She will hear you all right!"</p>
+      <p>So things went on thus, he visiting the kazhga of those brothers without the villagers ever seeing it, the orphan boy alone ever seeing <pb n="299"/>it, that kazhga. Then some time after that orphan said to the chief's son: "Friend, that your waited for one, I never see her, as she never comes to the kazhga. I hear her father-in-law has never yet seen her. Now, she is about to. become a mother. When she is about to bring forth, make her bring forth on the floor in the dark; when the child is born let your mother touch it first; if you touch it first, you alone will ever see your wife." Thus spoke the orphan boy.</p>
+      <p>So it went on. Some time after the chief's son said to his mother, "That one, my wife, looks as if she is to be confined, so go to her." Then his mother went to her. The son said, "Place her down on the floor"; so she placed her down on the floor. When he came in already this one was delivered of a boy. [The old mother] she sees this girl, the wife of her son, for the first time. This one is a pretty girl. Having seen her all right, she is friendly to her.</p>
+      <p>Then when she [the old mother] went out [she sees] those down there children of that yonder hillock kazhga playing. That kazhga she beholds for the first time; then they associated together, and those brothers of the chief's wife they married with the people of there, and so things went on, the last ones, those over there, loving that orphan.</p>
+    </body>
+  </text>
+</TEI>
