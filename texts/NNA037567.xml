@@ -1,0 +1,152 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Unfaithful Husband</title>
+        <editor ref="p:Lavrischeff3931" role="collector">Tikhon I. Lavrischeff</editor>
+        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="11">About 11 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA037567</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Lavrischeff, T. I. (1928): Two Aleut Tales. In: American Anthropologist NS 30(1), 121-124. Quot. pp. 121-122.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="8">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="3">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="7">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA27710">Aleut</name>
+          <date notAfter="1928" notBefore="1925" type="recorded">Recorded sometime between 1925 and 1928.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>At <placeName>Eekakhlee</placeName><note>Eekakhlee was the name given in the old days to present <placeName>Johnstone Point</placeName> on <placeName>Hinchinbrook island</placeName>, and the mountains between there and <placeName>Nutchek</placeName> were called <placeName>Keeliagat</placeName>.</note> lived an old man with his wife. They existed comfortably, but the old man did not love his spouse and hoped to desert her. As he was a shaman, or sorcerer, it was easy for him to go into a trance and appear as dead. His wife buried him, according to custom, in a cave on a mountain, and his bows, arrows, clothing and bidarkas were laid beside him in a cavern.</p>
+      <p>For three days the disconsolate widow came to the cave to weep and wail. When she came on the fourth day she did not find the body nor the bidarkas and clothing. Stupefied she stood there puzzled by the disappearance of the corpse. Search for traces of it were fruitless and her grief increased. But a little <animal>bird</animal> on a <plant>tree</plant> sang to her:</p>
+      <lg type="song">
+        <l>"Cheer up, cheer up. </l>
+        <l>Far beyond the Kiliagat the old man lives.</l>
+        <l>Far more than before, he enjoys his life.</l>
+        <l>Cheer up, cheer up."</l>
+      </lg>
+      <p>At first the woman paid no attention to the <animal>bird</animal> and went to her house. On the next day she renewed her search, but the <animal>bird</animal> again sang the same song. The old woman asked it, "Where is my husband?" At this the feathered <animal>creature</animal> chirped:</p>
+      <lg type="song">
+        <l>"On the top of the mount,</l>
+        <l>Near the peaceful bay,</l>
+        <l>The old man lives quietly there.</l>
+        <l>He does not love thee,</l>
+        <l>He will not come back;</l>
+        <l>Two nice girls entertain him there."</l>
+      </lg>
+      <p>Still skeptical the old woman replied, "If you tell me the truth, take flight to the place where he lives." Thereupon the <animal>bird</animal> set out, with the woman following silently.</p>
+      <p><pb n="122"/>It was a long journey across the forest, through brush and over mountains, but from time to time the <animal>bird</animal> rested, permitting the old woman to catch up with it. Finally they came to the top of a hill near the bay at <placeName>Nutchek</placeName>. From this spot the wife saw her husband in a bidarka far out to sea. Just below her on a sandy beach she espied two attractive girls. Quietly descending, the old woman stopped behind a <plant>tree</plant> to observe them. The girls were cooking soup and when it was ready she stepped out.</p>
+      <p>"Hello, girls," the wife exclaimed, "I see you have prepared your soup in the right way. Now I will show you best how to drink it." With this she seized the pan and turned it over the heads of the girls.</p>
+      <p>"That is the way the old man used to eat his soup in our birthplace," she gloated.</p>
+      <p>When both girls were dead the old woman made the feature of one appear as though she were scolding and the other seem to be laughing. Then she set their bodies on the beach and hid herself behind a <plant>tree</plant>.</p>
+      <p>The old man came back and saw the maidens, one apparently angry and the other laughing.</p>
+      <p>"Why do you quarrel?" he asked. "Live in peace. I love you both. I have brought two <animal>otters</animal> as a present for you. Do not fight."</p>
+      <p>Upon hearing these words the old woman turned herself into a <animal>bear</animal>, an easy thing for her to do, as she was also a shaman. Then she sprang upon her husband, exclaiming, "Here am I - your wife. You left me without your care and food. I have suffered very much. Now that I have found you here you shall die. Akcheenkoo."</p>
+      <p>And with that she ate up the old man, together with his bidarkas. Such was the end of the unfaithful husband of old<placeName>Eekakhlee</placeName>.</p>
+    </body>
+  </text>
+</TEI>
