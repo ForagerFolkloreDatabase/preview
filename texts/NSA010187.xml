@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010187</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,103 +121,103 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A521</idno>
               <term>A521. Culture hero as dupe or trickster.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B563</idno>
               <term>B563. Animals direct man on journey.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1283</idno>
               <term>D1283. Magic packet.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1641.7.1</idno>
               <term>D1641.7.1. Self-rolling head.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1841.5.1</idno>
               <term>D1841.5.1. Man proof against weapons.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D2061.2.2</idno>
               <term>D2061.2.2. Murder by sympathetic magic. An object or an animal is abused or destroyed to bring about the death of a person.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H57.2</idno>
               <term>H57.2. Recognition by missing finger.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J1485</idno>
               <term>J1485. Mistaken identity. A bride slips up behind her husband and kisses him. He is annoyed. She: "Pardon me, I did not know it was you"</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J1762+WS</idno>
               <term>J1762+WS. Deer thought to be person.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J1967</idno>
               <term>J1967. Numskull bales out the stream. He comes to a stream but not wishing to get his feet wet he sits down to wait for the stream to run down. He helps to bale the stream out with a hazelnut shell and keeps it up for months.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K522</idno>
               <term>K522. Escape by shamming death.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K525+WS</idno>
               <term>K525+WS. Escape by use of substituted monkey.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K547</idno>
               <term>K547. Escape by frightening would-be captors. (Cf. K1710.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K550</idno>
               <term>K550. Escape by false plea. A captive makes a request or proposes an action that permits him eventually to escape.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K824.1</idno>
               <term>K824.1. Sham doctor kills ogre (giant).</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K890</idno>
               <term>K890. Dupe tricked into killing himself.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K910</idno>
               <term>K910. Murder by strategy.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1010</idno>
               <term>K1010. Deception through false doctoring.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1887</idno>
               <term>K1887. Illusory sounds.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">M242</idno>
               <term>M242. Bargains and promises between mortals and supernatural beings. (Cf. M221, M222, M223.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q42</idno>
               <term>Q42. Generosity rewarded.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R49+WS</idno>
               <term>R49+WS. Captivity in a piece of wood.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">R261.1</idno>
               <term>R261.1. Pursuit by rolling head.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R311</idno>
               <term>R311. Tree refuge.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">W137</idno>
               <term>W137. Curiosity.</term>
             </item>
