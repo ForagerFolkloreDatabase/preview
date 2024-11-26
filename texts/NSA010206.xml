@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010206</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,27 +121,27 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F402.1.4</idno>
               <term>F402.1.4. Demons assume human forms in order to deceive.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F407+WS</idno>
               <term>F407+WS. Spirit departs in wind and flames.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H63+WS</idno>
               <term>H63+WS. Recognition of evil spirit posing as grandmother.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K714.4</idno>
               <term>K714.4. Victim tricked into entering basket.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1930+WS</idno>
               <term>K1930+WS. Disguise as grandmother.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S131</idno>
               <term>S131. Murder by drowning.</term>
             </item>
