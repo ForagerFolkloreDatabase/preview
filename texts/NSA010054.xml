@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010054</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,43 +121,43 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D150</idno>
               <term>D150. Transformation: man to bird. (Cf. B644.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D642</idno>
               <term>D642. Transformation to escape difficult situation.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">G61</idno>
               <term>G61. Relative's flesh eaten unwittingly.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K500</idno>
               <term>K500. Escape from death or danger by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K800</idno>
               <term>K800. Killing or maiming by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q211.3</idno>
               <term>Q211.3. Uxoricide punished. (Cf. Q414.0.1, Q416.0.2.1, Q596.1.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R311</idno>
               <term>R311. Tree refuge.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S62</idno>
               <term>S62. Cruel husband.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S139.2</idno>
               <term>S139.2. Slain person dismembered.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S139.2.2.1+WS</idno>
               <term>S139.2.2.1+WS. Head of slain wife impaled upon stake.</term>
             </item>
