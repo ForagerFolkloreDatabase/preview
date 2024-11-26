@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010020</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,39 +121,39 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C920</idno>
               <term>C920. Death for breaking tabu.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">G302.9.1</idno>
               <term>G302.9.1. Demons attack men.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">G332</idno>
               <term>G332. Sucking monster. Giant (sometimes a giant hall or cave) sucks in victims.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K910</idno>
               <term>K910. Murder by strategy.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q150</idno>
               <term>Q150. Immunity from disaster as reward.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q212</idno>
               <term>Q212. Theft punished. (Cf. Q221.8, Q413.1, Q428.2, Q431.15, Q451.0.4, Q451.1.1, Q451.2.2, Q451.4.1, Q451.5.2, Q451.6.2, Q451.7.0.2.2, Q458.0.3, Q458.2.2, Q467.2, Q469.10.2, Q520.2, Q551.2.3.ff., Q551.6.4, Q551.7.2, Q552.4, Q552.6, Q552.19.3, Q554.1, Q558.6, Q559.10, Q597.3.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q415.9</idno>
               <term>Q415.9. Punishment: being eaten by fish.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q451.7</idno>
               <term>Q451.7. Blinding as punishment.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S165</idno>
               <term>S165. Mutilation: putting out eyes.</term>
             </item>
