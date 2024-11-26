@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010028</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,59 +121,59 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C920</idno>
               <term>C920. Death for breaking tabu.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D610</idno>
               <term>D610. Repeated transformation. Transformation into one form after another.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D2061.2.1</idno>
               <term>D2061.2.1. Death-giving glance. (Cf. F555.7.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D2188</idno>
               <term>D2188. Magic disappearance. (Cf. D1641.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">E50</idno>
               <term>E50. Resuscitation by magic.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F401.6</idno>
               <term>F401.6. Spirit in human form.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F600</idno>
               <term>F600. Persons with extraordinary powers.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H49+WS4</idno>
               <term>H49+WS4. Recognition of evil spirit by immoderate behavior.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K2212</idno>
               <term>K2212. Treacherous sister. Usually elder sister.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">L50</idno>
               <term>L50. Victorious youngest daughter.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q301</idno>
               <term>Q301. Jealousy punished. (Cf. W181.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R11.2.2</idno>
               <term>R11.2.2. Abduction by demon.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S73.1</idno>
               <term>S73.1. Fratricide.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T71</idno>
               <term>T71. Women scorned in love.</term>
             </item>
