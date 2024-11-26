@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA013329</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,91 +121,91 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A33.1.1</idno>
               <term>A33.1.1. Creator's dog. The creator is accompanied by a dog. (Cf. A63.4.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1211+WS2</idno>
               <term>A1211+WS2. Tribe from creator's excrement.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1232.3.1</idno>
               <term>A1232.3.1. Mankind emerges from a pit.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1600</idno>
               <term>A1600. Distribution and differentiation of peoples &#8211; general.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1610</idno>
               <term>A1610. Origin of various tribes.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1610.1</idno>
               <term>A1610.1. Unworthy origin ascribed to hostile tribes.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1618</idno>
               <term>A1618. Origin of inequalities among men.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2230</idno>
               <term>A2230. Animal characteristics as punishment.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2286</idno>
               <term>A2286. Animal characteristics established by deity.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2426.2</idno>
               <term>A2426.2. Cries of birds.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2435.4</idno>
               <term>A2435.4. Food of birds.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B450</idno>
               <term>B450. Helpful birds.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B576</idno>
               <term>B576. Animal as guard.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B576.1.1</idno>
               <term>B576.1.1. Guardian animals evaded.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D437.4</idno>
               <term>D437.4. Transformation: excrements to person.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F660+WS4</idno>
               <term>F660+WS4. Skillful fisherman.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H1199.17</idno>
               <term>H1199.17. Task: guarding.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J1144</idno>
               <term>J1144. Eaters of stolen food detected.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K300</idno>
               <term>K300. Thefts and cheats &#8211; general.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K420</idno>
               <term>K420. Thief loses his goods or is detected.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">N396</idno>
               <term>N396. The sleeping guard. Watchman falls asleep as enemy approaches.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q221.5</idno>
               <term>Q221.5. Disobedience to God punished.</term>
             </item>
