@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010053</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,27 +121,27 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D110</idno>
               <term>D110. Transformation: man to wild beast (mammal).</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F441.4.6</idno>
               <term>F441.4.6. Wood-spirits with teeth on stomach.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">M340.5</idno>
               <term>M340.5. Prediction of danger.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">P251.5</idno>
               <term>P251.5. Two brothers.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q325</idno>
               <term>Q325. Disobedience punished. (Cf. Q431.3, Q451.7.0.2.3, Q456.0.3, Q458.0.2, Q552.1.0.1.1, Q593.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S11.3.3</idno>
               <term>S11.3.3. Father kills son.</term>
             </item>
