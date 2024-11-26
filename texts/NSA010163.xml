@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010163</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,43 +121,43 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B653.1</idno>
               <term>B653.1. Marriage to bee in human form.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C36.1</idno>
               <term>C36.1. Tabu: burning animal husband.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C142</idno>
               <term>C142. Tabu: sexual intercourse during menses.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C143</idno>
               <term>C143. Tabu: eating from hands of menstruating women.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C145</idno>
               <term>C145. Tabu: not to touch certain things during menses.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D195</idno>
               <term>D195. Transformation: man to frog. (Cf. B643).</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1283</idno>
               <term>D1283. Magic packet.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F610.4</idno>
               <term>F610.4. Man with strength of many men.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K2212</idno>
               <term>K2212. Treacherous sister. Usually elder sister.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T137.4</idno>
               <term>T137.4. Groom becomes a member of bride's family.</term>
             </item>
