@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010026</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,27 +121,27 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1611.1</idno>
               <term>A1611.1. Origin of American Indian tribes.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B610.1</idno>
               <term>B610.1. Girl's animal lover slain by spying relatives.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B613.1</idno>
               <term>B613.1. Snake paramour. (Cf. B604.1.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C141.3</idno>
               <term>C141.3. Tabu: not to enter water during menses.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C900</idno>
               <term>C900. Punishment for breaking tabu.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D391</idno>
               <term>D391. Transformation: serpent (snake) to person.</term>
             </item>
