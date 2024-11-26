@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010196</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,31 +121,31 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2412.1+WS9</idno>
               <term>A2412.1+WS9. Origin of jaguar's spots.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2412.5.1</idno>
               <term>A2412.5.1. Markings on tortoise's back.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J1117+WS38</idno>
               <term>J1117+WS38. Turtle as trickster.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K11</idno>
               <term>K11. Race won by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K70</idno>
               <term>K70. Contest in strength won by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K366.6</idno>
               <term>K366.6. Thieving turtle.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K563.2+WS</idno>
               <term>K563.2+WS. Tortoise persuades jaguar captor to put him in pocket with hole; escapes.</term>
             </item>
