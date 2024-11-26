@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010140</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,79 +121,79 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1251</idno>
               <term>A1251. Creation of man from tree. (Cf. A1236, A1275.6.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A1445.1+WS</idno>
               <term>A1445.1+WS. Origin of canoe.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">A2272+WS</idno>
               <term>A2272+WS. Ducks learn to float from canoe.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B143.1.3</idno>
               <term>B143.1.3. Warning parrot.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B211.3.4</idno>
               <term>B211.3.4. Speaking parrot.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D195</idno>
               <term>D195. Transformation: man to frog. (Cf. B643).</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D310+WS2</idno>
               <term>D310+WS2. Transformation: jaguar to person.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D610</idno>
               <term>D610. Repeated transformation. Transformation into one form after another.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F402.1.4</idno>
               <term>F402.1.4. Demons assume human forms in order to deceive.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H30</idno>
               <term>H30. Recognition through personal peculiarities</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H48</idno>
               <term>H48. Animal in human form recognized. (Cf. H64.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H79.3</idno>
               <term>H79.3. Recognition by voice.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H973</idno>
               <term>H973. Tasks performed by helpful forest spirits.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K525.1</idno>
               <term>K525.1. Substituted object left in bed while intended victim escapes.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K800</idno>
               <term>K800. Killing or maiming by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q325</idno>
               <term>Q325. Disobedience punished. (Cf. Q431.3, Q451.7.0.2.3, Q456.0.3, Q458.0.2, Q552.1.0.1.1, Q593.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S116.4</idno>
               <term>S116.4. Murder by crushing head.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T145.1.3</idno>
               <term>T145.1.3. Man married to several sisters.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T615</idno>
               <term>T615. Supernatural growth. (Cf. T585.)</term>
             </item>
