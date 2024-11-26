@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010052</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,55 +121,55 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1001</idno>
               <term>D1001. Magic spittle.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">D1611</idno>
               <term>D1611. Magic object answers for fugitive. Left behind to impersonate fugitive and delay pursuit.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">E586</idno>
               <term>E586. Dead returns soon after burial.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">E752.7+WS</idno>
               <term>E752.7+WS. Spirit gnawed by worms.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F402.1.10</idno>
               <term>F402.1.10. Spirit pursues person.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F402.1.11</idno>
               <term>F402.1.11. Spirit causes death.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H35.1.2</idno>
               <term>H35.1.2. Recognition by unique manner of playing flute.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J482.1.1</idno>
               <term>J482.1.1. Woman refuses second marriage. Her husband abides in her heart.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J890+WS1</idno>
               <term>J890+WS1. Consolation in children after death of husband.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K515.6</idno>
               <term>K515.6. Escape by hiding in the earth.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K525</idno>
               <term>K525. Escape by use of substituted object. The object is attacked rather than the intended victim.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1840</idno>
               <term>K1840. Deception by substitution.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R227</idno>
               <term>R227. Wife flees from husband. (Cf. P210, T200.)</term>
             </item>
