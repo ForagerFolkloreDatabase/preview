@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010033</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,23 +121,23 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F420</idno>
               <term>F420. Water-spirits. [Note: For help in the preparation of this item I am indebted to Miss Josephine Martin of Chicago.]</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F420.1.2</idno>
               <term>F420.1.2. Water-spirit as woman (water-nymph, water-nix). (Cf. F423.1.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F420.2</idno>
               <term>F420.2. Home of water-spirits. (Cf. F420.7.1.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F420.6.1</idno>
               <term>F420.6.1. Marriage or liaison of mortals and water-spirits.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">M242</idno>
               <term>M242. Bargains and promises between mortals and supernatural beings. (Cf. M221, M222, M223.)</term>
             </item>
