@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010191</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,31 +121,31 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B535.0.8+WS</idno>
               <term>B535.0.8+WS. Jaguar as nurse for child.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B754+WS</idno>
               <term>B754+WS. Jaguars attracted to girl during menses.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K800</idno>
               <term>K800. Killing or maiming by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K955.1</idno>
               <term>K955.1. Murder by scalding.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1822.4+WS</idno>
               <term>K1822.4+WS. Jaguar disguises as human being.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">N397</idno>
               <term>N397. Accidental self-injury.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R13.1</idno>
               <term>R13.1. Abduction by wild beast.</term>
             </item>
