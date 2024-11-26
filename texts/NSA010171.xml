@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010171</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,47 +121,47 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B200+WS19</idno>
               <term>B200+WS19. Monkey dresses in women's clothes and cooks.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B601.7</idno>
               <term>B601.7. Marriage to monkey.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B632</idno>
               <term>B632. Animal offspring from marriage to animal.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D118.2</idno>
               <term>D118.2. Transformation: man (woman) to monkey.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">D721.3</idno>
               <term>D721.3. Disenchantment by destroying skin (covering).</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1524.5+WS</idno>
               <term>D1524.5+WS. River crossed by magic.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D2165</idno>
               <term>D2165. Escapes by magic. (Cf. D1395.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F302.4.2.1+WS</idno>
               <term>F302.4.2.1+WS. Monkey comes into man's power when he steals her skin.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F1088.4</idno>
               <term>F1088.4. Animal escapes by slipping out of skin.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R227</idno>
               <term>R227. Wife flees from husband. (Cf. P210, T200.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S62</idno>
               <term>S62. Cruel husband.</term>
             </item>
