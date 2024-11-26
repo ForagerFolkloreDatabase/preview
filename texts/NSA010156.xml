@@ -19,13 +19,13 @@
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="KB" quantity="17">About 17 kilobytes</measure>
+        <measure unit="KB" quantity="18">About 18 kilobytes</measure>
       </extent>
       <publicationStmt>
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010156</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,79 +121,79 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B437.3</idno>
               <term>B437.3. Helpful squirrel.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B450+WS1</idno>
               <term>B450+WS1. Helpful hummingbird.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C286</idno>
               <term>C286. Tabu: partaking of certain feast.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">C946+WS</idno>
               <term>C946+WS. Feet burned off for breaking tabu.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1812.5.1</idno>
               <term>D1812.5.1. Bad omens.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F401.6</idno>
               <term>F401.6. Spirit in human form.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">F517.1</idno>
               <term>F517.1. Person unusual as to his feet. (Cf. F551.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">G341.1</idno>
               <term>G341.1. Ogre with sharpened leg.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">H57.2</idno>
               <term>H57.2. Recognition by missing finger.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J652</idno>
               <term>J652. Inattention to warnings.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">J1700</idno>
               <term>J1700. Fools.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J1762</idno>
               <term>J1762. Animal thought to be a person.</term>
             </item>
-            <item>
+            <item resp="#TMI_bibl">
               <idno type="TMI">J2424</idno>
               <term>J2424. The sharpened leg. A trickster sees a man with a sharpened leg. He also receives the power of sharpening his leg without harm if he will use it but four times. He breaks the tabu and is left with his leg sticking in a tree.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K500</idno>
               <term>K500. Escape from death or danger by deception.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K910</idno>
               <term>K910. Murder by strategy.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">L31</idno>
               <term>L31. Youngest brother helps elder.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">N340</idno>
               <term>N340. Hasty killing or condemnation (mistake).</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">P251.5</idno>
               <term>P251.5. Two brothers.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">S73.1</idno>
               <term>S73.1. Fratricide.</term>
             </item>
