@@ -25,7 +25,7 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010027</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/licenses/by-nc/4.0/">Creative Commons Attribution NonCommercial (CC BY-NC)</licence>
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
         </availability>
         <date when="2023">2023</date>
       </publicationStmt>
@@ -121,39 +121,39 @@
         <keywords scheme="URLtoOurTMI">
           <!-- link to our TMI once its online -->
           <list>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">B16</idno>
               <term>B16. Devastating animals.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D1440</idno>
               <term>D1440. Magic object gives power over animals.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">D2074.1</idno>
               <term>D2074.1. Animals magically called. (Cf. D1440, D2156.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J177</idno>
               <term>J177. Wisdom from brother-in-law.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">J414</idno>
               <term>J414. Marriage with equal or with unequal.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">K1839+WS3</idno>
               <term>K1839+WS3. Spirit deceives by imitating bird.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">Q325</idno>
               <term>Q325. Disobedience punished. (Cf. Q431.3, Q451.7.0.2.3, Q456.0.3, Q458.0.2, Q552.1.0.1.1, Q593.)</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">R311</idno>
               <term>R311. Tree refuge.</term>
             </item>
-            <item>
+            <item resp="#FLSAI">
               <idno type="TMI">T111</idno>
               <term>T111. Marriage of mortal and supernatural being.</term>
             </item>
