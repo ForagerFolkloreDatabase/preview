@@ -1,0 +1,142 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Stolen Wife</title>
+        <editor ref="p:Barnum4772" role="collector">Francis Barnum</editor>
+        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="12">About 12 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA039992</idno>
+        <availability status="free">
+          <licence target="https://en.wikipedia.org/wiki/Fair_use#U.S._fair_use_factors">Fair Use (US)</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Barnum, Francis/Reed, E. Irene/Teeluk, Martha (n.d. [late 1970s]): [Stories in Barnum 1901, retranscribed and transliterated by Irene Reed and Martha Teeluk]. Ms., Alaska Native Language Archive, Elmer E. Rasmuson Library, Fairbanks, Alaska. Quot. pp. 290-291.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="9">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="12">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="1">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA27735">Qaluyaarmiut</name>
+          <date notAfter="1899" notBefore="1891" type="recorded">Recorded sometime between 1891 and 1899.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>So there lived a couple by a river, all alone, and likewise they had no other human companion. But that river ran out to the sea.</p>
+      <p>That [her] husband, whom you recall, would go down there to the sea to hunt.</p>
+      <p>Then upon arriving, he would lower those that he caught down through the window into the house, then his wife would receive them from the inside of the house, and she would skin them in the house.</p>
+      <p>So that [her] husband, whom you recall, had a way of doing that all the time. And again, if he did not hunt in the sea, he would catch game from up yonder, <animal>reindeer</animal> [<animal>caribou</animal>?].</p>
+      <p>And so, by and by, <apartmyth>they say</apartmyth>, they [dual] they brought forth a child [acquired an offspring]. That [her] husband, whom you recall, didn't hunt anything much any more. They raised him well, that one you remember, not letting him lack anything. So they lived like that.</p>
+      <p>And then one day, her husband went away to hunt at sea. Then, when his kayak was getting loaded there down yonder in the sea, he went home, he was about to arrive home, but somehow strangely, his wife, whom you remember, was not even in front of the house. Now then upon beaching, he got out and went up shoulder-packing his catch. Then he lowered his catch down through the window, he lowered it in vain, strangely, that one down there did not want to take it. So he pulled it out, upon looking in, <apartmyth>it's said</apartmyth>, his wife was not there, only his child that you recall, was there all alone.</p>
+      <p>So now he went down and entered. Upon entering, <apartmyth>they say</apartmyth>, that pillow [of his] that used to be there, had been knocked down. It was evident here that a person had pulled her off the bed while she was lying in bed and dragged her out, and it was evident here [from indications] that he had brought her out.</p>
+      <p>Upon going outside, <apartmyth>it's said</apartmyth>, he could see along here that he had taken <pb n="2"/>her away, putting her in a sled. So now he went inside, got ready, putting on boots and went away following the person by his tracks, he also took along his weapons.</p>
+      <p>[He traveled for so long that] Soon, <apartmyth>they say</apartmyth>, it became winter as he was traveling on, although this journey of his from his home had started in the summertime. And also, <apartmyth>they say</apartmyth>, it was evident that here, he had climbed up a great big high mountain. Upon reaching the peak of the mountain, <apartmyth>they say</apartmyth>, there was another expanse of ocean down there. <apartmyth>They say</apartmyth>, then, was a village down there by the edge of the ocean.</p>
+      <p>Here, their tracks, those two, was evident that they had gone down.</p>
+      <p>Upon arriving there, to the said village, <apartmyth>they say</apartmyth>, was an old man chopping outdoors. So then he asked him about that one, concerning his wife, as to where she had gone. It is said that he said he [another] had took her to the other side of the ocean. Now then that old man whom we recall, took a <animal>king salmon</animal> and chopped it, and its inside there was hollow, so now as it was finished, he then took it to the water, then the old man ordered that man to get aboard. Then when he boarded, he covered the rear. So now it went away via down under the water, but then upon reaching the other side, it surfaced through the other side. So now down yonder from the village, upon getting out, he went up after turning his transporter downwards. Upon going up, he found that there was dancing inside the community house [sounds of dancing emanating from the qasgiq]. But his wife was in another house separate from the others with the portal shut. So he entered smashing the portal and took his wife, bringing her down, he put her into that transporter of his and took her away. So to that, which is remembered, to the other side they landed and furthermore, they got out, and upon getting out, they pushed that out, which we <pb n="3"/>recall, that which was their transport and it became a <animal>king salmon</animal> and swam away. And then they went home [returned] using their trail.</p>
+      <p>Upon taking notice, <apartmyth>they say</apartmyth>, as they were approaching their house, there were <animal>animals</animal> of various kinds coming out of his house. It was found that, <apartmyth>it's said</apartmyth>, the <animal>animals</animal> had raised that whom it is recalled, their child while they were gone. It was found that their child, we remember, had become an <animal>animal</animal>. And they, since they did not want to stay there without their child, went away and became <animal>animals</animal> themselves, they turned into <animal>wolverines</animal>, <apartmyth>they say</apartmyth>, that couple.</p>
+      <p>
+        <epimyth>Iaugiuq.</epimyth>
+        <note>archaic closing formula the meaning of which is lost; cf. Barnum 1901, p. 272.</note>
+      </p>
+    </body>
+  </text>
+</TEI>
