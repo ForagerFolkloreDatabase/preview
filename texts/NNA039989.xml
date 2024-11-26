@@ -1,0 +1,127 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Story of the Kwahuk (Stickleback)</title>
+        <editor ref="p:Barnum4772" role="collector">Francis Barnum</editor>
+        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="9">About 9 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA039989</idno>
+        <availability status="free">
+          <licence target="https://en.wikipedia.org/wiki/Fair_use#U.S._fair_use_factors">Fair Use (US)</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Barnum, Francis/Reed, E. Irene/Teeluk, Martha (n.d. [late 1970s]): [Stories in Barnum 1901, retranscribed and transliterated by Irene Reed and Martha Teeluk]. Ms., Alaska Native Language Archive, Elmer E. Rasmuson Library, Fairbanks, Alaska. Quot. p. 283.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="1">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="1">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA27735">Qaluyaarmiut</name>
+          <date notAfter="1899" notBefore="1891" type="recorded">Recorded sometime between 1891 and 1899.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p><anamyth>And so then</anamyth><note>t&#333;&#259;thl&#363;-h&#335;k-hw&#299;, 'well, then', or 'so then'. (The usual preface to all stories.) [Inserted from Barnum 1901, p. 289.]</note> - these two - it was two poor old women - they were both living [there] - and then - while they were both living there - by down there - river's sharp bend - on the other side of it - they remained - and then they saw - they [dual] heard - someone singing - and then - river's sharp bend - beyond it - they were both terrified - they packed up - their little effects - they embarked - into their poor old "a&#331;yak" [open boat] - then - things - their two small droppings - their little trail - their little woodpile - their water path - they effaced it - their household effects - all of them - after [their things] they were all ready [when they were done] - all right - their poor boat - they launched it - they launched all right - and loaded it - with their old [clothing, bedding, etc.] - like that - the thing down below there - it was approaching nearer all this time - they were in a panic - they were terrified - then - the elder one - she embarked - [and] embarking - her own friend [the other one] - she told her to embark - and then - her leg - the other - just [in the boat] - and then as she had it in [the boat] - she said - Oh - my poor little old needle case - I have forgotten - where I put it - Hold on!/Wait a minute - old woman - let me run and get it [them] - Wait for me - I will hurry - I will not delay - She finished? - she went - trying to run fast [but could not] <pb n="2"/>- because she was a very old woman - on account of her weakness - their little old house - she entered - going in slowly - something [anything] - she didn't see - because she didn't see it - again - she went back down - and then - to her poor old woman - she said - Look here - my needle case [past] which I had - is lost - and then - she told her to embark - her leg - once more - when she put it - in the boat - like this - water - down there - she looked - <animal>stickleback</animal> - that one - which was swimming along up - then - [and] singing - Oh, you good for nothing - up there - so it was he then who has been causing us terror - and then - with her own oar - she jabbed it - the thing which was scaring them - she got it up - to place on a flat surface [so that it can be readily chopped] - they two chopped it up - they cut it up - all right - after having been all chopped up - into the water - they threw it - all right - and after that was done - again -their little old place - they both returned - into their poor little old house - they went in - all right - and after their entrance - they both remained there.</p>
+    </body>
+  </text>
+</TEI>
