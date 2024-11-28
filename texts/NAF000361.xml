@@ -1,0 +1,149 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Girl of the Early Race, Who Made Stars</title>
+        <editor ref="p:Bleek79" role="collector">Wilhelm Heinrich Immanuel Bleek</editor>
+        <editor ref="p:Kabbo153" role="informant">&#449;Kabbo ('dreams')</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="14">About 14 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NAF000361</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Bleek, Wilhelm H. I./Lloyd, Lucy C. (1911): Specimens of Bushman Folklore. London: Allen. Quot. pp. 72-79.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="8">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="11">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="12">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CAF00214">&#448;Xam</name>
+          <date notAfter="1873" notBefore="1871" type="recorded">Recorded sometime between 1871 and 1873.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#KH">
+              <idno type="TMI">A763</idno>
+              <term>A763. Stars from objects thrown into sky.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">A778.8</idno>
+              <term>A778.8. Milky Way is smoke (ashes).</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>
+        <note>This girl is said to have been one of the people of the early race (&#451;&#967;w&#233;-&#448;n&#257;-ssh&#335;-&#451;k&#8217;e) and the 'first' girl; and to have acted ill. She was finally shot by her husband. These &#451;&#967;w&#233;-&#448;n&#257;-ssh&#335;-&#451;k&#8217;e are said to have been stupid, and not to have understood things well.</note>
+      </p>
+      <p>My mother was the one who told me that the girl arose; she put her hands into the wood ashes; she threw up the wood ashes into the sky. She said to the wood ashes: "The wood ashes which are here, they must altogether become the Milky Way. They must <color>white</color> lie along in the sky, that the stars may stand outside of the Milky Way, while the Milky Way is the Milky Way, while it used to be wood ashes." They [the ashes] altogether become the Milky Way. The Milky Way must go round with the stars; while the Milky Way feels that, the Milky Way lies going round; while the stars sail along; therefore, the Milky Way, lying, goes along with the stars. The Milky Way, when the Milky Way stands upon the earth, the Milky Way turns across in front, while the Milky Way means to wait [?], while the Milky Way feels that the Stars are turning back; while the Stars feel that the Sun is the one who has turned back; he is upon his path; the Stars turn back; while they go to fetch the daybreak; that they may lie nicely, while the Milky Way lies nicely. The Stars shall also stand nicely around. <pb n="75"/>They shall sail along upon their footprints, which they, always sailing along, are following. While they feel that, they are the Stars which descend.</p>
+      <p>The Milky Way lying comes to its place, to which the girl threw up the wood ashes, that it may descend nicely; it had lying gone along, while it felt that it lay upon the sky. It had lying gone round, while it felt that the Stars also turned round. They turning round passed over the sky. The sky lies [still]; the Stars are those which go along; while they feel that they sail. They had been setting; they had, again, been coming out; they had, sailing along, been following their footprints. They become <color>white</color>, when the Sun comes out. The Sun sets, they stand around above; while they feel that they did turning follow the Sun.</p>
+      <p>The darkness comes out; they [the Stars] wax <color>red</color>, while they had at first been <color>white</color>. They feel that they stand <color>brightly</color> around; that they may sail along; while they feel that it is night. Then, the people go by night; while they feel that the ground is made <color>light</color>. While they feel that the Stars shine a little. Darkness is upon the ground. The Milky Way gently glows; while it feels that it is wood ashes. Therefore, it gently glows. While it feels that the girl was the one who said that the Milky Way should give a little light for the people, that they might return home by night, in the middle of the night. For, the earth would not have been a little <color>light</color>, had not the Milky Way been there. It and the Stars.</p>
+      <p>The girl thought that she would throw up [into the air] roots of the <plant>&#451;h&#7909;i&#331;</plant>, in order that the <plant>&#451;h&#7909;i&#331;</plant> roots <pb n="77"/>should become Stars; therefore, the Stars are <color>red</color>; while they feel that [they] are <plant>&#451;h&#7909;i&#331;</plant> roots.<note>She threw up a scented root (eaten by some Bushmen) called <plant>&#451;h&#7909;i&#331;</plant>, which became stars; the <color>red</color> (or old) <plant>&#451;h&#7909;i&#331;</plant> making <color>red</color> stars, the <color>white</color> or young <plant>&#451;h&#7909;i&#331;</plant> making <color>white</color> stars. This root is, &#449;kabbo says, eaten by <animal>baboons</animal> and also by the <animal>porcupine</animal>. | The same girl also made <animal>locusts</animal>, by throwing up into the sky the peel of the <plant>&#451;k&#250;&#239;ss&#301; (an edible root)</plant> which she was eating.</note></p>
+      <p>She first gently threw up wood ashes into the sky, that she might presently throw up <plant>&#451;h&#7909;i&#331;</plant> roots; while she felt that she was angry with her mother, because her mother had not given her many <plant>&#451;h&#7909;i&#331;</plant> roots, that she might eat abundantly; for, she was in the hut. She did not herself go out to seek food; that she might get [?] <plant>&#451;h&#7909;i&#331;</plant> for herself; that she might be bringing it [home] for herself; that she might eat; for, she was hungry; while she lay ill in the hut. Her mothers were those who went out. They were those who sought for food. They were bringing home <plant>&#451;h&#7909;i&#331;</plant>, that they might eat. She lay in her little hut, which her mother had made for her. Her stick stood there; because she did not yet dig out food. And, she was still in the hut. Her mother was the one who was bringing her food. That she might be eating, lying in the little hut<note>&#449;kabbo here explained that, when a girl has 'grown', she is put into a tiny hut, made by her mother, with a very small arpeture for the door; which her mother closes upon her. When she goes out, she looks upon the ground; and when she returns to the hut, she sits and looks down. She does not go far, or walk about at this time. When presently she becomes a 'big girl', she is allowed to look about, and to look afar again; being, on the first occasion, allowed to look afar over her mother's hand. She leaves the small hut, when allowed to look about and around again; and she then walks about like the other women. During the time she is in retreat, she must not look at the <animal>springbok</animal>, lest they should become wild.</note>; while her mother thought that she [the girl] did not eat the young men's <animal>game</animal> [i.e. game killed by them]. For, she ate the <animal>game</animal> of her father, who was an old man. While she thought that the hands of the young men would become cool. Then, the arrow would become cool. The arrow head which is at the top, it would be cold; while the arrow head felt that the bow was cold; while the bow felt that his <pb n="79"/>[the young man's] hands were cold. While the girl thought of her saliva, which, eating, she had put into the <animal>springbok</animal> meat; this saliva would go into the bow, the inside of the bow would become cool; she, in this manner, thought. Therefore, she feared the young men's game. Her father was the one from whom she alone ate [<animal>game</animal>]. While she felt that she had worked [i.e. treated] her father's hands: she had worked, taking away her saliva [from them].</p>
+    </body>
+  </text>
+</TEI>
