@@ -1,0 +1,216 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Son of the Mantis, the Baboons, and the Mantis</title>
+        <editor ref="p:Lloyd78" role="collector">Lucy Catherine Lloyd</editor>
+        <editor ref="p:Hankasso9" role="informant">&#448;Han&#450;kass&#700;o</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="26">About 26 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NAF000357</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Bleek, Wilhelm H. I./Lloyd, Lucy C. (1911): Specimens of Bushman Folklore. London: Allen. Quot. pp. 16-37.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="96">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="6">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="12">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CAF00214">&#448;Xam</name>
+          <date when="1878" type="recorded">Recorded in 1878.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#KH">
+              <idno type="TMI">A521</idno>
+              <term>A521. Culture hero as dupe or trickster.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D1810.8.2</idno>
+              <term>D1810.8.2. Information received through dream.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D1812.2.3</idno>
+              <term>D1812.2.3. Power of prophecy from accidental drinking of water from magic fountain.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">E80</idno>
+              <term>E80. Water of Life. Resuscitation by water.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">J1881.1</idno>
+              <term>J1881.1. Object sent to go by itself.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p><persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName><note><persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName> was a son of the <animal>Mantis</animal>.</note> formerly went to fetch for his father sticks, that his father might take aim at the people who sit upon [their] heels. Fetching, he went up to them [the <animal>baboons</animal>] as they were going along feeding. Therefore, a <animal>baboon</animal> who feeding went past him, - he who was an older <animal>baboon</animal>, - he was the one to whom <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName> came. Then he questioned <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName>. And <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName> told him about it, that he must fetch for his father sticks, that his father might take aim at the people who sit upon [their] heels. Therefore, he [the <animal>baboon</animal>] exclaimed<note>"I must," the narrator here explained, "speak in my language, because I feel that the speech of the <animal>baboons</animal> is not easy."</note>: "Hie! Come to listen to this child." And the other one said:</p>
+      <lg type="verse">
+        <l>"First going</l>
+        <l>I listen,</l>
+        <l>To the child yonder.</l>
+        <l>First going</l>
+        <l>I listen,</l>
+        <l>To the child yonder."</l>
+      </lg>
+      <p><pb n="19"/>And he reached them. He said: "What does this child say?" And the child said: "I must fetch for my father sticks [<plant>bushes</plant>?], that my father may take aim at the people who sit upon [their] heels." Then the <animal>baboon</animal> said: "Tell the old man yonder that he must come to hear this child." Then the <animal>baboon</animal> called out: "Hie! Come to hear this child." Then the other one said:</p>
+      <lg type="verse">
+        <l>"First going</l>
+        <l>I listen,</l>
+        <l>To the child yonder."</l>
+      </lg>
+      <p>And he came up [to them]; he exclaimed: "What does this child say?" And the other one answered: "This child, he wishes, he says, to fetch sticks for his father, that his father may take aim at the people who sit upon [their] heels." And this <animal>baboon</animal> said: "Tell the old man yonder that he must come to hear this child." Then this [other] <animal>baboon</animal> called out: "O person passing across in front! come to listen to this child." Therefore, the other one said:</p>
+      <lg type="verse">
+        <l>"First going</l>
+        <l>I listen,</l>
+        <l>To the child yonder."</l>
+      </lg>
+      <p>And he came up [to them]. He said: "What does this child say?" And the other one answered: "This child wants, he says, to fetch sticks<note>In a paper entitled "A Glimpse into the Mythology of the Maluti Bushmen," which appeared in the Cape Monthly Magazine for July, 1874, written by Mr. J. M. Orpen (at that time Chief Magistrate, St. John's Territory), we find, on p. 8, that the <animal>Mantis</animal> sent one of his sons to cut sticks to make bows, and that he was caught and killed by the baboons.</note> for his father, that his father may take aim at the people who sit upon [their] heels." Therefore, this <animal>baboon</animal> <pb n="21"/>exclaimed: "It is ourselves! Thou shalt tell the old man yonder that he shall come to listen to this child." Therefore, this other <animal>baboon</animal> called out: "Ho! come to listen to this child." Then the other one said:</p>
+      <lg type="verse">
+        <l>"First going</l>
+        <l>I listen,</l>
+        <l>To the child yonder."</l>
+      </lg>
+      <p>He came up to the other people on account of it. He said: "What does this child say?" And the other one answered: "This child, he wants, he says, to fetch<note>Note by the narrator. He had sent his son, that his son should go to construct things for him. I think that they were sticks [<plant>bushes</plant>?]. He wished his son to go [and] make them for him, that he might come [and] work them, in order that he might make war upon the baboons.</note> sticks for his father, that his father may take aim at the people who sit upon [their] heels." Therefore, this <animal>baboon</animal> exclaimed [with a sneering kind of laugh]: "Oho! It is ourselves! Thou shalt quietly go to tell the old man yonder, that he may come to listen to this child." And the other one called out: "O person passing across in front! come to listen to this child." And the other said:</p>
+      <lg type="verse">
+        <l>"First going</l>
+        <l>I listen,</l>
+        <l>To the child yonder."</l>
+      </lg>
+      <p>And he went up to the other people; he said: "What does this child say?" And the other one answered: "This child, he wants, he says, to fetch sticks for his father, that his father may take aim at the people who sit upon their heels."</p>
+      <p>Then that <animal>baboon</animal>, - he felt that he was an old <pb n="23"/><animal>baboon</animal> - therefore, he said, when the other one had said, "This child wanted, he said, to fetch sticks for his father," therefore the other one [the old <animal>baboon</animal>] exclaimed: "What? it is we ourselves; ourselves it is! Ye shall strike the child with your fists."</p>
+      <p>Therefore, they were striking <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName> with their fists on account of it; they hit with their fists, breaking [his] head. And another struck with his fist, knocking out <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName>'s eye, and the child's eye in this manner sprang [or rolled] away. Then this <animal>baboon</animal> exclaimed: "My ball! my ball!" Therefore, they began to play a game at ball,<note>[They] were playing at ball. | "My ball, | My ball it is, | And I want it. | My companion's ball it is, | And I want it, | My companion's ball, | And I want it."</note> while the child died; the child lay still. They said [sang]:</p>
+      <lg type="verse">
+        <l>"And I want it,</l>
+        <l>Whose ball is it?</l>
+        <l>And I want it,</l>
+        <l>Whose ball is it?</l>
+        <l>And I want it."</l>
+      </lg>
+      <p>The other people said: </p>
+      <lg type="verse">
+        <l>"My companion's ball it is,</l>
+        <l>And I want it,</l>
+        <l>My companion's ball it is,</l>
+        <l>And I want it,"</l>
+      </lg>
+      <p>while they were playing at ball there with the child's eye.</p>
+      <p>The <animal>Mantis</animal> was waiting for the child. Therefore, the <animal>Mantis</animal> lay down at noon. Therefore, the <animal>Mantis</animal> <pb n="25"/>was dreaming about the child, that the <animal>baboons</animal> were those who had killed the child; that they had made a ball of the child's eye; that he went to the <animal>baboons</animal>, while the <animal>baboons</animal> played at ball there with the child's eye.</p>
+      <p>Therefore, he arose; he took up the quiver, he slung on the quiver; be said, "Rattling along,<note>The arrows they were, the arrows which were in the quiver; they made a rattling noise, because they stirred inside [it]. Therefore, he said, "Rattling along, rattling along."</note> rattling along," while he felt that he used formerly to do so, he used to say, "Rattling along." Then, when he came into sight, he perceived the <animal>baboons</animal>' dust, while the <animal>baboons</animal> were playing at ball there with the child's eye. Then the <animal>Mantis</animal> cried on account of it, because the <animal>baboons</animal> appeared really to have killed the child. Therefore, they were playing at ball there with the child's eye. Therefore, when he came into sight, he perceived the <animal>baboons</animal>' dust, while the <animal>baboons</animal> were playing at ball there with the child's eye. Therefore he cried about it. And he quickly shut his mouth; he thoroughly dried the tears from his eyes, while he desired that the <animal>baboons</animal> should not perceive tears in his eyes; that he appeared to have come crying, hence tears were in his eyes; so that he might go to play at ball with the <animal>baboons</animal>, while his eyes had no tears in them.</p>
+      <p>Then he, running, came up to the <animal>baboons</animal>, while the <animal>baboons</animal> stared at him, because they were startled at him.<note>They were not in the habit of seeing him; therefore they stared at him.</note> Then, while the <animal>baboons</animal> were still staring at him, he came running to a place where he <pb n="27"/>laid down the quiver; he took off [his] kaross [i.e. skin cloak], he put down the kaross, he, grasping, drew out the feather brush which he had put into the bag, he shook out the brush, he played with [?] the ball. He called out to the <animal>baboons</animal>, why was it that the <animal>baboons</animal> were staring at him, while the <animal>baboons</animal> did not play with [?] the ball, that the <animal>baboons</animal> might throw it to him.</p>
+      <p>Then the <animal>baboons</animal> looked at one another, because they suspected why he spoke thus. Then he caught hold of the ball, when the ball had merely flown to another <animal>baboon</animal>, when this [the first] <animal>baboon</animal> had thrown the ball to the other. Then the child's eye, because the child's eye felt that it was startled [?], on account of his father's scent, it went playing about; the <animal>baboons</animal> trying to get it, missed it. Then one <animal>baboon</animal>, he was the one who caught hold of it, he threw it towards another. Then the <animal>Mantis</animal> merely sprang out from this place, the <animal>Mantis</animal> caught hold of the child's eye, the <animal>Mantis</animal>, snatching, took the child's eye. Then the <animal>Mantis</animal> whirled around the child's eye; he anointed the child's eye with [the perspiration of] his armpits. Then he threw the child's eye towards the <animal>baboons</animal>, the child's eye ascended, the child's eye went about in the sky; the <animal>baboons</animal> beheld it above, as it played about above in the sky. And the child's eye went to stand yonder opposite to the quiver; it appeared as if it sprang over the quiver, while it stood inside the quiver's bag.<note>He tied, placing a little bag at the side of the quiver; therefore it is the quiver's bag; while it feels that it is a little bag which is tied at the side of the quiver; he had laid the bow upon it; it was the one that he tied, placing it by the side of the quiver. That bag, it was the one that the child's eye was in. That bag, it was the one that he laid the bow upon.</note></p>
+      <p><pb n="29"/>Then the <animal>baboons</animal> went to seek for it. The <animal>Mantis</animal> also sought for it, while the <animal>baboons</animal> sought for it. Then all the <animal>baboons</animal> were altogether seeking for the child's eye. They said: "Give my companion the ball." The <animal>baboon</animal> whose ball it was, he said: "Give me the ball." The <animal>Mantis</animal> said: "Behold ye! I have not got the ball." The <animal>baboons</animal> said: "Give my companion the ball." The <animal>baboon</animal> whose ball it was, he said: "Give me the ball." Then the baboons<note>It is uncertain whether this should be singular or plural here.</note> said that the <animal>Mantis</animal> must shake the bag, for the ball seemed to be inside the bag. And the <animal>Mantis</animal> exclaimed: "Behold ye! Behold ye! the ball is not inside the bag. Behold ye!" while he grasped the child's eye, he shook, turning the bag inside out. He said: "Behold ye! Behold ye! the ball cannot be inside the bag."</p>
+      <p>Then this <animal>baboon</animal> exclaimed: "Hit the old man with [your] fists." Then the other one exclaimed: "Give my companion the ball!" while he struck the head of the <animal>Mantis</animal>. Then the <animal>Mantis</animal> exclaimed: "I have not got the ball," while he struck the <animal>baboon</animal>'s head. Therefore, they were all striking the <animal>Mantis</animal> with their fists; the <animal>Mantis</animal> was striking them with his fist. Then the <animal>Mantis</animal> got the worst of it; the <animal>Mantis</animal> exclaimed: "Ow! <animal>Hartebeest</animal>'s Children!<note>"Hartebeest's Children," here, may refer to a bag made from the skin of young <animal>hartebeests</animal>, which the <animal>Mantis</animal> had with him.</note> ye must go! &#451;k&#225;u <pb n="31"/>&#451;&#164;&#232;rrigg&#250;!<note>The meaning of &#451;k&#225;u &#451;&#164;&#232;rri-gg&#250; is at present unknown to the translator, but the <animal>Mantis</animal> is still addressing some of his possessions, and ordering them to leave the scene of his defeat.</note> ye must go!" while the <animal>baboons</animal> watched him ascend; as he flew up, as he flew to the water. Then he popped into the water on account of it; while he exclaimed: "I &#448;k&#233;, tt&#233;n &#451;khwaiten&#451;khwaiten, &#451;ku&#237; h&#225; &#299; &#448;k&#224;&#451;"<note>Of these words of the <animal>Mantis</animal> (which frequently appear in stories concerning him) the narrators were not able to furnish a sufficiently clear explanation, so the original text is given.</note> Then he walked out of the water; he sat down; he felt inside [his] bag; he took out the child's eye; he walked on as he held it; he walked, coming up to the <plant>grass</plant> at the top of the water's bank;<note>It is <plant>grass</plant>; the <plant>grass</plant> which stands upon the top of the water's bank; it is that which the Bushmen call <plant>&#448;kannu&#331;-a-ss&#233;</plant>.</note> he sat down. He exclaimed: "Oh ww&#236; ho!"<note>At the same time, putting the first finger of his right hand into his mouth, against his left cheek, and drawing it forcibly out; the eye being meanwhile in the palm of his right hand, shut down by his other fingers.</note> as he put the child's eye into the water.</p>
+      <p>"Thou must grow out, that thou mayest become like that which thou hast been."<note>He desired that the child should live; that it should living return.</note>" Then he walked on; he went to take up [his] kaross, he threw it over his shoulder; he took up the quiver, he slung on the quiver; and, in this manner, he returning went, while he returning arrived at home.</p>
+      <p>Then the young <animal>Ichneumon</animal> exclaimed: "Who can have done thus to my grandfather, the <animal>Mantis</animal>, that the <animal>Mantis</animal> is covered with wounds?" Then the <animal>Mantis</animal> replied: "The <animal>baboons</animal> were those who killed grandson, <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName>; I went [the <animal>Mantis</animal> speaks very sadly and slowly here], as they were <pb n="33"/>playing at ball there with grandson's eye; I went to play at ball with them. Then grandson's eye vanished. Therefore, the <animal>baboons</animal> said [that] I was the one who had it; the <animal>baboons</animal> were fighting me; therefore, I was fighting them; and I thus did, I flying came."</p>
+      <p>Then <persName>&#448;kuamma&#331;-a</persName> said: "I desire thee to say to grandfather, Why is it that grandfather continues to go among strangers [literally, people who are different]?" Then the <animal>Mantis</animal> answered: "Thou dost appear to think that yearning was not that on account of which I went among the <animal>baboons</animal>;" while he did not tell <persName>&#448;kuamma&#331;-a</persName> and the others that he came [and] put the child's eye into the water.</p>
+      <p>Then he remained there [i.e. at home], while he did not go to the water. Then he went there, while he went to look at the place where he had put in the child's eye. And he approached gently, while he wished that he might not make a rustling noise. Therefore, he gently came. And the child heard him, because he had not come gently when afar off; and the child jumped up, it splashed into the water. Then the <animal>Mantis</animal> was laughing about it, while his heart yearned [for the child]. And he returned; altogether returned.</p>
+      <p>Then the child grew; it became like that which it had [formerly] been. Then the <animal>Mantis</animal> came; while he came to look; and he in this manner walking came. While he came walking and looking, he espied the child, as the child was sitting in the sun. Then the child heard him, as he came rustling [along]; the child sprang up, the child entered the water. And he looking stood, he went back. He went; he went to make for the child a front <pb n="35"/>kaross [or apron], that and a &#449;k&#243;roko.<note>Another article for the child to wear.</note> He put the things aside; then he put the front kaross [into a bag], that and the &#449;k&#243;roko; he in this manner went; he in this manner came; he approached gently. And, as he approached gently, he espied the child lying in the sun, as the child lay yonder, in the sun, opposite the water. Therefore, he gently came up to the child. And the child heard him, as his father gently came. And the <animal>Mantis</animal>, when the child intended to get up, the <animal>Mantis</animal> sprang forward, he caught hold of the child. And he anointed the child with his scent; he anointed the child; he said: "Why art thou afraid of me? I am thy father; I who am the <animal>Mantis</animal>, I am here; thou art my son, thou art <persName>&#451;g&#225;&#361;nu-ts&#7841;&#967;&#225;u</persName>; I am the <animal>Mantis</animal>, I whose son thou art; the father is myself." And the child sat down, on account of it; and he took out the front kaross, he took out the &#449;k&#243;roko. He put the front kaross on to the child; he put the &#449;k&#243;roko on to the child; he put the front kaross on to the child. Then he took the child with him; they, in this manner, returning went; they returning arrived at home.</p>
+      <p>Then the young <animal>Ichneumon</animal> exclaimed: "What person can it be who comes with the <animal>Mantis</animal>?" And <persName>&#448;kuamma&#331;-a</persName> replied: "Hast thou not just [?] heard that grandfather said he had gone to the <animal>baboons</animal>, while they were playing at ball there with the child's eye? while grandfather must have been playing before us; his son comes yonder with him!" And they returned, reaching the house. Then the young <animal>Ichneumon</animal> spoke; he said: "Why did my grandfather, the <animal>Mantis</animal>, first say that the <pb n="37"/>baboons were those who killed the child, while the child is here?" Then the <animal>Mantis</animal> said: "Hast thou not seen [that] he is not strong? while he feels that I came to put his eye into the water; while I wished that I might see whether the thing would not accomplish itself for me; therefore, I came to put his eye into the water. He came out of the water; therefore, thou seest [that] he is not strong. Therefore, I wished that I might wait, taking care of him; that I may see whether he will not become strong."</p>
+    </body>
+  </text>
+</TEI>
