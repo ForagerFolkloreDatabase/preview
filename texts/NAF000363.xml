@@ -1,0 +1,196 @@
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
+    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>!K&#243;-G!nuin-T&#225;ra, Wife of the Dawn's-Heart Star, Jupiter</title>
+        <editor ref="p:Lloyd78" role="collector">Lucy Catherine Lloyd</editor>
+        <editor ref="p:Hankasso9" role="informant">&#448;Han&#450;kass&#700;o</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="25">About 25 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NAF000363</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+        </availability>
+        <date when="2023">2023</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Bleek, Wilhelm H. I./Lloyd, Lucy C. (1911): Specimens of Bushman Folklore. London: Allen. Quot. pp. 84-98.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals,
+                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from an informant who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="">
+          <tagUsage gi="animal" occurs="66">Used to mark animal names mentioned in the text.</tagUsage>
+          <tagUsage gi="plant" occurs="15">Used to mark plant names mentioned in the text.</tagUsage>
+          <tagUsage gi="color" occurs="5">Used to mark colors (adjectives and nouns) mentioned in the
+                        text.</tagUsage>
+          <tagUsage gi="persName" occurs="36">Used to mark personal names (usually characters)
+                        mentioned in the text.</tagUsage>
+          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
+          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
+                        a narrative.</tagUsage>
+          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
+                        narrative.</tagUsage>
+          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
+                        narrative.</tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Animals, plants, colors, characters, and place names were automatically
+                        tagged using a semantic tagger based on WordNet and self-provided word
+                        lists, and were subsequently checked manually. They are tagged with <gi>
+                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
+                        placeName</gi>, respectively.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CAF00214">&#448;Xam</name>
+          <date when="1879" type="recorded">Recorded in 1879.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#KH">
+              <idno type="TMI">D112.1</idno>
+              <term>D112.1. Transformation: man to lion.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D112.3</idno>
+              <term>D112.3. Transformation: man to lynx.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D293</idno>
+              <term>D293. Transformation: man to star.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D551.6.2</idno>
+              <term>D551.6.2. Transformation by eating rice mixed with perspiration.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D688+KH</idno>
+              <term>D688+KH. Transforming mother suckles child as long as in human form.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D700</idno>
+              <term>D700. Person disenchanted.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D714+KH</idno>
+              <term>D714+KH. Disenchantment by rubbing with the contents of a goat's stomach.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">D721</idno>
+              <term>D721. Disenchantment by removing skin (or covering).</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">K1911</idno>
+              <term>K1911. The false bride (substituted bride). An impostor takes the wife's place without the husband's knowledge and banishes (kills, transforms) the wife.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">N800+KH</idno>
+              <term>N800+KH. Helpers of ogres/adversaries of heroes: agama, ant, baboon, blue crane, cat, chameleon, crocodile, crow, dog, hare, honey-badger, hyena, jackal, lizards (various kinds), magician, mongoose, moth, ostrich, snakes (various kinds), tortoise, monitor lizard, witch, a woman.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">P234</idno>
+              <term>P234. Father and daughter.</term>
+            </item>
+            <item resp="#KH">
+              <idno type="TMI">P252.1+KH</idno>
+              <term>P252.1+KH. Heroine and her younger sister.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>They sought for <animal>&#451;h&#257;k&#7865;n</animal>,<note><animal>&#451;haken</animal> resembles "<plant>rice</plant>" [i.e. "Bushman <plant>rice</plant>"]; its <animal>larvae</animal> are like [those of] "Bushman <plant>rice</plant>". <animal>&#451;h&#257;k&#7865;n</animal> is a thing to eat; there is nothing as nice as it is, when it is fresh.</note> they were digging out <animal>&#451;h&#257;k&#7865;n</animal>. They went about, sifting <animal>&#451;h&#257;k&#7865;n</animal>, while they were digging out <animal>&#451;h&#257;k&#7865;n</animal>. And, when the <animal>larvae</animal> of the <animal>&#451;h&#257;k&#7865;n</animal> were intending to go in [to the earth which was underneath the little hillock], they collected together, they sifted the <animal>larvae</animal> of the <animal>&#451;h&#257;k&#7865;n</animal> on the hunting ground.</p>
+      <p>And the hyena<note>A female <animal>hyeana</animal>.</note> took the blackened perspiration of her armpits, she put it into the <animal>&#451;h&#257;k&#7865;n</animal>. And they<note>The <animal>hyenas</animal> [it] was, with the <animal>jackals</animal>, the <color>blue</color> <animal>cranes</animal> [and] the <color>black</color> crows.</note> gave to <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> of the <animal>&#451;h&#225;g&#7865;n</animal>. And <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> exclaimed, she said to her younger sister: "Thou shalt leave this <animal>&#451;h&#257;k&#7865;n</animal> alone; I will be the one who eats it. For, thou art the one who shalt take care of the child.<note>It was <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>'s child. <persName>The Dawn's-Heart</persName> was the one who buried the child away from his wife, under the <plant>&#451;h&#7909;&#297;&#331;</plant> [a plant with a handsome <color>green</color> top, and little bulbous roots at the end of fibres in the ground. The roots are eaten by the Bushmen raw, and also roasted and made into meal, which is said to be excellent, &#448;h&#225;&#331;&#450;kass&#700;&#333; thinks that the flower is <color>red</color>; but has not seen the plant since he was a child].</note> For, this <animal>&#451;h&#257;k&#7865;n</animal>, its smell is not nice."</p>
+      <p>Therefore, as <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> sat, eating the <animal>&#451;h&#257;k&#7865;n</animal>, <pb n="87"/>the ornaments<note>Bracelet, anklet, leglet.</note> [i.e., earrings, bracelets, leglets, anklets] of themselves came off.<note>[They] came off, they sat down upon the ground.</note> The kaross [skin cloak] also unloosened [itself], the kaross also sat down. The skin petticoat also unloosened [itself], the skin petticoat sat down. The shoes also unloosened [themselves]. Therefore, she sprang up,<note>She felt that she became a <animal>beast</animal> of prey.</note> she in this manner trotted away. Her younger sister, shrieking, followed her.<note>Because she wanted to run to catch hold of her elder sister.</note> She [<persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>] went; she went into the <plant>reeds</plant>. She went to sit in the <plant>reeds</plant>.</p>
+      <p>Her younger sister exclaimed: "O <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>! wilt thou not first allow the child to suck?" And she [the elder sister] said: "Thou shalt bring it, that it may suck; I would altogether talk to thee, while my thinking-strings still stand." Therefore, she spoke., she said to her younger sister: "Thou must be quickly bringing the child, while I am still conscious; and thou shalt bring the child to-morrow morning."</p>
+      <p>Her younger sister returned home, also the <animal>hyena</animal>, when the <animal>hyena</animal> had put on the ornaments; they returned home, while <persName>the Dawn's-Heart</persName> and the rest<note>I think that he was with other people. I think that they seem to have been the <animal>jackals</animal> 'husbands, and the <animal>quaggas</animal>, and the <animal>wildebeests</animal> with the <animal>ostriches</animal>.</note> were [still] out hunting. <persName>The Dawn's-Heart</persName> returned home, as the child cried there, while his younger sister-in-law was the one who had the child.</p>
+      <p>He came, he exclaimed: "Why is it, that <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> is not attending to the child, while the child cries there?" The <animal>hyena</animal> did not speak.<pb n="89"/><persName>&#448;&#967;&#233;-dd&#233;-&#164;&#243;&#235;</persName><note>The name of the younger sister of <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> was <persName>&#448;&#967;&#233;-dd&#233;-&#164;&#243;&#235;</persName>. She was a &#451;&#967;w&#233;-&#449;n&#259;-ss&#8217;&#335;-&#451;k&#7909;i [one of the early race].</note> was soothing the child. She waited; her elder sister's husband went to hunt; and she took the child upon her back. She went to her elder sister; she walked, arriving at the <plant>reeds</plant>. She exclaimed: "O <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>! let the child suck." And her elder sister sprang out of the <plant>reeds</plant>; her elder sister, in this manner, came running; her elder sister caught hold of her, she turning [her body on one side] gave her elder sister the child. She said: "I am here" And her elder sister allowed the child to suck. She said: "Thou must quickly bring the child [again], while I am still conscious; for, I feel as if my thinking-strings would fall down." And her younger sister took the child upon her back, she returned home; while her elder sister went into the reeds.</p>
+      <p>And, near sunset, she went to her elder sister; while she felt that her elder sister was the one who had thus spoken to her about it; her elder sister said: "Thou must quickly bring the child, for, I feel. as if I should forget you, while I feel that I do not know." And, her younger sister took the child near sunset, she went to her elder sister, she stood. She exclaimed: "O <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>! let the child suck." Her elder sister sprang out of the <plant>reeds</plant>; she ran up to her younger sister. And she caught hold of her younger sister. Her younger sister said: "I am here! I am here!" She allowed the child to suck. She said: "Thou must quickly come [again]; for, I feel as if I should forget you, [as if] I should not any longer think of you." Her <pb n="91"/>younger sister returned home, while she went into the reeds.</p>
+      <p>Her younger sister, on the morrow, she went to her elder sister; she walked, coming, coming, coming, coming, she stood. And she exclaimed: "O <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>!" let the child suck. "And her elder sister sprang out of the <plant>reeds</plant>, she ran up to her younger sister, she caught hold of her younger sister. Her younger sister, springing aside, gave her the child. Her younger sister said:" I am here! "Therefore, she [the elder sister] spoke, she said to her younger sister:" Thou must not continue to come to me; for, I do not any longer feel that I know." And her younger sister returned home.</p>
+      <p>And they went to make a &#451;k&#249;<note>This is a dance or game of the Bushmen, which &#448;h&#225;&#331;&#450;kass&#700;&#333; has not himself seen, but has heard of from T&#7909;&#227;i-a&#331; and &#450;kam&#781;m&#236;, two of Tsatsi's wives. They used to say that their fathers made a &#451;k&#249; [and] played. Their mothers were those who clapped their hands, clapped their hands for the men; the men nodded their heads.</note> there [at the house]. They played. The men played with them, while the women were those who clapped their hands, while the men were those who nodded their heads, while the women were those who clapped their hands for them. Then, <persName>the Dawn's-Heart</persName>, nodding his head, went up to his younger sister-in-law, he laid his hand on his younger sister-in-law [on her shoulder]. Then his younger sister-in-law swerved aside. She exclaimed: "Leave me alone! your wives, the old she-<animal>hyenas</animal>,<note>She said &#451;gw&#227;i &#448;&#233;-t&#225;ra, a from anger; anger was that on account of which she said &#451;gw&#227;i &#448;&#233;-t&#225;ra.</note> may clap their hands for you."</p>
+      <p>Then <persName>the Dawn's-Heart</persName> ran to the <animal>hyena</animal>; he took <pb n="93"/>aim [with his assegai],<note>[He] brought himself to a stand [in order to take aim]</note> he pierced the place where the <animal>hyena</animal> had been sitting,<note>She sat in the house, being afraid. Therefore, she took off the bracelets from her wrists, while she desired that she might sit quietly; while she felt that she left the things. She suspected that the people were making a &#451;k&#249; [on her account], therefore she did not go to the &#451;k&#249;, while she felt that she had been wearing <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>&#8217;s things.</note> while the <animal>hyena</animal> sprang out, she trod, burning herself in the fire, while she sprang away; while the ornaments remained at the place where she had been sitting, and where she had been wearing them. She sprang away, while they remained.</p>
+      <p>And <persName>the Dawn's-Heart</persName> scolded his younger sister-in-law, why was it that his younger sister-in-law had not quickly told him about it; she had concealed from him about the <animal>hyena</animal>; as if this was not why he had seen that the woman had been sitting with her back towards him, she had not been sitting with her face towards him. She had been sitting with her back towards him; the [i.e. his] wife had been sitting with her face towards him. A different person, she must be the one who was here, she had sat with her back towards him.<note>Because he had married the <animal>hyena</animal>, because he thought that it was <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>.</note> And he said that his younger sister-in-law should quickly explain to him about the place where the [his] wife seemed to be. His younger sister-in-law said: "Thou shalt wait, that the place may become <color>light</color><note>Because it was night.</note>; for, thou dost seem to think that [thy] wife is still like that which she used to be. We will go to [thy] wife, when the sun has come out."</p>
+      <p><pb n="95"/>Therefore, on the morrow, he said that his younger sister-in-law must quickly allow them to go. Then his younger sister-in-law said: "We ought to drive, taking <animal>goats</animal>, that we may take <animal>goats</animal> to [thy] wife." Therefore, they drove, taking <animal>goats</animal>. They drove along <animal>goats</animal>, drove along <animal>goats</animal>; they took the <animal>goats</animal> to the <plant>reeds</plant>. And they drove the <animal>goats</animal> to a stand.<note>They left off [driving], in order that the <animal>goats</animal> might stand still.</note></p>
+      <p><persName>&#448;&#967;&#233;-dd&#233;-&#164;&#243;&#235;</persName><note>&#448;&#967;&#233; is a young girl. What the whole of &#448;&#967;&#233;-dd&#233;-&#164;&#243;&#235;'s name means, the narrator does not know.</note> directed her elder sister's husband, she said that her elder sister's husband should stand behind her back, the other people must stand behind her elder sister's husband's back, while she must be the one to stand beside the <animal>goats</animal>. Then she exclaimed: "O <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName>! let the child suck."</p>
+      <p>Then her elder sister sprang out of the <plant>reeds</plant>; she, in this manner, she running came. She, when she had run to her younger sister, she perceived the <animal>goats</animal>, she turned aside to the <animal>goats</animal>. She caught hold of a <animal>goat</animal>. <persName>The Dawn's-Heart</persName> caught hold of [his] wife, while the wife caught hold of the <animal>goat</animal>; while his younger sister-in-law, <persName>&#448;&#967;&#233;-dd&#233;-&#164;&#243;&#235;</persName>, also took hold of the wife. All the people altogether caught hold of her. Other people were catching hold of the <animal>goats</animal>; they cut the <animal>goats</animal> open, they took out the contents of the stomach, they anointed <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> with the contents of the stomachs. They, taking hold, rubbed off the hair<note>The hair, with which she had become a lynx.</note> [from her skin]. Therefore, when she sat down, she said: "Ye must, pulling, leave the hair on the tips of my ears; for, in that <pb n="97"/>manner I shall come to hear; for, I do not feel as if I should hear."<note>She said that she should not hear, if all the hair were off her ears. Therefore, her husband should leave the other hair on her ears.</note> Therefore, the man [her husband], pulling off, left the hair on the tips of her ears, that hair which is thus<note>Holding up two fingers.</note> on the tips of the ears, standing on the top of them.</p>
+      <p>Therefore, <persName>the Dawn's-Heart</persName> used, when he was returning home,<note>He always [henceforth] did thus, because the <animal>hyenas</animal> had made his heart angry, they had poisoned [his] wife.</note> to put an arrow on the bow, he walked, sticking the end of his assegai into the ground, as he returning came. His eyes were large, as he came walking along; they resembled fires. The people were afraid of him as he came, on account of his eyes; while they felt that his eyes resembled fires, as he came walking along. The <animal>jackals</animal> were afraid of him, as he returning came.<note>In order to throw more light on that portion of the story of <persName>&#451;k&#243;-g&#451;n&#7909;i&#331;-t&#225;ra</persName> which is contained in the version here given, the following extract is supplied from page 11 of Dr. Bleek's "Second Report concerning Bushman Researches", printed at Cape Town, in 1875: | "<persName>The "Dawn's-Heart" (the star Jupiter)</persName> has a daughter, who is identified with some neighbouring star preceding Jupiter (at the time when we asked, it was Regulus or Alpha Leonis). Her name is <persName>the Dawn's-Heart-child</persName>," and her relation to her father is somewhat mysterious. He calls her "my heart," he swallows her, then walks alone as the only Dawn's-Heart Star, and, when she is grown up, he spits her out again. She then herself becomes another (female) Dawn's-Heart, and spits out another Dawn's-Heart-child, which follows the male and female Dawn's-Heart. The mother of the latter, the first-mentioned <persName>Dawn's-Heart</persName>'s wife, was the <animal>Lynx</animal>, who was then a beautiful woman, with a younger sister who carried her digging-stick after her. <persName>The Dawn's-Heart</persName> hid his child under the leaves of an edible root (&#451;k&#250;&#239;ssi), where he thought that his wife would come and find it. Other <animal>animals</animal> and <animal>birds</animal> arrived first, and each proposed herself to <persName>the Dawn's-Heart-child</persName> as its mother; but they <pb n="98"/>were mocked at by the child, until at last it recognized its own mother. Among the insulted <animal>animals</animal> were the <animal>Jackal</animal> and the <animal>Hyena</animal>, who, to revenge themselves, bewitched the mother (<animal>Lynx</animal>) with some poisoned "Bushman <plant>rice</plant>" (so-called "<animal>ants</animal>' eggs"), by which means she was transformed into a <animal>lioness</animal>. ln the dark, the <animal>Hyena</animal> tried to take her (the <animal>Lynx</animal>'s) place in the hut, on the return of <persName>the Dawn's-Heart</persName>; but the imposture was made known to him by his sister-in-law. <persName>The Dawn's-Heart</persName> tried to stab the <animal>Hyena</animal> with his assegai, but missed her. She fled, putting her foot into the fire, and burning it severely. The bewitched wife was enticed out of the <plant>reeds</plant> by her younger sister, and then caught by her brothers, who pulled off the <animal>lion</animal> skin, so that she became a fair woman again. But, in consequence of having been bewitched by "Bushman <plant>rice</plant>," she could no longer eat that, and was changed into a <animal>lynx</animal> who ate meat. - This myth, which contains many minor, and some beautiful incidents, is partly given in the form of a narrative, and partly in discourses addressed by <persName>the Dawn's-Heart</persName> to his daughter, as well as in speeches made by the <animal>Hyena</animal> and her parents, after her flight home."</note></p>
+    </body>
+  </text>
+</TEI>
