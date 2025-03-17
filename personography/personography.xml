@@ -1,3 +1,4 @@
+<?xml version='1.0' encoding='UTF-8'?>
 <!-- this file is a work in progress -->
 <!-- it is an example of what a future personography for the FFDB might look like -->
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:f="http://www.filemaker.com/fmpxmlresult" xmlns:marcxml="http://www.loc.gov/MARC21/slim" xmlns:tb="http://www.wwp.brown.edu/ns/textbase/1.0" xmlns:wwp="http://www.wwp.brown.edu/ns/1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
@@ -203,80 +204,130 @@
         <idno type="VIAF">20927900</idno>
         <idno type="Wikidata">Q2578620</idno>
       </person>
-      <person n="18" xml:id="unidentified0" role="informant">
+      <person n="18" xml:id="Lipkind6631" role="collector">
+        <persName>
+          <surname>Lipkind</surname>
+          <forename>William</forename>
+        </persName>
+        <birth when="1904">1904</birth>
+        <death when="1974">1974</death>
+        <idno type="VIAF">30784950</idno>
+        <idno type="Wikidata">Q8014599</idno>
+      </person>
+      <person n="19" xml:id="Salzmann9253" role="collector">
+        <persName>
+          <surname>Salzmann</surname>
+          <forename>Zdenek</forename>
+        </persName>
+        <birth when="1925">1925</birth>
+        <death when="2021">2021</death>
+        <idno type="VIAF">29985</idno>
+        <idno type="Wikidata">Q3490014</idno>
+      </person>
+      <person n="20" xml:id="Moser11134" role="collector">
+        <persName>
+          <surname>Moser</surname>
+          <forename>Mary</forename>
+          <forename full="init">B.</forename>
+        </persName>
+        <note type="notes">wife of Edward W. Moser (cf. https://mexico.sil.org/language_culture/serian/the-seris-anthropology)</note>
+      </person>
+      <person n="21" xml:id="Moser11151" role="collector">
+        <persName>
+          <surname>Moser</surname>
+          <forename>Edward</forename>
+          <forename full="init">W.</forename>
+        </persName>
+        <birth when="1924">1924</birth>
+        <death when="1976">1976</death>
+        <idno type="VIAF">6927171191149258030006</idno>
+        <idno type="Wikidata">Q5345750</idno>
+      </person>
+      <person n="22" xml:id="Lehtisalo11232" role="collector">
+        <persName>
+          <surname>Lehtisalo</surname>
+          <forename>Toivo</forename>
+          <forename>Vilho</forename>
+        </persName>
+        <birth when="1887">1887</birth>
+        <death when="1962">1962</death>
+        <idno type="VIAF">115136069</idno>
+        <idno type="Wikidata">Q18633258</idno>
+      </person>
+      <person n="23" xml:id="unidentified0" role="narrator">
         <persName>
           <name type="main">unidentified</name>
         </persName>
         <note type="notes">The informant is either unidentified or identified so generally, e.g., "a Warao," that no meaningful features (name, age, gender, lifestyle, upbringing, mental faculties) could be determined.</note>
       </person>
-      <person n="19" xml:id="Hankasso9" role="informant">
+      <person n="24" xml:id="Hankasso9" role="narrator">
         <persName>
-          <name type="main">&#448;Han&#450;kass&#700;o</name>
+          <name type="main">ǀHanǂkassʼo</name>
           <name type="alt">Klein Jantje</name>
         </persName>
         <sex value="M">male</sex>
-        <note type="notes">middle-aged man from central Cape Colony; son-in-law of &#449;Kabbo</note>
+        <note type="notes">middle-aged man from central Cape Colony; son-in-law of ǁKabbo</note>
       </person>
-      <person n="20" xml:id="T&#601;bona12" role="informant">
+      <person n="25" xml:id="Təbona12" role="narrator">
         <persName>
-          <name type="main">&#450;T&#601;bo n&#451;a</name>
+          <name type="main">ǂTəbo nǃa</name>
         </persName>
-        <note type="notes">an old &#451;Kung (?) of Ghanzi</note>
+        <note type="notes">an old ǃKung (?) of Ghanzi</note>
       </person>
-      <person n="21" xml:id="Kanana38" role="informant">
+      <person n="26" xml:id="Kanana38" role="narrator">
         <persName>
-          <name type="main">Kan&#449;a n&#451;a</name>
-          <name type="alt">Kashe n&#451;a</name>
-          <name type="alt">K&#227;&#449;ka n&#451;a (?)</name>
+          <name type="main">Kanǁa nǃa</name>
+          <name type="alt">Kashe nǃa</name>
+          <name type="alt">Kãǁka nǃa (?)</name>
         </persName>
         <sex value="M">male</sex>
-        <note type="notes">an old &#451;Kung of Kauri, husband of &#451;Kun&#448;obe n&#451;a</note>
+        <note type="notes">an old ǃKung of Kauri, husband of ǃKunǀobe nǃa</note>
       </person>
-      <person n="22" xml:id="Kweitentaken74" role="informant">
+      <person n="27" xml:id="Kweitentaken74" role="narrator">
         <persName>
-          <name type="main">&#451;Kweiten-ta-&#449;ken</name>
+          <name type="main">ǃKweiten-ta-ǁken</name>
           <name type="alt">Rachel</name>
         </persName>
         <sex value="F">female</sex>
-        <note type="notes">middle-aged woman from Varskans, Cape Colony; sister of Di&#228;&#451;kwain, wife of &#450;Kasin, mother of 4 children</note>
+        <note type="notes">middle-aged woman from Varskans, Cape Colony; sister of Diäǃkwain, wife of ǂKasin, mother of 4 children</note>
         <idno type="Wikidata">Q98380221</idno>
-        <ref>https://en.wikipedia.org/wiki/&#451;Kweiten-ta-&#449;Ken</ref>
+        <ref>https://en.wikipedia.org/wiki/ǃKweiten-ta-ǁKen</ref>
       </person>
-      <person n="23" xml:id="Di&#228;kwain119" role="informant">
+      <person n="28" xml:id="Diäkwain119" role="narrator">
         <persName>
-          <name type="main">Di&#228;&#451;kwain</name>
+          <name type="main">Diäǃkwain</name>
           <name type="alt">David Husar (or Hesar or Hoezar)</name>
         </persName>
         <sex value="M">male</sex>
-        <note type="notes">middle-aged man from Varskans, Cape Colony; brother of &#451;Kweiten-ta-&#449;ken</note>
+        <note type="notes">middle-aged man from Varskans, Cape Colony; brother of ǃKweiten-ta-ǁken</note>
       </person>
-      <person n="24" xml:id="Kunobena121" role="informant">
+      <person n="29" xml:id="Kunobena121" role="narrator">
         <persName>
-          <name type="main">&#451;Kun&#448;obe n&#451;a</name>
-          <name type="alt">&#451;Unn&#448;obe N&#451;a&#700;an</name>
+          <name type="main">ǃKunǀobe nǃa</name>
+          <name type="alt">ǃUnnǀobe Nǃaʼan</name>
         </persName>
         <sex value="F">female</sex>
-        <note type="notes">an old &#451;Kung of Kauri, wife of Kan&#449;a n&#451;a</note>
+        <note type="notes">an old ǃKung of Kauri, wife of Kanǁa nǃa</note>
       </person>
-      <person n="25" xml:id="UkxaNaan122" role="informant">
+      <person n="30" xml:id="UkxaNaan122" role="narrator">
         <persName>
-          <name type="main">&#449;Ukxa N&#451;a&#700;an</name>
-          <name type="alt">&#448;Ukxa N&#451;a&#700;an</name>
-          <name type="alt">&#448;ukxa n&#451;a</name>
+          <name type="main">ǁUkxa Nǃaʼan</name>
+          <name type="alt">ǀUkxa Nǃaʼan</name>
+          <name type="alt">ǀukxa nǃa</name>
         </persName>
-        <note type="notes">an old &#451;Kung of Kauri (?) / Dobe (?)</note>
+        <note type="notes">an old ǃKung of Kauri (?) / Dobe (?)</note>
       </person>
-      <person n="26" xml:id="Tshuona123" role="informant">
+      <person n="31" xml:id="Tshuona123" role="narrator">
         <persName>
-          <name type="main">Tshu&#451;o n&#451;a</name>
-          <name type="alt">Tci&#451;xo N&#451;a&#700;an</name>
+          <name type="main">Tshuǃo nǃa</name>
+          <name type="alt">Tciǃxo Nǃaʼan</name>
         </persName>
-        <note type="notes">an old &#451;Kung (?) of &#451;Goshe</note>
+        <note type="notes">an old ǃKung (?) of ǃGoshe</note>
       </person>
-      <person n="27" xml:id="Kabbo153" role="informant">
+      <person n="32" xml:id="Kabbo153" role="narrator">
         <persName>
-          <name type="main">&#449;Kabbo</name>
-          <name type="alt">&#448;Uhi-ddoro ('smoking tinderbox')</name>
+          <name type="main">ǁKabbo</name>
+          <name type="alt">ǀUhi-ddoro ('smoking tinderbox')</name>
           <name type="alt">Jantje</name>
         </persName>
         <sex value="M">male</sex>
@@ -286,69 +337,107 @@
         <idno type="Wikidata">Q107286681</idno>
         <ref>https://en.wikipedia.org/wiki/Kabbo</ref>
       </person>
-      <person n="28" xml:id="XukxaNaan159" role="informant">
+      <person n="33" xml:id="XukxaNaan159" role="narrator">
         <persName>
-          <name type="main">&#449;Xukxa N&#451;a&#700;an</name>
-          <name type="alt">&#449;oka n&#451;a</name>
-          <name type="alt">&#448;Xoan N&#451;a&#700;an</name>
+          <name type="main">ǁXukxa Nǃaʼan</name>
+          <name type="alt">ǁoka nǃa</name>
+          <name type="alt">ǀXoan Nǃaʼan</name>
         </persName>
         <sex value="F">female</sex>
-        <note type="notes">a &#451;Kung of Dobe</note>
+        <note type="notes">a ǃKung of Dobe</note>
       </person>
-      <person n="29" xml:id="AsaNaan160" role="informant">
+      <person n="34" xml:id="AsaNaan160" role="narrator">
         <persName>
-          <name type="main">&#448;Asa N&#451;a&#700;an</name>
-          <name type="alt">&#448;asa n&#451;a</name>
+          <name type="main">ǀAsa Nǃaʼan</name>
+          <name type="alt">ǀasa nǃa</name>
         </persName>
-        <note type="notes">an old &#451;Kung of Kauri, repeating tales origially told by &#448;&#750;ai&#448;&#750;ai</note>
+        <note type="notes">an old ǃKung of Kauri, repeating tales origially told by ǀˮaiǀˮai</note>
       </person>
-      <person n="30" xml:id="Wanuk&#7512;1000" role="informant">
+      <person n="35" xml:id="Wanukᵘ1000" role="narrator">
         <persName>
-          <name type="main">Wa&#700;nuk&#7512;</name>
-        </persName>
-        <sex value="M">male</sex>
-      </person>
-      <person n="31" xml:id="Mal&#7431;d1001" role="informant">
-        <persName>
-          <name type="main">Mal&#7431;&#700;d</name>
+          <name type="main">Waʼnukᵘ</name>
         </persName>
         <sex value="M">male</sex>
-        <note type="notes">a Kw&#257;&#700;g&#8231;&#363;&#322; (Kwakiutl tribe)</note>
       </person>
-      <person n="32" xml:id="Haia&#322;k&#8231;&#238;ngam&#275;&#7499;1002" role="informant">
+      <person n="36" xml:id="Malᴇd1001" role="narrator">
         <persName>
-          <name type="main">Hai&#700;a&#322;k&#8231;&#238;ngam&#275;&#7499;</name>
+          <name type="main">Malᴇʼd</name>
         </persName>
         <sex value="M">male</sex>
-        <note type="notes">a D&#7431;na&#700;x&#8231;da&#7499;x  (Kwakiutl tribe)</note>
+        <note type="notes">a Kwāʼg‧ūł (Kwakiutl tribe)</note>
       </person>
-      <person n="33" xml:id="CharleyGreen4760" role="informant">
+      <person n="37" xml:id="Haiałk‧îngamēᵋ1002" role="narrator">
+        <persName>
+          <name type="main">Haiʼałk‧îngamēᵋ</name>
+        </persName>
+        <sex value="M">male</sex>
+        <note type="notes">a Dᴇnaʼx‧daᵋx  (Kwakiutl tribe)</note>
+      </person>
+      <person n="38" xml:id="CharleyGreen4760" role="narrator">
         <persName>
           <name type="main">Charley Green</name>
         </persName>
         <sex value="M">male</sex>
         <note type="notes">an Achomawi</note>
       </person>
-      <person n="34" xml:id="OldWool4761" role="informant">
+      <person n="39" xml:id="OldWool4761" role="narrator">
         <persName>
           <name type="main">"Old Wool"</name>
         </persName>
         <sex value="M">male</sex>
         <note type="notes">an Achomawi</note>
       </person>
-      <person n="35" xml:id="CharleySnook4762" role="informant">
+      <person n="40" xml:id="CharleySnook4762" role="narrator">
         <persName>
           <name type="main">Charley Snook</name>
         </persName>
         <sex value="M">male</sex>
         <note type="notes">an Atsugewi</note>
       </person>
-      <person n="36" xml:id="ThomasWilliams4900" role="informant">
+      <person n="41" xml:id="ThomasWilliams4900" role="narrator">
         <persName>
           <name type="main">Thomas Williams</name>
         </persName>
         <sex value="M">male</sex>
         <note type="notes">a Central Sierra Miwok of Jamestown, a former utentbe (travelling myth teller); cf. Gifford 1917, p. 284 (photograph ibid., plate 6)</note>
+      </person>
+      <person n="42" xml:id="JohnBGoggles16021" role="narrator">
+        <persName>
+          <name type="main">John B. Goggles</name>
+        </persName>
+        <sex value="M">male</sex>
+        <birth when="1883">1883</birth>
+        <death when="1952">1952</death>
+        <note type="notes">a Northern Arapaho of Ethete, Wind River Reservation, Wyoming (cf. Cowell 2014, p. 10)</note>
+      </person>
+      <person n="43" xml:id="RobertoHerraraT18783" role="narrator">
+        <persName>
+          <name type="main">Roberto Herrara T.</name>
+          <name type="alt">Cmiique Roberto</name>
+          <name type="alt">Roberto Thomson</name>
+        </persName>
+        <sex value="M">male</sex>
+        <birth when="1916">1916</birth>
+        <death when="1988">1988</death>
+        <note type="notes">a Seri of El Desemboque (Haxöl Iihom), Sonora (cf. Marlett 2022, p. 32)</note>
+      </person>
+      <person n="44" xml:id="JesúsMorales18801" role="narrator">
+        <persName>
+          <name type="main">Jesús Morales</name>
+        </persName>
+        <sex value="M">male</sex>
+        <birth when="1904">1904</birth>
+        <death when="1975">1975</death>
+        <note type="notes">a Seri storyteller of El Desemboque (Haxöl Iihom), Sonora (cf. Marlett 2022, p. 31)</note>
+      </person>
+      <person n="45" xml:id="ChicoRomero18822" role="narrator">
+        <persName>
+          <name type="main">Chico Romero</name>
+        </persName>
+        <sex value="M">male</sex>
+        <birth when="c. 1886">c. 1886</birth>
+        <death when="1974">1974</death>
+        <note type="notes">a Seri leader of El Desemboque (Haxöl Iihom), Sonora (cf. Marlett 2022, p. 31)</note>
       </person>
     </body>
   </text>
