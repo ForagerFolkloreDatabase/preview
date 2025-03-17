@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Story of the Leopard Tortoise</title>
         <editor ref="p:Bleek79" role="collector">Wilhelm Heinrich Immanuel Bleek</editor>
-        <editor ref="p:Kweitentaken74" role="informant">&#451;Kweiten-ta-&#449;ken</editor>
+        <editor ref="p:Kweitentaken74" role="narrator">ǃKweiten-ta-ǁken</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,9 +24,9 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NAF000358</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Bleek, Wilhelm H. I./Lloyd, Lucy C. (1911): Specimens of Bushman Folklore. London: Allen. Quot. pp. 36-41.</bibl>
@@ -36,32 +35,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="15">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="15">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,18 +99,14 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
     <profileDesc>
       <settingDesc>
         <setting>
-          <name type="culture" key="CAF00214">&#448;Xam</name>
+          <name type="culture" key="CAF00214">ǀXam</name>
           <date when="1875" type="recorded">Recorded in 1875.</date>
         </setting>
       </settingDesc>
@@ -137,15 +130,15 @@
   <text>
     <body>
       <p>
-        <note>The story was considered by Dr. Bleek to be a variation of a myth (L II.5. 565 - 624, 8. 811 - 882) describing how the <animal>Mantis</animal> is tricked by the <animal>Great Tortoise</animal>.</note>
+        <note>The story was considered by Dr. Bleek to be a variation of a myth (L II.5. 565 - 624, 8. 811 - 882) describing how the <rs type="animal">Mantis</rs> is tricked by the <rs type="animal">Great Tortoise</rs>.</note>
       </p>
-      <p>The people had gone hunting: she [the <animal latin="Testudo pardalis">Leopard Tortoise</animal>] was ill; and she perceived a man<note>The narrator explains that this misfortune happened to men of the Early Race.</note> who came up to her hut; he had been hunting around.</p>
+      <p>The people had gone hunting: she [the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs>] was ill; and she perceived a man<note>The narrator explains that this misfortune happened to men of the Early Race.</note> who came up to her hut; he had been hunting around.</p>
       <p>She asked the man to rub her neck a little with fat for her; for, it ached. The man rubbed it with fat for her. And she altogether held the man firmly with it.<note>By drawing in her neck.</note> The man's hands altogether decayed away in it.<note>The flesh decayed away and came off, as well as the skin and nails, leaving, the narrator says, merely the bones.</note></p>
       <p>Again, she espied another man, who came hunting. And she also spoke, she said: "Rub me with fat a little."</p>
-      <p>And the man whose hands had decayed away in <pb n="39"/>her neck, he was hiding his hands, <note>He sat, putting his hands behind him, when the other man came, taking them out from the <animal latin="Testudo pardalis">Leopard Tortoise</animal>'s neck.</note> so that the other man should not perceive them, namely, that they had decayed away in it. And he said: "Yes; O my mate! rub our elder sister a little with fat; for, the moon has been cut,<note>The moon 'died', and another moon came, while she still lay ill, the narrator explains. "Whilst in the preceding myths of the <animal>Mantis</animal>, the Moon, according to its origin, is only a piece of leather (a shoe of the Mantis), - in Bushman astrological mythology the Moon is looked upon as a man who incurs the wrath of the Sun, and is consequently pierced by the knife (i.e. rays) of the latter. This process is repeated until almost the whole of the Moon is cut away, and only one little piece left; which the Moon piteously implores the Sun to spare for his (the Moon's) children. (As mentioned above, the Moon is in Bushman mythology a male being.) From this little piece, the Moon gradually grows again until it becomes a full moon, when the Sun's stabbing and cutting processes recommence." ("A Brief Account of Bushman Folk-lore and other Texts." By W. H. I. Bleek, Ph.D. Cape Town, 1875. p. 9, &#167; 16.)</note> while our elder sister lies ill. Thou shalt also rub our elder sister with fat." He was hiding his hands, so that the other one should not perceive them.</p>
-      <p>The <animal latin="Testudo pardalis">Leopard Tortoise</animal> said: "Rubbing with fat, put [thy hands] into my neck." And he, rubbing with fat, put in his hands upon the <animal latin="Testudo pardalis">Leopard Tortoise</animal>'s neck; and the <animal latin="Testudo pardalis">Leopard Tortoise</animal> drew in her head upon her neck; while his hands were altogether in her neck; and he dashed the <animal latin="Testudo pardalis">Leopard Tortoise</animal> upon the ground, on account of it; while he desired, he thought, that he should, by dashing [it] upon the ground, break the <animal latin="Testudo pardalis">Leopard Tortoise</animal>. And the <animal latin="Testudo pardalis">Leopard Tortoise</animal> held him fast.</p>
-      <p>The other one had taken out his hands [from behind his back]; and he exclaimed: "Feel [thou] that which I did also feel!" and he showed the other one his hands; and the other one's hands were altogether inside the <animal latin="Testudo pardalis">Leopard Tortoise</animal>'s neck. And he arose, he returned home. And the other one was dashing the <animal latin="Testudo pardalis">Leopard Tortoise</animal> upon the ground; while he returning went; and he said that the other one also felt what he had felt. A pleasant thing <pb n="41"/>[it] was not, in which he had been! He yonder returning went; [he] arrived at home.</p>
-      <p>The people exclaimed: "Where hast thou been?" And he, answering, said that the <animal latin="Testudo pardalis">Leopard Tortoise</animal> had been the one in whose neck his hands had been; that was why he had not returned home. The people said: "Art thou a fool? Did not [thy] parents instruct thee? The <animal latin="Testudo pardalis">Leopard Tortoise</animal> always seems as if she would die; while she is deceiving us."</p>
+      <p>And the man whose hands had decayed away in <pb n="39"/>her neck, he was hiding his hands, <note>He sat, putting his hands behind him, when the other man came, taking them out from the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs>'s neck.</note> so that the other man should not perceive them, namely, that they had decayed away in it. And he said: "Yes; O my mate! rub our elder sister a little with fat; for, the moon has been cut,<note>The moon 'died', and another moon came, while she still lay ill, the narrator explains. "Whilst in the preceding myths of the <rs type="animal">Mantis</rs>, the Moon, according to its origin, is only a piece of leather (a shoe of the Mantis), - in Bushman astrological mythology the Moon is looked upon as a man who incurs the wrath of the Sun, and is consequently pierced by the knife (i.e. rays) of the latter. This process is repeated until almost the whole of the Moon is cut away, and only one little piece left; which the Moon piteously implores the Sun to spare for his (the Moon's) children. (As mentioned above, the Moon is in Bushman mythology a male being.) From this little piece, the Moon gradually grows again until it becomes a full moon, when the Sun's stabbing and cutting processes recommence." ("A Brief Account of Bushman Folk-lore and other Texts." By W. H. I. Bleek, Ph.D. Cape Town, 1875. p. 9, § 16.)</note> while our elder sister lies ill. Thou shalt also rub our elder sister with fat." He was hiding his hands, so that the other one should not perceive them.</p>
+      <p>The <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> said: "Rubbing with fat, put [thy hands] into my neck." And he, rubbing with fat, put in his hands upon the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs>'s neck; and the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> drew in her head upon her neck; while his hands were altogether in her neck; and he dashed the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> upon the ground, on account of it; while he desired, he thought, that he should, by dashing [it] upon the ground, break the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs>. And the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> held him fast.</p>
+      <p>The other one had taken out his hands [from behind his back]; and he exclaimed: "Feel [thou] that which I did also feel!" and he showed the other one his hands; and the other one's hands were altogether inside the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs>'s neck. And he arose, he returned home. And the other one was dashing the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> upon the ground; while he returning went; and he said that the other one also felt what he had felt. A pleasant thing <pb n="41"/>[it] was not, in which he had been! He yonder returning went; [he] arrived at home.</p>
+      <p>The people exclaimed: "Where hast thou been?" And he, answering, said that the <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> had been the one in whose neck his hands had been; that was why he had not returned home. The people said: "Art thou a fool? Did not [thy] parents instruct thee? The <rs type="animal" key="Testudo pardalis">Leopard Tortoise</rs> always seems as if she would die; while she is deceiving us."</p>
     </body>
   </text>
 </TEI>

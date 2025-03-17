@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Taʼ Tahala or the Man with the Sharp Penis</title>
+        <editor ref="p:Howell48" role="collector">Signe Howell</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="16">About 16 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NEE023353</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Howell, Signe (1982): Chewong Myths and Legends. Kuala Lumpur: Art Printing Works (The Malaysian Branch of the Royal Asiatic Society Monographs, 11). Quot. pp. 126-128.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="47">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CEE20501">Chewong</name>
+          <date notAfter="1979" notBefore="1977" type="recorded">Recorded sometime between 1977 and 1979.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#FFDB">
+              <idno type="TMI">F547.3.3</idno>
+              <term>F547.3.3. Toothed penis.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p><persName>Taʼ Tahala</persName>, whose nickname was Taʼ Totyor<note>I can provide no gloss for either of these names. <persName>Taʼ Tahala</persName> appears in another myth, "The ghost under the rambutan tree", but the Chewong knew nothing else about him.</note>, wanted a wife. He had, however, a serious problem: his penis was extremely pointed and sharp, and it was covered in thorns. One day he placed some necklaces, bracelets, sarongs, and rings inside a large cane <rs type="animal">fish</rs>-trap and left it on the bank of the river. After a few days a <rs type="animal">bird</rs> spoke to him, "<persName>Taʼ Totyor</persName>, <persName>Taʼ Totyor</persName>, there are dead <rs type="animal">fish</rs> in your trap." <persName>Taʼ Totyor</persName> went to investigate together with his <rs type="animal">dog</rs>. His <rs type="animal">dog</rs> was actually a <rs type="animal">tiger</rs>. Two young girls were inside the trap. They were sisters. He let them out and they went with him to his house, where he cooked <rs type="plant">rice</rs> and gave it to them to eat. In the evening they all slept next to each other and the two girls became his wives, but <persName>Taʼ Totyor</persName> did not have sexual intercourse with them because his penis was covered in sharp thorns. After three or four nights the sisters said to him, "<persName>Taʼ Totyor</persName>?" "What is it?" asked he. "<persName>Taʼ Totyor</persName>, we want to have children," they replied. When he heard this, <persName>Taʼ Totyor</persName> had intercourse with both by placing his penis between their toes.</p>
+      <p>After a while the wives became pregnant in their calves.<note>The abnormal pregnancy reflects the abnormality of the sexual act. In Chewong, the word 'banko' means both calf and to be pregnant, possibly as the result of this (or similar) myth.</note> Several months went by until one day they said, "<persName>Taʼ Totyor</persName>." "What is it?" replied he. "Oh, <persName>Taʼ Totyor</persName>, our children are growing very large and the time for the birth is close. You must go and find some bark so that we can make bark cloth for the baby slings," they told him. The following morning <persName>Taʼ Totyor</persName> got out two large bags of <rs type="plant">rice</rs> and gave them to his wives. Pointing at them he said, "This <rs type="plant">rice</rs> is good and you may eat it. This other bag of <rs type="plant">rice</rs> is poisonous and you must not eat it." Having said this, he and his <rs type="animal">dog</rs> set off.</p>
+      <p>The two wives at home cooked some of the good <rs type="plant">rice</rs> and ate it. Then they decided to pretend to have eaten the poisonous <rs type="plant">rice</rs> and they cooked some of this as well, but left it aside. They went to sleep and pretended that they were dead.</p>
+      <p>Meanwhile, <persName>Taʼ Totyor</persName> and his <rs type="animal">dog</rs> arrived at the <rs type="plant" ref="g:GEE2143.029">poal tree</rs> and was busy cutting at the bark when a <rs type="animal">bird</rs> called out, "<persName>Taʼ Totyor</persName>, <persName>Taʼ Totyor</persName>, the two women at home have died!" "Oh, but I told them that one bag of <rs type="plant">rice</rs> was poisonous," lamented <persName>Taʼ Totyor</persName>. "Come on, Master, let us go home, the two women have died," said the <rs type="animal">dog</rs>. When they reached the house <persName>Taʼ Totyor</persName> looked at his two wives. They were asleep, but he thought that they were dead. He saw the <rs type="plant">rice</rs> in the saucepan and tried a little. It tasted very bitter and he vomited. Then he looked at his wives' swollen calves and said sadly, "Oh, and they were so pregnant, too."</p>
+      <p>"Master, what shall we do with the corpses, shall we bury them?" asked the <pb n="127"/>dog. "No," replied <persName>Taʼ Totyor</persName>, "we will make a <rs type="plant">bamboo</rs> raft and send them down the river to where they came from." So they carried the two bodies and placed them on some leaves on the river bank while they built the raft. When it was ready, <persName>Taʼ Totyor</persName> went up to the two women and looked at them closely. No, they were truly dead, he decided, and he put them on the raft together with all the things he had given them. After a while the girls arrived at their own settlement and they told everybody what they had done. The people there said that they had been very clever.</p>
+      <p>Meanwhile, <persName>Taʼ Totyor</persName> built another large <rs type="animal">fish</rs>-trap and placed sarongs, necklaces, rings and bracelets inside. Two other girls from the settlement wanted the things and they entered the fishtrap. "<persName>Taʼ Totyor</persName>, <persName>Taʼ Totyor</persName>, there are <rs type="animal">fish</rs> corpses in your trap," called out the <rs type="animal">bird</rs>. "Come let us have a look," said <persName>Taʼ Totyor</persName> to his <rs type="animal">dog</rs>. When he saw two girls inside, he asked his <rs type="animal">dog</rs> - which was really a <rs type="animal">tiger</rs> - "What do you say. Is that meat for you?" "No," said the <rs type="animal">dog</rs>, so <persName>Taʼ Totyor</persName> let the girls out and they went home with him. After a few days they said to him, "<persName>Taʼ Totyor</persName>." "What?" he asked. "Tat Totyor, we want to make children," they said, so <persName>Taʼ Totyor</persName> had sexual intercourse with them, but this time he did it properly, in their vaginas. But the thorns on his penis scraped their vaginas, and they cried out with pain. After a while they became pregnant. This time the wives were properly pregnant, in their stomachs. As the time for delivery drew near, they said to their husband, "<persName>Taʼ Totyor</persName>." "What?" asked he. "<persName>Taʼ Totyor</persName>, our babies are getting large. You must go and get some bark so that we can make bark cloth for baby slings." The next morning, <persName>Taʼ Totyor</persName> showed his wives two bags of <rs type="plant">rice</rs>. "This <rs type="plant">rice</rs> is sweet and you may eat it. This <rs type="plant">rice</rs> is poisonous and you must not eat it." Having said this, he and the <rs type="animal">dog</rs> set off to find the bark. The girls cooked the good <rs type="plant">rice</rs> and ate it. Then they cooked the poisonous <rs type="plant">rice</rs> and left it so that <persName>Taʼ Totyor</persName> would think they had eaten it and died. They lay down to sleep.</p>
+      <p><persName>Taʼ Totyor</persName> was busily hacking at the bark of a <rs type="plant" ref="g:GEE2143.029">poal tree</rs>. The <rs type="animal">bird</rs> called out to him, "<persName>Taʼ Totyor</persName>, <persName>Taʼ Totyor</persName>," but he did not hear. The <rs type="animal">bird</rs> called again, this time louder, "<persName>Taʼ Totyor</persName>, <persName>Taʼ Totyor</persName>." "What?" said he. "The two women at home have died," said the <rs type="animal">bird</rs>. "Oh, but I told them which <rs type="plant">rice</rs> was good and which was poisonous!" exclaimed <persName>Taʼ Totyor</persName>. So he and the <rs type="animal">dog</rs> went home. <persName>Taʼ Totyor</persName> was very sad. He looked at his two wives and their big stomachs. "And they were so close to giving birth," he lamented. "Well, what shall we do?" he asked his <rs type="animal">dog</rs> - which was really a <rs type="animal">tiger</rs> - "are they going to be your meat?" "No, no," said the <rs type="animal">dog</rs>, "we'll build a raft as we did the last time."</p>
+      <p>They carried the girls to river, and placed them on some leaves, together with the things that they had been given. <persName>Taʼ Totyor</persName> looked at them. They were truly dead, he decided. "Let us go home," he said to his <rs type="animal">dog</rs>, "we'll leave them here to be eaten by wild <rs type="animal">animals</rs>." When the girls heard this they became frightened and they called out, "No, no, we are not dead. We lied and only pretended to be dead." <persName>Taʼ Totyor</persName> was very upset when he heard this, and he told his <rs type="animal">dog</rs> - <pb n="128"/>which was really a <rs type="animal">tiger</rs> - to bite the girls. "They lied to me," he said. The <rs type="animal">dog</rs> then bit the girls and they died properly. The corpses fell into the river and floated down to the settlement. When the people saw them, they said that they had been less clever than the other two girls. No more girls dared to enter <persName>Taʼ Totyor</persName>'s fishtrap, and he went up to Earth Six.</p>
+    </body>
+  </text>
+</TEI>

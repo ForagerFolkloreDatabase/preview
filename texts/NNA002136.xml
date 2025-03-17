@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Man Named Barrel</title>
+        <editor ref="p:Moser11151" role="collector">Edward W. Moser</editor>
+        <editor ref="p:ChicoRomero18822" role="narrator">Francisco Romero</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="10">About 10 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA002136</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Marlett, Stephen A. (2022): Words from Another World. A Collection of Analyzed Seri Texts. Oaxaca: Instituto Lingüístico de Verano. Quot. pp. 260-280.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="1">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA33401">Seri</name>
+          <date notAfter="1975" notBefore="1952" type="recorded">Recorded sometime between 1952 and 1975.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>It was in the old days when it happened. That is when an adult named <persName>Barrel</persName> lived, it is said. He was a Seri. He was a fool, he was not wise, and he didn't have good sense. He lived in a settlement to the south of the center of <placeName>Hermosillo</placeName> where there were lots of Seris living. Non-Indian Mexicans didn't live there; it was where Seris lived. There were a lot of Seris living there. The place called <placeName>Hast Captj</placeName> was there, and they were in a place near there, it is said. That's the place. And while they were there, they had what they needed with respect to food.</p>
+      <p>And so it was, one day there was a woman whose husband was called <persName>Barrel</persName>. He was there, and one day that they were there, all by himself he ate all of the prepared food that was in the house, while he was there eating and eating, and now all of the food that had been prepared to be eaten was gone, they say, <persName>Barrel</persName> ate all of it. Then while the woman was there crying, she went to the non-Indians, she went from house to house [to look for food], it is said. So she arrived to the non-Indians, [and] they said to her, the woman said, "What has happened? Why are you are crying?" thus they said to her, she said. Then, [she told them that] the man that she lived with - every last bit of food that was in the house - all by himself, he had eaten it all, [and] she hadn't eaten anything, [and] she didn't have anything to eat, [and] she was hungry, [and] that's why, she was crying, the woman said. Then, the non-Indians - there was lots of stew - it was put on a really large dish, it was sent with that woman, it is said. They told her that she should take it, the woman said. They told her that she should not eat any of it.<note>It is not stated here explicitly, but it is understood, I am told, that the food was poisoned.</note> It should be taken to <persName>Barrel</persName>, she should take it to him, they told her, she said.</p>
+      <p>Then, she took to him what they sent. He had already eaten, he was sitting there but she took it to him. She brought it to him, he looked at it, he felt happy, he said: "You really know how to treat the old man," he said. He acted that way because he thought that the food had been prepared for him to eat. Then he sat up, and while he was sitting there eating, he ate it all. He was sitting there eating it all, and not much later, <persName>Barrel</persName> said: "My abdomen is just thundering. My abdomen is spinning, and it is thundering," he said. While he was there, he began to get bigger, and the swelling of his abdomen increased, and then it was as though he <pb n="261"/>couldn't breathe, it was just absolutely full, and he had indigestion, it seems, but he was getting worse. He couldn't lie down and he couldn't vomit, and then his belly ballooned larger and larger. And then his belly didn't fit into his body, the thin spot below his waist split open. It burst open, [the opening] was not very big, it happened, his intestine came out, it popped out, and <persName>Barrel</persName> said: "My goodness! The side of my belly has split open. So this is what should happen. It should be sewn up. Like when a big <rs type="animal">pig</rs> has a split, it is sewn up and it is fine, my belly should be sewn up in the same way." And then more of his intestines came out. And then all of his intestines were outside, and he died.</p>
+    </body>
+  </text>
+</TEI>

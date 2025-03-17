@@ -1,0 +1,150 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Spider Man</title>
+        <editor ref="p:Howell48" role="collector">Signe Howell</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="18">About 18 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NEE023305</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Howell, Signe (1982): Chewong Myths and Legends. Kuala Lumpur: Art Printing Works (The Malaysian Branch of the Royal Asiatic Society Monographs, 11). Quot. pp. 14-16.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="74">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CEE20501">Chewong</name>
+          <date notAfter="1979" notBefore="1977" type="recorded">Recorded sometime between 1977 and 1979.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#FFDB">
+              <idno type="TMI">B640</idno>
+              <term>B640. Marriage to person in animal form.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">B643</idno>
+              <term>B643. Marriage to person in insect form.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">D181</idno>
+              <term>D181. Transformation: man to spider.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">D381</idno>
+              <term>D381. Transformation: spider to man.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>A <rs type="animal">spider</rs> man<note>This means that the person was a human <rs type="animal">male</rs> who wore a <rs type="animal">spider</rs> "cloak" (<rs ref="g:GEE2143.004">bajo</rs>). All the myths in this section are about human beings who wear <rs type="animal">animal</rs> "cloaks". At the end of each story, they all revert to being human only, having had their "cloaks" destroyed by their spouse.</note> lived with his aunt (<rs ref="g:GEE2143.003">baha</rs>)<note>The Chewong distinguish terminologically between parents' brothers and sisters with reference to their relative ages, not with regard to whether they are mother's or father's siblings. These terms are also used classificatorily in order to include people significantly older than ego. In such cases the term used is always on of 'older than parent' category.</note>. One day he gave his aunt some bracelets, ear-rings and sarongs and told her that he wanted a wife. "Aunt, take these things and go over to the house there and offer them to the unmarried girls." The aunt went. She arrived at the house and the people were at home. "Step inside, auntie," they told her. She did, and she was given tobacco and <rs type="plant">betel</rs> nuts. Then the wife of the house cooked <rs type="plant">rice</rs>. When they had eaten, the aunt extended her hand to the mother of the unmarried girls. "What is it, auntie?" the mother wanted to know. The aunt gave her the things and said that her <rs type="animal">spider</rs> nephew wanted a wife. The girls did not want to marry a <rs type="animal">spider</rs> so the aunt went home. "Well, aunt?" enquired the nephew. "They did not want to marry a <rs type="animal">spider</rs>," said the aunt. So they went to sleep. The <rs type="animal">spider</rs> slept on the ladder which led from the cooking platform to the main part of the house.</p>
+      <p>The next morning the <rs type="animal">spider</rs> told his aunt, "Aunt, take these things and go to the house over there." "I don't think that they will want to marry you," said the aunt. "Go aunt!" commanded the <rs type="animal">spider</rs>, so the aunt went. She entered the house and sat down. The people there gave her tobacco and <rs type="plant">betel</rs> nut. Then they cooked <rs type="plant">rice</rs>. When they had finished eating, the aunt extended her hand to the old woman. "What is it, auntie?" she wanted to know. The aunt gave the things and said that her nephew wanted a wife. "We don't want to, we don't want to," said the girls, "it will be so difficult to sleep together." So the aunt went home. "Well, aunt?" the nephew asked. "They did not want to. Said it would be difficult to sleep together," said the aunt. They went to sleep.</p>
+      <p>The next morning the nephew said, "Aunt." "What?" said the aunt. "Take these things and go over to the house over there." "No I don't want to go. The girls do not want a <rs type="animal">spider</rs> for a husband," the aunt replied. "Go, aunt!" the <rs type="animal">spider</rs> insisted. So the aunt went. When the aunt arrived at the house she was given tobacco and <rs type="plant">betel</rs> nut and then a meal of <rs type="plant">rice</rs>. After the meal the aunt extended <pb n="15"/>her hand to the mother. "What is it, aunt?" asked the mother. The aunt explained how her nephew wanted a wife. "There are lots of male <rs type="animal">dogs</rs> on the ground underneath the house if that is what we are after," the girls said. The aunt returned and told her nephew. They went to sleep. The nephew never ate <rs type="plant">rice</rs> or <rs type="plant" key="manihot utilissima">tapioca</rs> in his aunt's house. If he had, she would have realized that he could become a human being.</p>
+      <p>The next day the same thing happened again.<note>In this and in other stories where the same events take place, several times, I have omitted the full repetition. These are never omitted when the stories are told.</note> While the aunt was away the young girls from the houses she had already been to came to have a look at the <rs type="animal">spider</rs>. He sat on the ladder and looked back at them. None of them wanted him as husband.</p>
+      <p>The following day the aunt was sent on her errand again. When she arrived at the swidden, they had just finished making <rs type="plant" key="manihot utilissima">tapioca</rs> "bread". The mother was a very old woman and she had two unmarried daughters. These girls were picking <rs type="animal">lice</rs> out of each other's hair when the aunt arrived. "Enter the house, aunt," the old woman insisted. The aunt was given tobacco and <rs type="plant">betel</rs> nuts and a meal of freshly baked <rs type="plant" key="manihot utilissima">tapioca</rs> "bread". When they had eaten, the aunt extended her hand to the mother and laid out the things explaining that her nephew wanted a wife. The two girls looked at the things. They wanted them and told the aunt that they would go back to the house with aunt. When they arrived the nephew said, "Well, aunt?" "These two girls<note>Polygamy is not uncommon among the Chewong. Ideally, the wives are sisters.</note> have come to be your wives," said the aunt. The woman cooked <rs type="plant">rice</rs> and soup and then ate <rs type="plant">betel</rs> nut. The <rs type="animal">spider</rs> did not eat. When the women had finished eating there was still some food left in the saucepans. The wives went to sleep on their mat, the <rs type="animal">spider</rs> sat on the ladder up to the next level. When the girls were fast asleep, the <rs type="animal">spider</rs> took off his <rs type="animal">spider</rs> "cloak" (<rs ref="g:GEE2143.004">bajo</rs> chanbutn) and became a real man. He ate the rest of the <rs type="plant">rice</rs> and <rs type="plant">vegetable</rs> stew. Then he smoked tobacco and ate <rs type="plant">betel</rs> nut. He looked at his two wives. They were fast asleep. He lay down between them and made love to each one in turn. Then he went to sleep. When it began to get <rs type="color">light</rs> he put on his <rs type="animal">spider</rs> "cloak" and settled down on the ladder. The wives woke up. "There is still some food left over from last night," they said. They went over to look. "No, it is finished. Who has eaten it?" The aunt said she did not know, she had been asleep all night.</p>
+      <p>The wives wanted to go for a swim. The <rs type="animal">spider</rs> went as well. He walked between them. When the girls had finished bathing, the husband said that he also wanted to bathe, but that he wanted to do so alone, and he told the wives to go home alone. When they had disappeared he took off his <rs type="animal">spider</rs> "cloak" and put it on a stone. Then he went fishing. He caught lots and lots of <rs type="animal">fish</rs> and left them all by the riverside. Then he bathed, put on his <rs type="animal">spider</rs> "cloak" and returned home, telling his wives that a friend of his had given him much <rs type="animal">fish</rs> and left it by the river. "Go and fetch it," he told them. They did and cooked a large <rs type="animal">fish</rs> stew which they <pb n="16"/>ate, leaving some in the pan, and then went to sleep. The <rs type="animal">spider</rs> waited until they were fast asleep. Then he took of his <rs type="animal">spider</rs> "cloak" and ate the rest of the <rs type="animal">fish</rs> stew, smoked tobacco and ate <rs type="plant">betel</rs> nut. Then, as he had done the night before, he lay down between the two wives, made love to them, and fell asleep. In the morning before it was <rs type="color">light</rs> he put on his <rs type="animal">spider</rs> "cloak" again and settled on the ladder. In the morning the wives wanted to finish the stew from the evening before. They went to get it. "Oh, it is finished," they exclaimed, "who has eaten it?" The aunt did not know.</p>
+      <p>Later that day people came to have a look at the <rs type="animal">spider</rs> and his wives. "Has he slept with you yet?" they wanted to know. "No, we sleep separately," the wives replied. The wives cooked <rs type="plant">rice</rs> and the rest of the <rs type="animal">fish</rs> caught the day before and when the visitors had eaten they went home. The wives wanted to go bathing again so the husband went with them. When they had finished, the <rs type="animal">spider</rs> told his wives to go home for he wanted to bathe on his own. He took off his "cloak", went fishing, left the <rs type="animal">fish</rs> on the bank, put his <rs type="animal">spider</rs> "cloak" back on again, and went home to tell his wives that a friend has given him lots of <rs type="animal">fish</rs> for them to fetch. This they did. They then cooked a stew, ate and went to sleep. The <rs type="animal">spider</rs> took off his "cloak" finished off the meal, slept with his wives and returned to his <rs type="animal">spider</rs> "cloak" in time not to be discovered. This happened every night until one day all the <rs type="animal">fish</rs> had been eaten. The wives said to their husband, "There is no more <rs type="animal">fish</rs>." They all went to the river to bathe, and as he had done before, the <rs type="animal">spider</rs> told his wives to go home on their own as he wanted to bathe alone. But instead of going home as they had been told to do, the wives hid behind a <rs type="plant">tree</rs> and watched the <rs type="animal">spider</rs>. They saw how he took off his <rs type="animal">spider</rs> "cloak" and became a real man. When he went to the river to fish they ran forward and took the <rs type="animal">spider</rs> "cloak" between their fingers and crumpled it up and scattered the pieces. When the husband returned after having placed a lot of <rs type="animal">fish</rs> on the river bank he could not find his <rs type="animal">spider</rs> "cloak" anywhere. "Where is my cloak. My original <rs type="animal">spider</rs>'s cloak?" he cried out. On hearing this the two wives leaped out from behind the <rs type="plant">tree</rs> and grabbed hold of his arms. They held one arm each. "I want my cloak, where have you put it?" he demanded. "No, we cannot sleep together when you have your <rs type="animal">spider</rs> cloak," the wives said. So the husband went back to the house as a real man and they all sat down together to have a big meal. After they had eaten they smoked tobacco and ate <rs type="plant">betel</rs> nut. In the night the husband lay down between his two wives.</p>
+    </body>
+  </text>
+</TEI>

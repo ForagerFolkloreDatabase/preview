@@ -1,25 +1,24 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Myth of the Old Woman (Mutjingga)</title>
         <editor ref="p:Stanner5812" role="collector">William Edward Hanley Stanner</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="KB" quantity="12">About 12 kilobytes</measure>
+        <measure unit="KB" quantity="11">About 11 kilobytes</measure>
       </extent>
       <publicationStmt>
         <authority>The Forager Folklore Database</authority>
@@ -27,41 +26,39 @@
         <availability status="free">
           <licence target="https://creativecommons.org/licenses/by-nc-nd/4.0">CC BY-NC-ND</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Stanner, William E. H. (1963/2014): On Aboriginal Religion. Sydney: Sydney University Press (Oceania Monograph, 11). (Repr. as Oceania Monograph 36, 1989. New ed. 2014.) Quot. pp. 40-42.</bibl>
+        <bibl>Stanner, William E. H. (1963): On Aboriginal Religion. Sydney: Sydney University Press (Oceania Monograph, 11). (First published 1959-63 in Oceania 30-34. Repr. as Oceania Monograph 36, 1989. New ed. 2014.) Quot. pp. 40-42.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="3">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="21">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="3">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,11 +99,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -121,19 +114,19 @@
   </teiHeader>
   <text>
     <body>
-      <p><persName>Mutji&#331;ga, the Old Woman</persName>, slept there until morning. The people said, "we shall leave the children with you while we find honey; you look after them." <persName>The Old Woman</persName> said, "yes, I will keep them here." The people spread out to hunt.</p>
+      <p><persName>Mutjiŋga, the Old Woman</persName>, slept there until morning. The people said, "we shall leave the children with you while we find honey; you look after them." <persName>The Old Woman</persName> said, "yes, I will keep them here." The people spread out to hunt.</p>
       <p><persName>The Old Woman</persName> called to the children, "go and bathe in the water there, and then come to lie down in the sun to dry." She showed them how to do so. When they were washed they came ashore, and ran close to her, wanting to sleep. <pb n="41"/><persName>The Old Woman</persName>, herself truly wanting to sleep, made a sleeping place in the shade.</p>
-      <p>She took one child by the arm, saying "Ka&#331;iru, <note>The term designates the relationship of (man-speaking) daughter's daughter, and (woman-speaking) brother's daughter's daughter. All the children were in relationships of the second and third (descending) generations.</note> I will look for <animal>lice</animal> in your hair. Are you itchy?" The child said, "Yes, you look for me." <persName>The Old Woman</persName>, pretending, said "you look too for my <animal>lice</animal>." Then she swallowed the child, letting it go entirely inside her own body. Then she said to a second child, "Ka&#331;iru, I will make you sleep." This way, the child disappeared, swallowed like the other.</p>
+      <p>She took one child by the arm, saying "Kaŋiru, <note>The term designates the relationship of (man-speaking) daughter's daughter, and (woman-speaking) brother's daughter's daughter. All the children were in relationships of the second and third (descending) generations.</note> I will look for <rs type="animal">lice</rs> in your hair. Are you itchy?" The child said, "Yes, you look for me." <persName>The Old Woman</persName>, pretending, said "you look too for my <rs type="animal">lice</rs>." Then she swallowed the child, letting it go entirely inside her own body. Then she said to a second child, "Kaŋiru, I will make you sleep." This way, the child disappeared, swallowed like the other.</p>
       <p>[The myth then relates, in much the same phraseology, how eight more children, making ten in all, were swallowed.]</p>
       <p>A man and his wife, thirsty for water, came back to the camp from hunting. The woman swore violently at her husband, "I see no children here. Where are they? What did she do with them? She swallowed them! There are no children. Come quickly!" The husband, from a distance, quickly ran to her. The woman, seeing tracks, then said, "Ah, yes, she went that way." Then, pointing to the water, she said, "You run quickly the short way." Both ran, calling out in alarm, by different ways in the direction in which the water flowed.</p>
       <p>All the people, alarmed by the cries, now came together running. They gathered spears and womerahs from every place. Among them, calling out, was a mature man, <persName>Left Hand</persName>. "That way, that way."</p>
       <p>Five men ran one way, five another, to come together later at a shallow water-crossing. There was no one there. The water was clear. They ran again as before, and again met. Still the clear water gave no sign. Again they ran and met to no avail, finding clear water only.</p>
       <p>The river now went crookedly. The people thought <persName>the Old Woman</persName> might have crawled along it. Dividing again, they searched as before. Now, meeting, they saw that the water was no longer clear. Ah! The murk stirred up by her dragging fingernails could be seen. Again they divided and ran, meeting to search again. Ah! The water was more clouded still. They divided and ran on the sand to Manawarar. Ah! Here the water was heavily clouded. They were overtaking her. Good!</p>
       <p>Now all told <persName>Left Hand</persName>, because of his great skill, to take spear and <persName>Right Hand</persName> to take club; the two men ran, one to each side of the water to block <persName>the Old Woman</persName>'s road.</p>
-      <p>They came together and looked. No one! Good! They waited and waited ... then they saw big eyes coming, and out came <persName>the Old Woman</persName> throwing water from each side. <persName>Mutji&#331;ga</persName> was here!</p>
+      <p>They came together and looked. No one! Good! They waited and waited ... then they saw big eyes coming, and out came <persName>the Old Woman</persName> throwing water from each side. <persName>Mutjiŋga</persName> was here!</p>
       <p>She kept coming, not seeing the men. When she was close <persName>Left Hand</persName> threw his spear. Du! It hit and pierced both her legs. Yakai! <persName>The Old Woman</persName> <pb n="42"/>cried, "From whom is this?" <persName>Left Hand</persName> answered "from yourself! Yours was the fault!"</p>
       <p><persName>Right Hand</persName> jumped into the water and with his club broke <persName>the Old Woman</persName>'s neck. There, it was done! The men looked. Her belly was moving! Then, slowly, holding her up, they cut her open with a knife of stone. There, in her womb, the children were alive! They had not gone where the excrement was.</p>
-      <p><persName>Left Hand</persName> and <persName>Right Hand</persName> now pulled the children one by one from the womb, washed them, and came with them to fire to dry them in the smoke. Then they painted the children with ochre and put on their foreheads the kutaral<note>A band made of <animal>opossum</animal> hair.</note> which is the mark of the initiated. Then <persName>Left Hand</persName> and <persName>Right Hand</persName> took them back to the camp where they now saw their mothers.</p>
+      <p><persName>Left Hand</persName> and <persName>Right Hand</persName> now pulled the children one by one from the womb, washed them, and came with them to fire to dry them in the smoke. Then they painted the children with ochre and put on their foreheads the kutaral<note>A band made of <rs type="animal">opossum</rs> hair.</note> which is the mark of the initiated. Then <persName>Left Hand</persName> and <persName>Right Hand</persName> took them back to the camp where they now saw their mothers.</p>
       <p>Joyfully, the mothers cried, "they are alive, they are alive. See, the men are bringing them now," and hit their own heads so that the blood flowed. "O, children, alas, alas! What did she do to you? She swallowed you!"</p>
     </body>
   </text>

@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Contented and Happy Son-in-Law</title>
         <editor ref="p:Roth394" role="collector">Walter E. Roth</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,43 +24,41 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010028</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Roth, Walter E. (1915): An Inquiry into the Animism and Folk-Lore of the Guiana Indians. Extract from the Thirteenth Annual Report of the Bureau of American Ethnology, Washington, D.C.: Government Printing Office. Quot. pp. 190-191.</bibl>
+        <bibl>Roth, Walter E. (1915): An Inquiry into the Animism and Folk-Lore of the Guiana Indians. Extract from the Thirteenth Annual Report of the Bureau of American Ethnology, Washington: Government Printing Office. Quot. pp. 190-191.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="0">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="4">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="4">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,11 +99,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -184,7 +177,7 @@
   </teiHeader>
   <text>
     <body>
-      <p>Once upon a time there was a good old man who, possessed of a young wife and a field well planted, lived happily and contented. When off to his field one morning, he met a young man coming in the direction of his house, and noticed that, during the greeting which they gave each other, the stranger kept his eyes fixed hard on his wife in the dim distance. On his return home in the afternoon, he met the stranger again in just about the same place, where his movements seemed very suspicious: he rightly concluded that he was dealing with a Hebu and went on home. Arrived there, he told his wife he was going to hunt a little, and took his bow and arrow with him; but what he really did was to hide in the immediate vicinity. And from his hiding place he saw the Hebu steal into the house and wrestle with his wife, who was just about grating the <plant>cassava</plant>: he heard her say "No! No! Oh, if only my man were not so far away!" So taking aim, and waiting for a chance not to hurt his wife, he let fly and shot the Spirit. Both Spirit and wife simultaneously disappeared.<note>When a person suddenly disappears from any place without leaving a trace, under circumstances which in plain English would be described as murder and disposal of the body, the Indians ascribe it to the Evil Spirit.</note> It would seem that the Hebu had dragged his victim to the water's edge and thence thrown her in; fortunately she had caught hold of the <plant>bushes</plant> alongside the river bank, and came up to the surface. On meeting her husband, she told him she thought she had been dead and never expected to see him more; she told him also how the Hebu had threatened to visit their place again. They therefore went over to her mother's home, and stayed there a long while. At last the old man thought it was time to look over his <plant>cassava</plant> and <plant>plantains</plant>, and with his wife and brother-in-law returned to the scene of the outrage. The brother, who was a powerful medicine-man, led the way. As he went along he was accosted by a beautiful girl, who, staring into his eyes, rushed up ready to put her arms around his neck, and then drew back. Now, except at a drinking feast and when she is drunk, no Indian woman would behave in this bold manner, and it was thus that they recognized her to be the Hebu. The medicine-man just looked at her in silence, and she fell dead. The wife also met her death shortly after, and they then remembered having noticed the token; she had omitted to bathe after a meal some days before. But the parents of the deceased girl were very fond of their good old son-in-law, and gave him the younger of their two remaining daughters as a helpmate.<note>Among many savage races, the husband has marital rights over his wife's sisters, and vice versa; I have found several traces of this communal form of marriage in the Guianas. - W. E. R.</note> But the elder one becoming jealous, went over to the husband's place and picked a quarrel with her younger sister; this made the latter go and tell the old man that she was afraid to remain with him any longer. But he said: "No! I don't want your sister. She is much too passionate for an old man like me, whereas you and I get along very well together." The parents then gave a drinking party, at which the old man got so drunk that he fell into his hammock; whereupon the elder sister got in also. He was not so drunk, however, as not to be able to turn her out, which he did. She then said that they would have to kill her before she would let <pb n="191"/>him alone. And so the brother killed her. On seeing all the trouble that had arisen, and recognizing how he had been the cause of it, the old man offered to go away, but the brother said he would kill him before he would let him go. And so the old man stayed with his wife's parents in the customary way, and continued to live long, happy, and contented.</p>
+      <p>Once upon a time there was a good old man who, possessed of a young wife and a field well planted, lived happily and contented. When off to his field one morning, he met a young man coming in the direction of his house, and noticed that, during the greeting which they gave each other, the stranger kept his eyes fixed hard on his wife in the dim distance. On his return home in the afternoon, he met the stranger again in just about the same place, where his movements seemed very suspicious: he rightly concluded that he was dealing with a Hebu and went on home. Arrived there, he told his wife he was going to hunt a little, and took his bow and arrow with him; but what he really did was to hide in the immediate vicinity. And from his hiding place he saw the Hebu steal into the house and wrestle with his wife, who was just about grating the <rs type="plant">cassava</rs>: he heard her say "No! No! Oh, if only my man were not so far away!" So taking aim, and waiting for a chance not to hurt his wife, he let fly and shot the Spirit. Both Spirit and wife simultaneously disappeared.<note>When a person suddenly disappears from any place without leaving a trace, under circumstances which in plain English would be described as murder and disposal of the body, the Indians ascribe it to the Evil Spirit.</note> It would seem that the Hebu had dragged his victim to the water's edge and thence thrown her in; fortunately she had caught hold of the <rs type="plant">bushes</rs> alongside the river bank, and came up to the surface. On meeting her husband, she told him she thought she had been dead and never expected to see him more; she told him also how the Hebu had threatened to visit their place again. They therefore went over to her mother's home, and stayed there a long while. At last the old man thought it was time to look over his <rs type="plant">cassava</rs> and <rs type="plant">plantains</rs>, and with his wife and brother-in-law returned to the scene of the outrage. The brother, who was a powerful medicine-man, led the way. As he went along he was accosted by a beautiful girl, who, staring into his eyes, rushed up ready to put her arms around his neck, and then drew back. Now, except at a drinking feast and when she is drunk, no Indian woman would behave in this bold manner, and it was thus that they recognized her to be the Hebu. The medicine-man just looked at her in silence, and she fell dead. The wife also met her death shortly after, and they then remembered having noticed the token; she had omitted to bathe after a meal some days before. But the parents of the deceased girl were very fond of their good old son-in-law, and gave him the younger of their two remaining daughters as a helpmate.<note>Among many savage races, the husband has marital rights over his wife's sisters, and vice versa; I have found several traces of this communal form of marriage in the Guianas. - W. E. R.</note> But the elder one becoming jealous, went over to the husband's place and picked a quarrel with her younger sister; this made the latter go and tell the old man that she was afraid to remain with him any longer. But he said: "No! I don't want your sister. She is much too passionate for an old man like me, whereas you and I get along very well together." The parents then gave a drinking party, at which the old man got so drunk that he fell into his hammock; whereupon the elder sister got in also. He was not so drunk, however, as not to be able to turn her out, which he did. She then said that they would have to kill her before she would let <pb n="191"/>him alone. And so the brother killed her. On seeing all the trouble that had arisen, and recognizing how he had been the cause of it, the old man offered to go away, but the brother said he would kill him before he would let him go. And so the old man stayed with his wife's parents in the customary way, and continued to live long, happy, and contented.</p>
     </body>
   </text>
 </TEI>

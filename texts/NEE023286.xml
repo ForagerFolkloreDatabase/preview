@@ -1,0 +1,141 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>How the Chewong Were Taught to Behave Properly</title>
+        <editor ref="p:Howell48" role="collector">Signe Howell</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="11">About 11 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NEE023286</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Howell, Signe (1982): Chewong Myths and Legends. Kuala Lumpur: Art Printing Works (The Malaysian Branch of the Royal Asiatic Society Monographs, 11). Quot. p. 3.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="17">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CEE20501">Chewong</name>
+          <date notAfter="1979" notBefore="1977" type="recorded">Recorded sometime between 1977 and 1979.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#FFDB">
+              <idno type="TMI">A1351</idno>
+              <term>A1351. Origin of childbirth.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">A1560</idno>
+              <term>A1560. Origin of customs connected with birth.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">C284</idno>
+              <term>C284. Tabu: eating alone.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>In the old, old days people did not know about <rs ref="g:GEE2143.023">maro</rs><note><rs ref="g:GEE2143.023">Maro</rs> and <rs ref="g:GEE2143.028">pantang</rs> (see below) are both rules governing Chewong behaviour. <rs ref="g:GEE2143.023">Maro</rs> specifies that one must always share one's food and offer visitors to eat. <rs ref="g:GEE2143.028">pantang</rs> rules are about specified behaviour at times of life crises. (See also part IV).</note> [the rule that specifies that one may not eat alone, but always be generous and share one's food]. One day <persName>Bujægen Yed</persName><note><persName>Bujægen</persName> is derived from the Malay bujang which means single, unmarried. The Chewong use it to indicate a young man, usually, but not necessarily, a bachelor. Yed is a species of <rs type="animal">lizard</rs>.</note> went hunting. He shot a <rs type="animal" key="Arctictis">binturong</rs>.<note>The <rs type="animal" key="Arctictis">binturong (Arctictis)</rs> is a member of the Malayan <rs type="animal">civet</rs> family. It is primarily arboreal and it is omnivorous (Medway 1978).</note> He prepared it and cooked it in the jungle on his own. In those days people lived by the maxim "whatever I catch I eat, whatever you catch you eat." That was how it was in the old days. While <persName>Bujægen Yed</persName> was eating his catch of the day, <persName>Yinlugen Bud</persName><note>Yinlugen is the aspect of a person that continues to live in the afterworld; also a class of (usually) harmful superhuman beings. Bud means a fallen treetrunk.</note> came by. He is an original ghost who was around before the first humans. <persName>Bud</persName> asked <persName>Yed</persName> what he was doing. "I am eating my <rs type="animal">binturong</rs>," replied <persName>Yed</persName>. "If you eat alone and don't share, you <rs ref="g:GEE2143.023">maro</rs>. You must always share your food with others. Human beings must never eat alone," <persName>Bud</persName> told him. When he heard this, <persName>Yed</persName> took his <rs type="animal">binturong</rs> meat and went home. He gave the meat to his wife who was pregnant. She ate and was no longer hungry. She was about to give birth. She had bad pains in her stomach. <persName>Yed</persName> took out his knife and prepared to cut open her stomach. <persName>Yinlugen Bud</persName> who had followed <persName>Yed</persName> back to his house asked him what he was doing. "l am going to cut open my wife's stomach so that the child can get out," said <persName>Yed</persName>. "No, no," said <persName>Bud</persName> "Don't do that. There is an opening." He showed <persName>Yed</persName> how to press on the stomach of the pregnant woman, and when the baby came out, <persName>Bud</persName> showed <persName>Yed</persName> how to cut the navel string with a piece of <rs type="plant">bamboo</rs> and tie it with a piece of <rs type="plant">rattan</rs>. Then he showed him how to wrap the afterbirth in leaves and place it in a <rs type="plant">tree</rs>, and how to cover the blood with ashes. <persName>Yed</persName> then started to feed the child from his elbow, which was how the men used to feed their babies after their wives had died from having their stomach cut open. "What are you doing?" asked <persName>Bud</persName>, "there is milk in the mother's breasts." Then <persName>Bud</persName> taught the birth spells, and the various leaves to be used for medicines after the birth.</p>
+      <p>He showed him which species of <rs type="plant">tree</rs> fibres to boil and give the mother to drink, and which leaves to warm up and put on her stomach. He also told him all the <rs ref="g:GEE2143.028">pantang</rs> rules connected with child birth: the woman sleeps next to the fire, she cannot go out except to relieve herself, nor can she eat meat until all bleeding has ceased. Having taught <persName>Yed</persName> all practices connected with child birth, <persName>Yinlugen Bud</persName> returned to his own lands. <shift feature="epimyth"/>From then on women did not die in child birth, and people did not eat alone any more, but always brought back their game and shared it with everybody.</p>
+    </body>
+  </text>
+</TEI>

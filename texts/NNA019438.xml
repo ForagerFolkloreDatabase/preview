@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>S&#7431;&#700;n&#322;&#275;&#7499;</title>
+        <title>Sᴇʼnłēᵋ</title>
         <editor ref="p:Boas15" role="collector">Franz Boas</editor>
-        <editor ref="p:Mal&#7431;d1001" role="informant">Mal&#7431;&#700;d</editor>
+        <editor ref="p:Malᴇd1001" role="narrator">Malᴇʼd</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,43 +24,41 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA019438</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Boas, Franz (1910): Kwakiutl Tales. New York: Columbia University Press (Columbia University Contributions to Anthropology, 2). Quot. pp. 6-8.</bibl>
+        <bibl>Boas, Franz (1910): Kwakiutl Tales. New York: Columbia University Press &amp; Leyden: Brill (Columbia University Contributions to Anthropology, 2). Quot. pp. 6-9.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="0">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="10">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="4">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="1">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="0">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,18 +99,14 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
     <profileDesc>
       <settingDesc>
         <setting>
-          <name type="culture" key="CNA29001">Kwakwaka&#700;wakw</name>
+          <name type="culture" key="CNA29001">Kwakwakaʼwakw</name>
           <date when="1893" type="recorded">Recorded in 1893.</date>
         </setting>
       </settingDesc>
@@ -121,10 +114,10 @@
   </teiHeader>
   <text>
     <body>
-      <p>A man lived at <placeName>Y&#275;&#700;kwin</placeName>. He said that he had come down from above, being the son of the Sun. He had the name <persName>S&#7431;&#700;n&#322;&#275;&#7499;</persName>. Then he wore the sun mask. He came after he had left the place from which he came down, where he had first been. He searched for a house site, looking for a good country. Then he found <placeName>Bar-at-Mouth-of-River</placeName>. There he built a house on the meadow back of the point of <placeName>Bar-at-Mouth-of-River</placeName>. Then he took off his sun mask and he became an ordinary man there.</p>
-      <p>Then he paddled and went to <placeName>Bella Bella</placeName>. There he met <persName>Brave</persName>, the Bella Bella. Then he was asked by <persName>Brave</persName>, "[Go on!] [and tell me] how long you have been <pb n="9"/>in the world since the time when you became a man!" Then <persName>S&#7431;&#700;n&#322;&#275;&#7499;</persName> said, "At the same time when the mountains were first put down."</p>
-      <p>Then <persName>S&#7431;&#700;n&#322;&#275;&#7499;</persName> also asked <persName>Brave</persName>, "When was the time when you became a man?" - "Behold! I have been a man for a long time," said <persName>Brave</persName>, "I [became a man] at the same time when the kelp was first put down on the water." That is all they said when they parted.</p>
-      <p><persName>S&#7431;&#700;n&#322;&#275;&#7499;</persName> went home, and <persName>Brave</persName> went home to where he had come from. <persName>S&#7431;&#700;n&#322;&#275;&#7499;</persName> just went to see the whole world. <epimyth>That is the end.</epimyth></p>
+      <p>A man lived at <placeName>Yēʼkwin</placeName>. He said that he had come down from above, being the son of the Sun. He had the name <persName>Sᴇʼnłēᵋ</persName>. Then he wore the sun mask. He came after he had left the place from which he came down, where he had first been. He searched for a house site, looking for a good country. Then he found <placeName>Bar-at-Mouth-of-River</placeName>. There he built a house on the meadow back of the point of <placeName>Bar-at-Mouth-of-River</placeName>. Then he took off his sun mask and he became an ordinary man there.</p>
+      <p>Then he paddled and went to <placeName>Bella Bella</placeName>. There he met <persName>Brave</persName>, the Bella Bella. Then he was asked by <persName>Brave</persName>, "[Go on!] [and tell me] how long you have been <pb n="9"/>in the world since the time when you became a man!" Then <persName>Sᴇʼnłēᵋ</persName> said, "At the same time when the mountains were first put down."</p>
+      <p>Then <persName>Sᴇʼnłēᵋ</persName> also asked <persName>Brave</persName>, "When was the time when you became a man?" - "Behold! I have been a man for a long time," said <persName>Brave</persName>, "I [became a man] at the same time when the kelp was first put down on the water." That is all they said when they parted.</p>
+      <p><persName>Sᴇʼnłēᵋ</persName> went home, and <persName>Brave</persName> went home to where he had come from. <persName>Sᴇʼnłēᵋ</persName> just went to see the whole world. <shift feature="epimyth"/>That is the end.</p>
     </body>
   </text>
 </TEI>

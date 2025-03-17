@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Kangaroo-Rat Races with Coyote and Others</title>
         <editor ref="p:Curtin1091" role="collector">Jeremiah Curtin</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,43 +24,41 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA025267</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Curtin, Jeremiah/Dixon, Roland B. (1909): Achomawi Myths. In: The Journal of American Folk-Lore 22(85), 283-287. Quot. pp. 284-285.</bibl>
+        <bibl>Curtin, Jeremiah/Dixon, Roland B. (1909): Achomawi Myths. Collected by Jeremiah Curtin. Ed. by Roland B. Dixon. In: The Journal of American Folk-Lore 22(85), 283-287. Quot. pp. 284-285.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="18">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="1">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="1">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="19">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,11 +99,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -132,11 +125,11 @@
   </teiHeader>
   <text>
     <body>
-      <p>Two <animal>Kangaroo-Rat</animal> women, a mother and her daughter, lived near <animal>Coyote</animal>'s place. Now the people at this place hunted all the time, but never sent any meat to the old woman. She said, "It is best to get a man to hunt for us. I do not like these people; they are too proud." Her daughter said, "I will run a race with these men, and I'll bet myself against a man. I'll win and have a husband."</p>
-      <p>The next morning the girl went over to <animal>Coyote</animal>'s house when the men were just through breakfast. She went on top of the sweat-house and called out, "I want to run a race with one of your boys; to-day I feel like running."</p>
-      <p><animal>Coyote</animal> said, "All right. The chief men always run first. I will run with you first." He went out, and they started towards the north, and ran until he fell down dead. The girl came home, and that night <persName>Cocoon-Man</persName> said, "I know what she is trying to do. When women want to marry us, they always kill us first. These are bad women."</p>
-      <p>Next day she came to the house, and asked again to run with a man. <animal>Badger</animal> ran with her. He ran northward, turned to come back, reached a mountain-top, and died. Next day <animal>Silver-Fox</animal> went out to run with her. He ran far to the north, came back halfway, and fell dead. <animal>Ground-Squirrel</animal> ran, came halfway home, and died. <animal>Kangaroo-Rat</animal> was coming home slowly. She came more slowly each time. First she had always returned in the middle of the morning, but this time she was back about noon. The mother thought, "My daughter will fail. I am afraid she gets tired too easily." The girl ran the next day with <animal>Wolf</animal>, but he died, and she reached home still later.</p>
-      <p>Now she had killed all but three men. <animal>Pine-Marten</animal> ran the next day. They kept together. The girl thought he was going to win; but when he came into the valley and almost reached home, he fell dead. The last men left were <animal>Weasel</animal> and his brother from the mountain. They were angry because <animal>Pine-Marten</animal> had been killed. They were going to take an otter-skin quiver. One of the brothers was to rest in it; so when the other became tired, this one would jump out and carry the tired one. When then the other one had rested and was fresh, he would jump out and take his turn. Thus they would run and carry each other alternately. The two looked just alike, and the girl thought she was running with one. The mountain brother of <animal>Weasel</animal> sang. They ran near the girl all the time. They found the bones of <animal>Coyote</animal>, picked them up, and put them in the otter-skin quiver. They came to the other bones and picked them up also. While they were picking up the bones, the girl, thinking she had beaten <animal>Weasel</animal>, turned and looked <pb n="285"/>back. He called out, "Don't look back. I can outrun you. Girls cannot run fast." She was frightened at his words, and ran on as fast as possible. When one brother was tired, the other came out, and the first went into the quiver. <animal>Weasel</animal> called out, "Run fast, I am going to beat you." Now the girl began to give out. While <animal>Weasel</animal> was running, she thought she noticed a difference in the song, and looked back. He called out, "Go on fast!" It was near sundown now. The old woman saw them coming. The two <animal>Weasel</animal> brothers as one, reached the sweathouse first. The young woman went with them to their sweat-house, and did not go back to her mother. That evening they put the bones in water, and the dead all came to life. The girl went in the morning to her mother's house to get <plant>roots</plant>, and the men went hunting. She always sent plenty of meat to her mother after that.</p>
+      <p>Two <rs type="animal">Kangaroo-Rat</rs> women, a mother and her daughter, lived near <rs type="animal">Coyote</rs>'s place. Now the people at this place hunted all the time, but never sent any meat to the old woman. She said, "It is best to get a man to hunt for us. I do not like these people; they are too proud." Her daughter said, "I will run a race with these men, and I'll bet myself against a man. I'll win and have a husband."</p>
+      <p>The next morning the girl went over to <rs type="animal">Coyote</rs>'s house when the men were just through breakfast. She went on top of the sweat-house and called out, "I want to run a race with one of your boys; to-day I feel like running."</p>
+      <p><rs type="animal">Coyote</rs> said, "All right. The chief men always run first. I will run with you first." He went out, and they started towards the north, and ran until he fell down dead. The girl came home, and that night <persName>Cocoon-Man</persName> said, "I know what she is trying to do. When women want to marry us, they always kill us first. These are bad women."</p>
+      <p>Next day she came to the house, and asked again to run with a man. <rs type="animal">Badger</rs> ran with her. He ran northward, turned to come back, reached a mountain-top, and died. Next day <rs type="animal">Silver-Fox</rs> went out to run with her. He ran far to the north, came back halfway, and fell dead. <rs type="animal">Ground-Squirrel</rs> ran, came halfway home, and died. <rs type="animal">Kangaroo-Rat</rs> was coming home slowly. She came more slowly each time. First she had always returned in the middle of the morning, but this time she was back about noon. The mother thought, "My daughter will fail. I am afraid she gets tired too easily." The girl ran the next day with <rs type="animal">Wolf</rs>, but he died, and she reached home still later.</p>
+      <p>Now she had killed all but three men. <rs type="animal">Pine-Marten</rs> ran the next day. They kept together. The girl thought he was going to win; but when he came into the valley and almost reached home, he fell dead. The last men left were <rs type="animal">Weasel</rs> and his brother from the mountain. They were angry because <rs type="animal">Pine-Marten</rs> had been killed. They were going to take an otter-skin quiver. One of the brothers was to rest in it; so when the other became tired, this one would jump out and carry the tired one. When then the other one had rested and was fresh, he would jump out and take his turn. Thus they would run and carry each other alternately. The two looked just alike, and the girl thought she was running with one. The mountain brother of <rs type="animal">Weasel</rs> sang. They ran near the girl all the time. They found the bones of <rs type="animal">Coyote</rs>, picked them up, and put them in the otter-skin quiver. They came to the other bones and picked them up also. While they were picking up the bones, the girl, thinking she had beaten <rs type="animal">Weasel</rs>, turned and looked <pb n="285"/>back. He called out, "Don't look back. I can outrun you. Girls cannot run fast." She was frightened at his words, and ran on as fast as possible. When one brother was tired, the other came out, and the first went into the quiver. <rs type="animal">Weasel</rs> called out, "Run fast, I am going to beat you." Now the girl began to give out. While <rs type="animal">Weasel</rs> was running, she thought she noticed a difference in the song, and looked back. He called out, "Go on fast!" It was near sundown now. The old woman saw them coming. The two <rs type="animal">Weasel</rs> brothers as one, reached the sweathouse first. The young woman went with them to their sweat-house, and did not go back to her mother. That evening they put the bones in water, and the dead all came to life. The girl went in the morning to her mother's house to get <rs type="plant">roots</rs>, and the men went hunting. She always sent plenty of meat to her mother after that.</p>
     </body>
   </text>
 </TEI>

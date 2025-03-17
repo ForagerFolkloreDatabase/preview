@@ -1,21 +1,20 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Search for Fire</title>
         <editor ref="p:Dixon1051" role="collector">Roland B. Dixon</editor>
-        <editor ref="p:OldWool4761" role="informant">"Old Wool"</editor>
-        <editor ref="p:CharleyGreen4760" role="informant">Charley Green</editor>
+        <editor ref="p:OldWool4761" role="narrator">"Old Wool"</editor>
+        <editor ref="p:CharleyGreen4760" role="narrator">Charley Green</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -26,9 +25,9 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA025128</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Dixon, Roland B. (1908): Achomawi and Atsugewi Tales. In: The Journal of American Folk-Lore 21(81), 159-177. Quot. p. 165.</bibl>
@@ -37,32 +36,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="18">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="1">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="18">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -103,11 +100,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -122,8 +115,8 @@
   </teiHeader>
   <text>
     <body>
-      <p>After <animal>Hawk</animal> had been killed, and the flood had subsided, people found that all fires were put out all over the world. Nothing could be cooked, but for a time people did not trouble about it. Then after a few days they began to talk about it, and sent <animal>Owl</animal> to <placeName>Mount Shasta</placeName> to look all over the world and see if he could find any trace of fire. <animal>Owl</animal> took a feather blanket and went. <animal>Lizard</animal> watched him go, and told the people how he was getting on. After a while, when <animal>Owl</animal> did not come back, people thought he was dead. But <animal>Lizard</animal> said, "Sh! I can still see him." <animal>Owl</animal> got to the top at last, very tired, and wet with sweat. <animal>Lizard</animal> saw him look all about. He looked west twice, and there saw smoke coming from a sweat-house. After a while <animal>Owl</animal> came down from the mountain, and, coming back, told people what he had seen.</p>
-      <p>Next morning all got ready and went off to the west, to where the smoke had been seen. Every one had a cedar-bark torch. <animal>Dog</animal> had some punk hidden in his car. Late in the evening they arrived at the house, and asked to be allowed to warm their hands. <animal>Dog</animal> held his ear down, and fire caught in the punk. Then every one thrust their torches into the fire, and ran. The people in the house were angry, and struck at them as they ran off. <animal>Coyote</animal>'s fire gave out first, then another's and another's, until finally all were out except that which <animal>Dog</animal> had in his ears. The people who owned fire had made it rain, and this put out the people's torches. No one knew that <animal>Dog</animal> had fire. They got home and were much troubled, for they thought the fire had all been lost. <animal>Dog</animal> was laughing, and said, "I am sweating." <animal>Coyote</animal> got angry at this, and said, "Hit him! Knock him out!" Then <animal>Dog</animal> said to <animal>Fox</animal>, "Look in my ear." When he did so, he saw the fire. He took out the punk, made fire from it, and so people got fire again.</p>
+      <p>After <rs type="animal">Hawk</rs> had been killed, and the flood had subsided, people found that all fires were put out all over the world. Nothing could be cooked, but for a time people did not trouble about it. Then after a few days they began to talk about it, and sent <rs type="animal">Owl</rs> to <placeName>Mount Shasta</placeName> to look all over the world and see if he could find any trace of fire. <rs type="animal">Owl</rs> took a feather blanket and went. <rs type="animal">Lizard</rs> watched him go, and told the people how he was getting on. After a while, when <rs type="animal">Owl</rs> did not come back, people thought he was dead. But <rs type="animal">Lizard</rs> said, "Sh! I can still see him." <rs type="animal">Owl</rs> got to the top at last, very tired, and wet with sweat. <rs type="animal">Lizard</rs> saw him look all about. He looked west twice, and there saw smoke coming from a sweat-house. After a while <rs type="animal">Owl</rs> came down from the mountain, and, coming back, told people what he had seen.</p>
+      <p>Next morning all got ready and went off to the west, to where the smoke had been seen. Every one had a cedar-bark torch. <rs type="animal">Dog</rs> had some punk hidden in his car. Late in the evening they arrived at the house, and asked to be allowed to warm their hands. <rs type="animal">Dog</rs> held his ear down, and fire caught in the punk. Then every one thrust their torches into the fire, and ran. The people in the house were angry, and struck at them as they ran off. <rs type="animal">Coyote</rs>'s fire gave out first, then another's and another's, until finally all were out except that which <rs type="animal">Dog</rs> had in his ears. The people who owned fire had made it rain, and this put out the people's torches. No one knew that <rs type="animal">Dog</rs> had fire. They got home and were much troubled, for they thought the fire had all been lost. <rs type="animal">Dog</rs> was laughing, and said, "I am sweating." <rs type="animal">Coyote</rs> got angry at this, and said, "Hit him! Knock him out!" Then <rs type="animal">Dog</rs> said to <rs type="animal">Fox</rs>, "Look in my ear." When he did so, he saw the fire. He took out the punk, made fire from it, and so people got fire again.</p>
     </body>
   </text>
 </TEI>

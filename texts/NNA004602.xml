@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Death of Cöquimaxp</title>
+        <editor ref="p:Moser11151" role="collector">Edward W. Moser</editor>
+        <editor ref="p:JesúsMorales18801" role="narrator">Jesús Morales</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="20">About 20 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA004602</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Marlett, Stephen A. (2022): Words from Another World. A Collection of Analyzed Seri Texts. Oaxaca: Instituto Lingüístico de Verano. Quot. pp. 282-310.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="74">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA33401">Seri</name>
+          <date notAfter="1976" notBefore="1952" type="recorded">Recorded sometime between 1952 and 1976.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>
+        <note>The free translation given here is a compromise between a relatively close translation that reflects the rapid-paced delivery of the original and one that is understandable. As noted above, the first three sentences do not appear in the recording. In addition, the two <rs type="animal">sea creatures</rs> are not identified or described until late in the narrative, the first being a <rs type="animal">shark</rs> and the second something quite extraordinary. While this may reflect either the fact that the story is well-known to the Seris or contributes to the fast pace of the action, it makes it less understandable to an outsider. I have added some bracketed material to help the reader.</note>
+      </p>
+      <p><persName>Cöquimaxp</persName><note>The name Cöquimaxp ('who is <rs type="color">light pink</rs>', variation of cöquihmaxp) probably indicates something about the man's skin complexion, although this is not mentioned in the story. People have typically had nicknames of this type; see Marlett (2008a). The phonetics may suggest that the name is simplified to Cöimaxp (or an orthographical variation of this) as appears in previous publications; this would not be surprising. The expression for <rs type="color">light pink</rs> is believed to be etymologically related to the root for <rs type="color">'white': √ooxp</rs>. - Since many people died in this incident, it is not clear why the story begins and ends with only the mention of the man named <persName>Cöquimaxp</persName>.</note> was one of the <placeName>San Esteban Island</placeName> people.<note>This sentence gives two alternative ways to refer to the inhabitants of <placeName>San Esteban Island</placeName>. The second is the more prosaic of the two, while the first one uses a name (Hast) that is primarily used in special contexts. For more information about the Seri groups that lived in the area, including <placeName>San Esteban Island</placeName>, see E. Moser (2017). There were four subgroups on the island, one of which was known as the <placeName>Cofteecöl Iifa</placeName> group, referring to the peninsula that is mentioned further below. The name <placeName>Cofteecöl</placeName> itself has a disputed etymology. One of these, often cited in earlier work, understands it as reference to large (-eecöl) <rs type="animal">chuckwallas (coof)</rs>. Another option, told to me unsolicited a number of years ago by Priscila Moreno Díaz, a descendant of one of the last residents of <placeName>San Esteban Island</placeName>, is that it refers to coft (plural of <rs type="plant">cof 'San Juanico tree'</rs>). This species of <rs type="plant">tree</rs> is not found on the island today, a fact that has caused some people to question the authenticity of the explanation.</note> He was an adult, but he was small. When he sat behind a water jug, only the crown of his hat could be seen<note>The itni of a hat is its crown. The word appears here in a modified form, with an infix, to add a rhetorical effect of an imprecise nature but apparently relating to the fact that 'just' the crown could be seen above the large water pot. The water pots in question were large clay pots made with great skill, today found only in museums. For more information, see Bowen &amp; E. Moser (1968).</note>.<note>Sentences 1-3 are not in the original recording; they were presumably added by Roberto Herrera Marcos and Edward W. Moser as they prepared the text to be used in the community. These sentences give some crucial background information that Jesús Morales did not include in this telling.</note> Well, the people were first on <placeName>San Esteban Island</placeName>, but they left there ...<note>This sentence is interrupted by an explanation of why the people left <placeName>San Esteban Island</placeName>. The sentence after the next could be viewed as its continuation.</note> They had been eating <rs type="animal">chuckwallas</rs> and <rs type="animal" key="Zalophus californicus">sea lions</rs>,<note>The place of <rs type="animal">chuckwallas</rs> and <rs type="animal">sea lions</rs> as food resources for some groups of Seri people has been well documented; see Felger &amp; M. Moser (1985:49, 53).</note> but they had depleted the <rs type="animal">sea lions</rs> that were there, [while other <rs type="animal">sea lions</rs>] fled [the area]<note>In this sentence we are led to understand that the sea lion population had not been completely wiped out, but that some of the animals had gone elsewhere, with the result that there was a food shortage for the people.</note> ... [The people] went toward that other mountain [a place on <placeName>San Lorenzo Island</placeName>].<note>This sentence picks up from the next to last one.</note> The peak [of that place on <placeName>San Lorenzo Island</placeName>] was oriented with a point [out into the sea]; it is almost like an island, and the place resembles an estuary.<note>Bowen (2000) provides more information about the geographical features discussed here relating to the location on the west side of the southern part of <placeName>San Lorenzo Island</placeName>.</note> The <placeName>San Esteban</placeName> people called it <placeName>Xtaasi Hapee - "Gift Estuary"</placeName><note>As Xavier Moreno explained, the word Hapee here, while very similar to the form hapé ('what is heard') from quii 'to hear', is a form of the irregular verb quiye 'to give food to'. As he was told by a relative, the same name Xtaasi Hapee occurs for another body of water in the Seri area and indicates that food is always found there.</note> [And so the people] were there [for some time], they were eating those <rs type="animal">animals</rs>, including sea <rs type="animal">lions</rs> [and <rs type="animal">chuckwallas</rs>]. They were there ...<note>Again, Morales begins a sentence and then interrupts it, this time with an explanation about the chuckwallas.</note> The <rs type="animal">chuckwallas</rs> there are bigger than normal. They are like the size of toddlers but they are <rs type="color">black</rs>, extremely <rs type="color">black</rs>. Their form is like that of a normal <rs type="animal">chuckwalla</rs>, and they are called '<rs type="animal" key="Sauromalus obesus" ref="q:Q656553">black chuckwallas</rs>'.<note>There are three kinds of <rs type="animal">chuckwallas</rs> in the area: <rs type="animal" key="Sauromalus obesus" ref="q:Q656553">Sauromalus obesus (northern chuckwalla, called both coof and ziix hast iizx ano coom)</rs>, <rs type="animal" key="Sauromalus varius" ref="q:Q2967623">Sauromalus varius (San Esteban Island chuckwalla or piebald chuckwalla, called coof)</rs>, and <rs type="animal" key="Sauromalus hispidus" ref="q:Q115765">Sauromalus hispidus (spiny chuckwalla, called coof coopol)</rs>; the latter has a <rs type="color">darker</rs> skin than the others (Felger &amp; M. Moser 1985, Bowen 2000, Moser &amp; Marlett 2010).</note> [And so the people] were there with food to eat. And as another year was about to begin,<note>This is taken to mean that the people had been there for a year.</note> someone said: "Maybe we should return to <placeName>San Esteban Island</placeName>. A year has gone by. The <rs type="plant" key="Agave cerulata" ref="q:Q391676">century plant</rs><note>From Felger &amp; M. Moser (1985:222): "This highly variable subspecies [of <rs type="plant">century plant</rs>] is endemic to <placeName>San Esteban Island</placeName>, and is the only <rs type="plant">agave</rs> occurring on that island. [...] Unlike all other <rs type="plant">agaves</rs> in the Seri region, edible plants of this species could be found throughout the year. However, they are most flavorful during the latter part of January. [...] The hearts, cooked and mixed with <rs type="animal">sea turtle</rs> fat, were said to have a <rs type="plant">coconut</rs>-like flavor."</note> stalks have emerged.<note>When the <rs type="plant">century plants</rs> were prepared for roasting in underground pits, the developing inflorescence was cut out and discarded (Felger &amp; M. Moser 1985:222-227). The inflorescence is mentioned here to indicate that this would be the right time to harvest the <rs type="plant">century plants</rs>.</note> No matter which <rs type="plant">century plant</rs> we might choose to eat would be sweet. So maybe we should return." [And so they started on their trip back.]</p>
+      <p>They were going in seven <rs type="plant">reed</rs> boats.<note>Reed boats were used until the early part of the twentieth century; one of the last ones was obtained by Edward H. Davis and is part of the Smithsonian Institution collection. More information about these craft may be found in McGee (1898:215-221) and Felger &amp; M. Moser (1985:131-133), where they are also referred to as balsas. Reed boats were also used by indigenous groups in Baja California; see MacFarlan &amp; Henrickson (2010:59).</note> They were crossing the sea. They had killed lots of <rs type="animal">sea lions</rs> and were transporting them.<note>This fact surely was one of the reasons why a <rs type="animal">shark</rs> would be attracted to them.</note> There was one family in each <rs type="plant">reed</rs> boat. While <pb n="283"/>they were coming, they were on this side of <placeName>San Esteban Island</placeName>, and the bottom of the sea was roaring, and [someone] said: "A <rs type="animal">sea creature</rs> went there! Paddle! Paddle!" The one called <persName>"<rs type="color">Blue</rs> Shirt"</persName> was in the lead [boat], and the <rs type="animal">creature</rs><note>The creature is later identified as a large <rs type="color">white</rs> <rs type="animal">shark</rs>.</note> arrived to [the people on the <rs type="plant">reed</rs> boats] and quickly grabbed them one after another and ate them, all except <persName>"<rs type="color">Blue</rs> Shirt"</persName> [and his group]; it tried to chase him, but [<persName>"<rs type="color">Blue</rs> Shirt"</persName>] was fast. He was as fast as if he were in a motorboat, and he made his <rs type="plant">reed</rs> boat jump over a big sea current on his way. [He was fast] because he had spiritual power, and not because of his own strength. [The <rs type="animal">creature</rs>] chasing him, ...<note>This sentence is another one that is incomplete. The action picks up after the next two sentences.</note></p>
+      <p><placeName>Cofteecöl Point</placeName> is a long peninsula on <placeName>San Esteban Island</placeName>.<note>This notable spit on the southwestern side of <placeName>San Esteban Island</placeName> is listed as <placeName>El Cascajal</placeName> in Spanish-language sources (Bowen 2000:18).</note> It extends toward <placeName>San Lorenzo Island</placeName>. They went to the south side of it, and went ashore, but [the <rs type="animal">shark</rs>] was there out in front and did not leave. The people made a fire, [the <rs type="animal">shark</rs>] smelled the smoke, and did not leave; it just stayed there. Two nights passed, and then in the morning, ...<note>This is another incomplete sentence; the next two sentences are an explanatory insertion, after which the action picks up again.</note> In that direction [south] there is a place called <placeName>Hastojiicöla - "Tall Mountains"</placeName>. [Another <rs type="animal">creature</rs>], a large <rs type="animal">sea animal</rs>, was getting closer, making noise in its throat as it came. It came to the surface, and it seemed to growl as it came. Then [the <rs type="animal">shark</rs>], which was lying on the surface of the sea, took notice of [the oncoming <rs type="animal">creature</rs>], and gradually turned around to face it. At the same time, [the other <rs type="animal">creature</rs>] was coming into view. While [the other <rs type="animal">creature</rs>] was coming, [the <rs type="animal">shark</rs>] turned around to face it straight on. While the other one was coming, [the <rs type="animal">shark</rs>] faced it straight on and went out to meet it. [The other <rs type="animal">creature</rs>] arrived, and the two met and were almost standing up in the water [as they fought], and the sea water flowed over the land as they did. During that time, [<persName><rs type="color">Blue</rs> Shirt</persName> and his group] pulled their <rs type="plant">reed</rs> boat up farther on land as they were there on <placeName>San Esteban Island</placeName> watching. And that other <rs type="animal">creature</rs> killed the <rs type="color">white</rs> <rs type="animal">shark</rs> called 'wrinkled skin.' The other <rs type="animal">creature</rs> was something like a huge <rs type="animal">chuckwalla</rs> or like a <rs type="animal" key="Ctenosaura spp.">spiny-tailed iguana</rs>. It had come and killed [the <rs type="animal">shark</rs>]. After it had killed it, it returned to where it came from, going up and down in the water as it went. That's how it went away, going in the same direction that it came from.</p>
+      <p>Then, [<persName><rs type="color">Blue</rs> Shirt</persName> and his group] launched their <rs type="plant">reed</rs> boat and took it around [the point] to where a lot of people were living; they were their relatives. The people near the place called <placeName>Pajii</placeName> were a family, and they were living near a large arroyo there. [<persName><rs type="color">Blue</rs> Shirt</persName> and his group] arrived and told them the sad news: "The <rs type="plant">balsas</rs>, and all the people, they have all died. Even the children, they have ..."<note>Xavier Moreno pointed out that this sentence is incomplete out of respect for the deceased.</note></p>
+      <p><shift feature="epimyth"/>That's how it was that <persName>Cöquimaxp</persName>, died, little person that he was. He was a grown man, but he was little. That's how he died. And that's the end of the story.</p>
+    </body>
+  </text>
+</TEI>

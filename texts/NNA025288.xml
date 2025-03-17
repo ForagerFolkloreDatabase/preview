@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Fish-Hawk and His Daughter</title>
         <editor ref="p:Curtin1091" role="collector">Jeremiah Curtin</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,43 +24,41 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA025288</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Curtin, Jeremiah/Dixon, Roland B. (1909): Achomawi Myths. In: The Journal of American Folk-Lore 22(85), 283-287. Quot. pp. 287-288.</bibl>
+        <bibl>Curtin, Jeremiah/Dixon, Roland B. (1909): Achomawi Myths. Collected by Jeremiah Curtin. Ed. by Roland B. Dixon. In: The Journal of American Folk-Lore 22(85), 283-287. Quot. pp. 287-288.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="13">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="2">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="13">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,11 +99,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -121,11 +114,11 @@
   </teiHeader>
   <text>
     <body>
-      <p><animal>Fish-Hawk</animal> lived down at <placeName>Pit River</placeName>. When Sun travelled in winter, he left his daughter at home, but he carried her about with him in summer. Sun did not want his daughter to marry any poor person, but a great man, like <animal>Pine-Marten</animal>, <animal>Wolf</animal>, or <animal>Coyote</animal>. <animal>Fish-Hawk</animal> got angry at Sun because he talked in this way of poor people, so he started and went down to the ocean, to Sun's place, and slipped into the sweat-house. It was winter now, and Sun's daughter was put away inside the house in a basket. <animal>Fish-Hawk</animal> stole her, carried her on his back to <animal>Coyote</animal>'s house, and hid her away. He made the journey in one night.</p>
-      <p>Next morning Sun could not find his daughter, and did not know where she had gone. That morning <animal>Fish-Hawk</animal> took the basket with the woman in it, and put it away under the rocks in muddy water, to hide it so that Sun could not see and could not find his daughter.</p>
-      <p>Sun searched everywhere in the air and on the ground, but could not find her. Then he hired all men who were good divers or swimmers to hunt in the water, for he thought she was hidden in the water. All searched until they came to <placeName>Pit River</placeName>. One would search part of the way, then another. <animal>Kingfisher</animal> was the last man to go in search of her. He went along slowly to look where the water was muddy. At last he thought he saw just a bit of something under the water. Then he went over the place carefully again and again.</p>
-      <p>Many people were going along the river, watching these men looking for Sun's daughter. <animal>Kingfisher</animal> filled his pipe, smoked, and blew on the water to make it clear, for he was a great shaman. Then he went up in the air and came down over the place. The people were all excited, and thought surely he would find something. He came along slowly, and sat and smoked again, and blew the smoke over the water. Then he rose, rolled up his pipe and tobacco, and put them away. Then he took a long pole, stood over the water, pushed his pole down deep, and speared with it until he got hold of the basket and pulled it out. Old Sun came, untied the basket, took his daughter out, washed her, then put her back. He paid each of the men he had hired. Part of their pay was in shells.</p>
-      <p><animal>Kingfisher</animal> said that it was <animal>Fish-Hawk</animal> who had hidden the basket. Sun put the basket on his back and started home. He was so happy to get his daughter back that he did no harm to <animal>Fish-Hawk</animal> for stealing her.</p>
+      <p><rs type="animal">Fish-Hawk</rs> lived down at <placeName>Pit River</placeName>. When Sun travelled in winter, he left his daughter at home, but he carried her about with him in summer. Sun did not want his daughter to marry any poor person, but a great man, like <rs type="animal">Pine-Marten</rs>, <rs type="animal">Wolf</rs>, or <rs type="animal">Coyote</rs>. <rs type="animal">Fish-Hawk</rs> got angry at Sun because he talked in this way of poor people, so he started and went down to the ocean, to Sun's place, and slipped into the sweat-house. It was winter now, and Sun's daughter was put away inside the house in a basket. <rs type="animal">Fish-Hawk</rs> stole her, carried her on his back to <rs type="animal">Coyote</rs>'s house, and hid her away. He made the journey in one night.</p>
+      <p>Next morning Sun could not find his daughter, and did not know where she had gone. That morning <rs type="animal">Fish-Hawk</rs> took the basket with the woman in it, and put it away under the rocks in muddy water, to hide it so that Sun could not see and could not find his daughter.</p>
+      <p>Sun searched everywhere in the air and on the ground, but could not find her. Then he hired all men who were good divers or swimmers to hunt in the water, for he thought she was hidden in the water. All searched until they came to <placeName>Pit River</placeName>. One would search part of the way, then another. <rs type="animal">Kingfisher</rs> was the last man to go in search of her. He went along slowly to look where the water was muddy. At last he thought he saw just a bit of something under the water. Then he went over the place carefully again and again.</p>
+      <p>Many people were going along the river, watching these men looking for Sun's daughter. <rs type="animal">Kingfisher</rs> filled his pipe, smoked, and blew on the water to make it clear, for he was a great shaman. Then he went up in the air and came down over the place. The people were all excited, and thought surely he would find something. He came along slowly, and sat and smoked again, and blew the smoke over the water. Then he rose, rolled up his pipe and tobacco, and put them away. Then he took a long pole, stood over the water, pushed his pole down deep, and speared with it until he got hold of the basket and pulled it out. Old Sun came, untied the basket, took his daughter out, washed her, then put her back. He paid each of the men he had hired. Part of their pay was in shells.</p>
+      <p><rs type="animal">Kingfisher</rs> said that it was <rs type="animal">Fish-Hawk</rs> who had hidden the basket. Sun put the basket on his back and started home. He was so happy to get his daughter back that he did no harm to <rs type="animal">Fish-Hawk</rs> for stealing her.</p>
     </body>
   </text>
 </TEI>

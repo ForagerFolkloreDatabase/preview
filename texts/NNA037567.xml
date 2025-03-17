@@ -1,33 +1,32 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Unfaithful Husband</title>
         <editor ref="p:Lavrischeff3931" role="collector">Tikhon I. Lavrischeff</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="KB" quantity="11">About 11 kilobytes</measure>
+        <measure unit="KB" quantity="10">About 10 kilobytes</measure>
       </extent>
       <publicationStmt>
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA037567</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Lavrischeff, T. I. (1928): Two Aleut Tales. In: American Anthropologist NS 30(1), 121-124. Quot. pp. 121-122.</bibl>
@@ -36,32 +35,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="8">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="3">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="7">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="11">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,11 +99,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -122,14 +115,14 @@
   <text>
     <body>
       <p>At <placeName>Eekakhlee</placeName><note>Eekakhlee was the name given in the old days to present <placeName>Johnstone Point</placeName> on <placeName>Hinchinbrook island</placeName>, and the mountains between there and <placeName>Nutchek</placeName> were called <placeName>Keeliagat</placeName>.</note> lived an old man with his wife. They existed comfortably, but the old man did not love his spouse and hoped to desert her. As he was a shaman, or sorcerer, it was easy for him to go into a trance and appear as dead. His wife buried him, according to custom, in a cave on a mountain, and his bows, arrows, clothing and bidarkas were laid beside him in a cavern.</p>
-      <p>For three days the disconsolate widow came to the cave to weep and wail. When she came on the fourth day she did not find the body nor the bidarkas and clothing. Stupefied she stood there puzzled by the disappearance of the corpse. Search for traces of it were fruitless and her grief increased. But a little <animal>bird</animal> on a <plant>tree</plant> sang to her:</p>
+      <p>For three days the disconsolate widow came to the cave to weep and wail. When she came on the fourth day she did not find the body nor the bidarkas and clothing. Stupefied she stood there puzzled by the disappearance of the corpse. Search for traces of it were fruitless and her grief increased. But a little <rs type="animal">bird</rs> on a <rs type="plant">tree</rs> sang to her:</p>
       <lg type="song">
         <l>"Cheer up, cheer up. </l>
         <l>Far beyond the Kiliagat the old man lives.</l>
         <l>Far more than before, he enjoys his life.</l>
         <l>Cheer up, cheer up."</l>
       </lg>
-      <p>At first the woman paid no attention to the <animal>bird</animal> and went to her house. On the next day she renewed her search, but the <animal>bird</animal> again sang the same song. The old woman asked it, "Where is my husband?" At this the feathered <animal>creature</animal> chirped:</p>
+      <p>At first the woman paid no attention to the <rs type="animal">bird</rs> and went to her house. On the next day she renewed her search, but the <rs type="animal">bird</rs> again sang the same song. The old woman asked it, "Where is my husband?" At this the feathered <rs type="animal">creature</rs> chirped:</p>
       <lg type="song">
         <l>"On the top of the mount,</l>
         <l>Near the peaceful bay,</l>
@@ -138,14 +131,14 @@
         <l>He will not come back;</l>
         <l>Two nice girls entertain him there."</l>
       </lg>
-      <p>Still skeptical the old woman replied, "If you tell me the truth, take flight to the place where he lives." Thereupon the <animal>bird</animal> set out, with the woman following silently.</p>
-      <p><pb n="122"/>It was a long journey across the forest, through brush and over mountains, but from time to time the <animal>bird</animal> rested, permitting the old woman to catch up with it. Finally they came to the top of a hill near the bay at <placeName>Nutchek</placeName>. From this spot the wife saw her husband in a bidarka far out to sea. Just below her on a sandy beach she espied two attractive girls. Quietly descending, the old woman stopped behind a <plant>tree</plant> to observe them. The girls were cooking soup and when it was ready she stepped out.</p>
+      <p>Still skeptical the old woman replied, "If you tell me the truth, take flight to the place where he lives." Thereupon the <rs type="animal">bird</rs> set out, with the woman following silently.</p>
+      <p><pb n="122"/>It was a long journey across the forest, through brush and over mountains, but from time to time the <rs type="animal">bird</rs> rested, permitting the old woman to catch up with it. Finally they came to the top of a hill near the bay at <placeName>Nutchek</placeName>. From this spot the wife saw her husband in a bidarka far out to sea. Just below her on a sandy beach she espied two attractive girls. Quietly descending, the old woman stopped behind a <rs type="plant">tree</rs> to observe them. The girls were cooking soup and when it was ready she stepped out.</p>
       <p>"Hello, girls," the wife exclaimed, "I see you have prepared your soup in the right way. Now I will show you best how to drink it." With this she seized the pan and turned it over the heads of the girls.</p>
       <p>"That is the way the old man used to eat his soup in our birthplace," she gloated.</p>
-      <p>When both girls were dead the old woman made the feature of one appear as though she were scolding and the other seem to be laughing. Then she set their bodies on the beach and hid herself behind a <plant>tree</plant>.</p>
+      <p>When both girls were dead the old woman made the feature of one appear as though she were scolding and the other seem to be laughing. Then she set their bodies on the beach and hid herself behind a <rs type="plant">tree</rs>.</p>
       <p>The old man came back and saw the maidens, one apparently angry and the other laughing.</p>
-      <p>"Why do you quarrel?" he asked. "Live in peace. I love you both. I have brought two <animal>otters</animal> as a present for you. Do not fight."</p>
-      <p>Upon hearing these words the old woman turned herself into a <animal>bear</animal>, an easy thing for her to do, as she was also a shaman. Then she sprang upon her husband, exclaiming, "Here am I - your wife. You left me without your care and food. I have suffered very much. Now that I have found you here you shall die. Akcheenkoo."</p>
+      <p>"Why do you quarrel?" he asked. "Live in peace. I love you both. I have brought two <rs type="animal">otters</rs> as a present for you. Do not fight."</p>
+      <p>Upon hearing these words the old woman turned herself into a <rs type="animal">bear</rs>, an easy thing for her to do, as she was also a shaman. Then she sprang upon her husband, exclaiming, "Here am I - your wife. You left me without your care and food. I have suffered very much. Now that I have found you here you shall die. Akcheenkoo."</p>
       <p>And with that she ate up the old man, together with his bidarkas. Such was the end of the unfaithful husband of old<placeName>Eekakhlee</placeName>.</p>
     </body>
   </text>

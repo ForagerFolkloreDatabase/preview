@@ -1,0 +1,130 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>How Coyote Would Have Liked to Have Eaten Stinkbug</title>
+        <editor ref="p:Moser11151" role="collector">Edward W. Moser</editor>
+        <editor ref="p:JesúsMorales18801" role="narrator">Jesús Morales</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="9">About 9 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA006009</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Marlett, Stephen A. (2022): Words from Another World. A Collection of Analyzed Seri Texts. Oaxaca: Instituto Lingüístico de Verano. Quot. pp. 104-111.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="13">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA33401">Seri</name>
+          <date notAfter="1975" notBefore="1952" type="recorded">Recorded sometime between 1952 and 1975.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>One day, <rs type="animal" key="Eleodes spp." ref="q:Q108542223">Stinkbug</rs> was sitting on the road. <rs type="animal" key="Canis latrans" ref="q:Q44299">Coyote</rs> was coming along the road, and as he was arriving to where <rs type="animal">Stinkbug</rs> was, he looked down and said to him, "What would Friend<note>The word hamiigo is not a common one in the Seri language and so its use by Coyote is interesting. He uses it here without a definite article, but is not using it as a vocative, it seems, since there is no indication of second person in the sentence. It is not taken here and in the next sentence as a vocative, unlike four paragraphs below. The word "is" in this sentence is also not at all common (it was not included in the dictionary), but is not restricted to Coyote speech.</note> be doing here? I think I'd like to chew on Friend. Hmmm," he said.</p>
+      <p><rs type="animal">Stinkbug</rs> replied: "I'm just here doing something," he said.</p>
+      <p>Then <rs type="animal">Coyote</rs> said: "What would he be doing?"</p>
+      <p>[<rs type="animal">Stinkbug</rs>:] "The underground dwellers are talking, and I am here listening to them."</p>
+      <p>[<rs type="animal">Coyote</rs>:] "Friend, what are they saying? If you understand what they are saying, don't hide it from me!"</p>
+      <p>[<rs type="animal">Stinkbug</rs>:] "OK<note>This word is very unusual and, if included in a dictionary, would be an interjection (although followed by a declarative enclitic here). It has a nasalized vowel that is otherwise unexplained phonologically.</note>. Can that be it? Can that be the meaning of it? How could they be thinking and talking like that?<note>This sentence is a bit more complex in the recording but is not clear.</note>"</p>
+      <p>Then he continued: "Everything that defecates<note>The verb translated 'defecate' here is considered very vulgar today and was only slightly less vulgar fifty years ago.</note> on road will be gathered together and killed, they say."</p>
+      <p>[Coyote:] "Well, in that case, I am going to run away."</p>
+      <p>And at that point, he took off running. While he was still with <rs type="animal">Stinkbug</rs>, <rs type="animal">Coyote</rs> took off running, and <rs type="animal">Stinkbug</rs> escaped into a conveniently found burrow.</p>
+      <p><shift feature="epimyth"/>Anyone who sees <rs type="animal">Coyote</rs> tricks him. <rs type="animal">Stinkbug</rs> had tricked him and escaped. The end.</p>
+    </body>
+  </text>
+</TEI>

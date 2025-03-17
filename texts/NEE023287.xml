@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>How the Chewong Got Fire and other Cultural Artifacts (Origin of Night)</title>
+        <editor ref="p:Howell48" role="collector">Signe Howell</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="10">About 10 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NEE023287</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Howell, Signe (1982): Chewong Myths and Legends. Kuala Lumpur: Art Printing Works (The Malaysian Branch of the Royal Asiatic Society Monographs, 11). Quot. p. 4.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="7">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CEE20501">Chewong</name>
+          <date notAfter="1979" notBefore="1977" type="recorded">Recorded sometime between 1977 and 1979.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#FFDB">
+              <idno type="TMI">A1174</idno>
+              <term>A1174. Origin of night.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">A1414</idno>
+              <term>A1414. Origin of fire.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">A1414.4</idno>
+              <term>A1414.4. Origin of fire – gift from god (supernatural person).</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">A2691.2</idno>
+              <term>A2691.2. Origin of tobacco. (Cf. A2611.2, A2611.2.1.)</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">F92</idno>
+              <term>F92. Pit entrance to lower world. Entrance through pit, hole, spring, or cavern.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>A long, long time ago there was no night on this earth - Earth Seven. The people slept during the day. They did not have fire either. If they wanted to cook <rs type="plant" key="manihot utilissima">tapioca</rs> they just put it on the ground. The moon was just another star. One day a boy lost his knife through a hole in the ground. He followed after it and fell down on Earth Eight which was very close to Earth Seven in those days. Old people lived down there. <persName>Yaʼ Rud</persName><note>Yaʼ means grandmother. It is often used to prefix the name of a woman, and characters in the legends often refer to old women whom they meet as Yaʼ. <persName>Yaʼ Rud</persName> is an original superhuman being who lives below, on Earth Eight. She is one of <persName>Tanko</persName>'s wives (see "<rs ref="g:GEE2143.042">Tanko</rs>") and is possibly the same as the Original <rs type="animal">Snake</rs>, or possibly another aspect of her.</note> was there and other people who are still alive today. They gave him some food to eat. Then it became very dark and the boy was frightened. "What is this?" he wanted to know. "This is night," they told him. "We do not have night on my earth," said the boy. Then the people lighted resin torches. "What is that?" asked the boy. "That is resin torches," they told him. The people on Earth Eight had fire and they made a big one. The boy was very frightened. "What is that?" he asked. "That is fire," they explained. "We do not have fire on my earth," the boy said. The people told the boy that if there was no night all the <rs type="plant">tubers</rs> would die, so they gave him night. They put night in a <rs type="plant">bamboo</rs> for him to take with him to Earth Seven. They also gave him fire, resin for torches and tobacco. The boy returned to this earth. When he poured out night from the <rs type="plant">bamboo</rs> and it became dark the people here became very frightened. The boy explained to them that it was night and that if they did not have night their <rs type="plant">tubers</rs> would die. He then gave them the resin torches and the fire so that they could cook their food. When he smoked the tobacco and the people saw the smoke coming out of his mouth they became very frightened, but the boy told them that it tasted good.</p>
+    </body>
+  </text>
+</TEI>

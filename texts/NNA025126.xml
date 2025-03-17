@@ -1,21 +1,20 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Making of Daylight</title>
         <editor ref="p:Dixon1051" role="collector">Roland B. Dixon</editor>
-        <editor ref="p:OldWool4761" role="informant">"Old Wool"</editor>
-        <editor ref="p:CharleyGreen4760" role="informant">Charley Green</editor>
+        <editor ref="p:OldWool4761" role="narrator">"Old Wool"</editor>
+        <editor ref="p:CharleyGreen4760" role="narrator">Charley Green</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -26,9 +25,9 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA025126</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Dixon, Roland B. (1908): Achomawi and Atsugewi Tales. In: The Journal of American Folk-Lore 21(81), 159-177. Quot. pp. 161-163.</bibl>
@@ -37,32 +36,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="44">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="1">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="1">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="46">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -103,11 +100,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -122,9 +115,9 @@
   </teiHeader>
   <text>
     <body>
-      <p>In the beginning it was always dark. Darkness was a woman, who had two daughters, and came from the eastward to gamble with <animal>Wildcat</animal>. She reached <animal>Wildcat</animal>'s house at night, and after supper began to talk about gambling, saying, "I never came here before. I came to gamble." The others present advised <animal>Wildcat</animal> to play: so all the preparations were made, and, sitting on either side of the fire, they began to play. Darkness bet her two daughters against all the people which <animal>Wildcat</animal> had. Darkness wanted <animal>Wildcat</animal> to bet her husband, <animal>Chicken-Hawk</animal>, but she did not wish to. Finally, on <animal>Coyote</animal>'s advice, she bet him as chief first. Then they began to play, <animal>Coyote</animal> helping to sing. He thought the game was going favorably, and that <animal>Wildcat</animal> would win the two girls, and <pb n="162"/>that he would get them for wives. But just as she almost won, Darkness beat her, and, taking <animal>Coyote</animal>, broke him in two and threw him outside. Darkness then threatened to "stay dark all the time" unless <animal>Wildcat</animal> would bet her husband, as Darkness wanted him for a husband for her daughters. <animal>Wildcat</animal> refused, and bet other people in the house. All but three offered themselves to be bet. These were <animal>Rabbit</animal>, <animal>Weasel</animal>, and <animal>Caterpillar</animal>. Finally all were lost to Darkness but these; and then <animal>Caterpillar</animal> said, "Bet me," and he came near where <animal>Wildcat</animal> sat. They were gambling with a small slippery thing like ice, instead of the usual gambling-bone. <animal>Caterpillar</animal> began to sing, and to win. Pretty soon all but one of Darkness' counters were gone, and she began to be afraid. She was afraid of the smooth gambling-stick. <animal>Caterpillar</animal> told her to sit still, as she was moving about nervously. Suddenly he slid the gambling-stick across at her, and, entering her body, it caused her to burst. Then <animal>Caterpillar</animal> took her body and threw it outside.</p>
-      <p>The two girls were sitting there crying. One of them was going to gamble. She told <animal>Caterpillar</animal> to deal, but he refused. So she began, and won until <animal>Caterpillar</animal> had only one counter left. Then he began to win, and finally killed her just as he had her mother. He then threw her body outside. Only the youngest sister was left. <animal>Caterpillar</animal> told her not to cry, as he was not crying, although all his people were lost. They played and played, and, as before, <animal>Caterpillar</animal> killed her by the same trick. Then <animal>Caterpillar</animal> said, "In after time, people will say that I was the one who won my people back."</p>
-      <p>Still, however, it was dark. So <animal>Lizard</animal> set to work to try to make light. He went over to Big-<animal>Lizard</animal>'s house, and took a light with him. He told Big-<animal>Lizard</animal> all about what had happened, and told him that he and <animal>Caterpillar</animal> and <animal>Rabbit</animal> were the only ones left. Then <animal>Lizard</animal> put on his cap and began to dance. His cap was made of a <animal>grizzly-bear</animal>'s head. <animal>Rabbit</animal> was talking, singing, while <animal>Lizard</animal> was dancing near the house-post. By and by it began to grow <color>light</color>. <animal>Lizard</animal> made daylight come by dancing. <animal>Rabbit</animal> said, "That is what people will say; that is what people must say, 'Daylight is coming."' <animal>Lizard</animal>'s grandmother was sitting there, and she sang, "Daylight is coming, daylight is coming!" Then she made a mistake, and sang about a man. <animal>Lizard</animal> was angry, and said, "You are always thinking about men." His grandmother answered, "I meant to sing properly, but my teeth are all gone, and so I made a mistake." <animal>Lizard</animal> then told <animal>Rabbit</animal> to go out and see where light was coming. He went up and looked, and, looking to the east, saw the dawn and heard the <animal>birds</animal> singing. He came back and said, "I did not see anything." By and by he went up again, after <animal>Lizard</animal> had danced some more. This time daylight had come. All over the world people woke up, and made a noise. Then <animal>Lizard</animal> stopped dancing. He told people to open the doors, to build a fire and go out. It was <pb n="163"/>spring-time, and <plant>sunflowers</plant> were ripening. All the people came out and talked about <animal>Lizard</animal>'s having made the light.</p>
+      <p>In the beginning it was always dark. Darkness was a woman, who had two daughters, and came from the eastward to gamble with <rs type="animal">Wildcat</rs>. She reached <rs type="animal">Wildcat</rs>'s house at night, and after supper began to talk about gambling, saying, "I never came here before. I came to gamble." The others present advised <rs type="animal">Wildcat</rs> to play: so all the preparations were made, and, sitting on either side of the fire, they began to play. Darkness bet her two daughters against all the people which <rs type="animal">Wildcat</rs> had. Darkness wanted <rs type="animal">Wildcat</rs> to bet her husband, <rs type="animal">Chicken-Hawk</rs>, but she did not wish to. Finally, on <rs type="animal">Coyote</rs>'s advice, she bet him as chief first. Then they began to play, <rs type="animal">Coyote</rs> helping to sing. He thought the game was going favorably, and that <rs type="animal">Wildcat</rs> would win the two girls, and <pb n="162"/>that he would get them for wives. But just as she almost won, Darkness beat her, and, taking <rs type="animal">Coyote</rs>, broke him in two and threw him outside. Darkness then threatened to "stay dark all the time" unless <rs type="animal">Wildcat</rs> would bet her husband, as Darkness wanted him for a husband for her daughters. <rs type="animal">Wildcat</rs> refused, and bet other people in the house. All but three offered themselves to be bet. These were <rs type="animal">Rabbit</rs>, <rs type="animal">Weasel</rs>, and <rs type="animal">Caterpillar</rs>. Finally all were lost to Darkness but these; and then <rs type="animal">Caterpillar</rs> said, "Bet me," and he came near where <rs type="animal">Wildcat</rs> sat. They were gambling with a small slippery thing like ice, instead of the usual gambling-bone. <rs type="animal">Caterpillar</rs> began to sing, and to win. Pretty soon all but one of Darkness' counters were gone, and she began to be afraid. She was afraid of the smooth gambling-stick. <rs type="animal">Caterpillar</rs> told her to sit still, as she was moving about nervously. Suddenly he slid the gambling-stick across at her, and, entering her body, it caused her to burst. Then <rs type="animal">Caterpillar</rs> took her body and threw it outside.</p>
+      <p>The two girls were sitting there crying. One of them was going to gamble. She told <rs type="animal">Caterpillar</rs> to deal, but he refused. So she began, and won until <rs type="animal">Caterpillar</rs> had only one counter left. Then he began to win, and finally killed her just as he had her mother. He then threw her body outside. Only the youngest sister was left. <rs type="animal">Caterpillar</rs> told her not to cry, as he was not crying, although all his people were lost. They played and played, and, as before, <rs type="animal">Caterpillar</rs> killed her by the same trick. Then <rs type="animal">Caterpillar</rs> said, "In after time, people will say that I was the one who won my people back."</p>
+      <p>Still, however, it was dark. So <rs type="animal">Lizard</rs> set to work to try to make light. He went over to Big-<rs type="animal">Lizard</rs>'s house, and took a light with him. He told Big-<rs type="animal">Lizard</rs> all about what had happened, and told him that he and <rs type="animal">Caterpillar</rs> and <rs type="animal">Rabbit</rs> were the only ones left. Then <rs type="animal">Lizard</rs> put on his cap and began to dance. His cap was made of a <rs type="animal">grizzly-bear</rs>'s head. <rs type="animal">Rabbit</rs> was talking, singing, while <rs type="animal">Lizard</rs> was dancing near the house-post. By and by it began to grow <rs type="color">light</rs>. <rs type="animal">Lizard</rs> made daylight come by dancing. <rs type="animal">Rabbit</rs> said, "That is what people will say; that is what people must say, 'Daylight is coming."' <rs type="animal">Lizard</rs>'s grandmother was sitting there, and she sang, "Daylight is coming, daylight is coming!" Then she made a mistake, and sang about a man. <rs type="animal">Lizard</rs> was angry, and said, "You are always thinking about men." His grandmother answered, "I meant to sing properly, but my teeth are all gone, and so I made a mistake." <rs type="animal">Lizard</rs> then told <rs type="animal">Rabbit</rs> to go out and see where light was coming. He went up and looked, and, looking to the east, saw the dawn and heard the <rs type="animal">birds</rs> singing. He came back and said, "I did not see anything." By and by he went up again, after <rs type="animal">Lizard</rs> had danced some more. This time daylight had come. All over the world people woke up, and made a noise. Then <rs type="animal">Lizard</rs> stopped dancing. He told people to open the doors, to build a fire and go out. It was <pb n="163"/>spring-time, and <rs type="plant">sunflowers</rs> were ripening. All the people came out and talked about <rs type="animal">Lizard</rs>'s having made the light.</p>
     </body>
   </text>
 </TEI>

@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Snake Husband</title>
+        <editor ref="p:Howell48" role="collector">Signe Howell</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="13">About 13 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NEE023304</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Howell, Signe (1982): Chewong Myths and Legends. Kuala Lumpur: Art Printing Works (The Malaysian Branch of the Royal Asiatic Society Monographs, 11). Quot. pp. 17-18.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="49">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="2">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CEE20501">Chewong</name>
+          <date notAfter="1979" notBefore="1977" type="recorded">Recorded sometime between 1977 and 1979.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#FFDB">
+              <idno type="TMI">B640</idno>
+              <term>B640. Marriage to person in animal form.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">B646.1</idno>
+              <term>B646.1. Marriage to person in snake form. (Cf. D191.)</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">D191</idno>
+              <term>D191. Transformation: man to serpent (snake). (Cf. B646.1.)</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">D391</idno>
+              <term>D391. Transformation: serpent (snake) to person.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Once the fire went out in all the houses. Only the <rs type="animal">snake</rs> had fire. The young girls went to ask him for fire. "If you will become my wives I will give you fire," said he. "No we do not want to," said the girls, "we do not want a <rs type="animal">snake</rs> for husband. It will be so difficult to sleep together." Two sisters went also to ask the <rs type="animal">snake</rs> for fire. "I'll give you fire if you marry me," replied he. The sisters agreed. The <rs type="animal">snake</rs> then gave them rings and returned with the two sisters to their house. The girls told everybody that they had married the <rs type="animal">snake</rs>. In the evening they cooked <rs type="plant">rice</rs> and ate. When they had eaten they went to sleep. There was still some <rs type="plant">rice</rs> left in the saucepan. The <rs type="animal">snake</rs> did not eat. <shift feature="apartmyth"/><rs type="animal">Snakes</rs> do not eat cooked <rs type="plant">rice</rs>.<shift feature="diegesis"/> The girls slept at one end of the house, and the <rs type="animal">snake</rs> slept at the other end. Once the sisters were fast asleep, the <rs type="animal">snake</rs>, who was really a man who wore a <rs type="animal">snake</rs> "cloak" (<rs ref="g:GEE2143.004">bajo</rs> talòden), took off his <rs type="animal">snake</rs> cloak and became a real man. He ate the rest of the <rs type="plant">rice</rs> in the saucepan. He smoked tobacco which he took from the girls' tobacco pouches. Then he ate their <rs type="plant">betel</rs> nuts. Having finished this he went over to where his two wives were sleeping and lay down between and went to sleep. As it began to get <rs type="color">light</rs> he got up, put on his <rs type="animal">snake</rs> cloak again and went back to his own sleeping place. In the morning the girls said they would finish off the rest of the <rs type="plant">rice</rs> from the night before, but when they went to get it, they saw that the saucepan was empty. "Who has eaten the <rs type="plant">rice</rs>?" the older sister asked the younger. "l do not know, I was fast asleep all night," she replied. During the day the other girls in the settlement - those who had refused to marry the <rs type="animal">snake</rs> - came to have a look. They thought that the <rs type="animal">snake</rs> would have gobbled up his two wives.</p>
+      <p>In the evening the girls cooked <rs type="plant">rice</rs> which they ate. There was still quite a lot left in the saucepan when they had finished. Then they went to sleep. When the <rs type="animal">snake</rs> saw that they were fast asleep, he took off his <rs type="animal">snake</rs> cloak as he had done the night before, ate up the rest of the <rs type="plant">rice</rs>, smoked tobacco, ate <rs type="plant">betel</rs> nuts, and then lay down to sleep between his two wives. Before sunrise he got up, put his <rs type="animal">snake</rs> cloak back on and returned to his own sleeping quarters. In the morning the girls wanted to eat the rest of the <rs type="plant">rice</rs>, but found that there was nothing left. During the day the other people in the settlement came to have a look to see if they were still alive or whether the <rs type="animal">snake</rs> had swallowed them. But the girls assured everybody that there was no problem in being the <rs type="animal">snake</rs>'s wives.</p>
+      <p>The same thing went on for several nights, and finally the girls decided to find out who it was who was eating their <rs type="plant">rice</rs>, smoking their tobacco and eating their <rs type="plant">betel</rs> nuts. They went into the jungle and found some nuts that looks very much like <rs type="plant">betel</rs>, but are poisonous. Then they picked some leaves that look like <rs ref="g:GEE2143.038">sireh</rs> leaves, but are very bitter, and with these they replaced their real <rs type="plant">betel</rs> nuts and <rs ref="g:GEE2143.038">sireh</rs> leaves. In the evening after they had eaten, they pretended to go to sleep. The <rs type="animal">snake</rs> thought that they were asleep and took off his <rs type="animal">snake</rs> cloak and went to eat the <rs type="plant">rice</rs>. The girls got up and took his <rs type="animal">snake</rs> cloak and crumpled it up between <pb n="18"/>their fingers. Then they went back, pretending to be asleep. When the <rs type="animal">snake</rs>-man ate the '<rs type="plant">betel</rs>-nuts' and the '<rs ref="g:GEE2143.038">sireh</rs> leaves' he shouted "This tastes horrible." The girls got up and when he saw them he looked everywhere for his <rs type="animal">snake</rs> cloak. "Where is my cloak? Where is my shirt? My original cloak!" he cried. His wives told him that they had destroyed it because they wanted a real husband. They then gave him a real cloak (<rs ref="g:GEE2143.004">bajo</rs>) to wear and from then on the <rs type="animal">snake</rs>-man was a real man.</p>
+      <p>The next day all the young girls came to have a look at the <rs type="animal">snake</rs> husband. When they saw the handsome man, they became very ashamed because they had refused to marry him.</p>
+    </body>
+  </text>
+</TEI>

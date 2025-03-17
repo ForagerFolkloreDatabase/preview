@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Origin of Man</title>
         <editor ref="p:Oberg378" role="collector">Kalervo Oberg</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,9 +24,9 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA013329</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Oberg, Kalervo (1949): The Terena and the Caduveo of Southern Mato Grosso, Brazil. Washington, D. C.: Government Printing Office (Smithsonian Institution, Institute of Social Anthropology, Publication 9.) Quot. p. 63.</bibl>
@@ -36,32 +35,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="25">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="1">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="13">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="1">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="3">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="1">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="26">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="9">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,18 +99,14 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
     <profileDesc>
       <settingDesc>
         <setting>
-          <name type="culture" key="CSA39202">Kadiw&#233;u</name>
+          <name type="culture" key="CSA39202">Kadiwéu</name>
           <date when="1947" type="recorded">Recorded in 1947.</date>
         </setting>
       </settingDesc>
@@ -135,7 +128,7 @@
             </item>
             <item resp="#FLSAI">
               <idno type="TMI">A1600</idno>
-              <term>A1600. Distribution and differentiation of peoples &#8211; general.</term>
+              <term>A1600. Distribution and differentiation of peoples – general.</term>
             </item>
             <item resp="#FLSAI">
               <idno type="TMI">A1610</idno>
@@ -195,7 +188,7 @@
             </item>
             <item resp="#FLSAI">
               <idno type="TMI">K300</idno>
-              <term>K300. Thefts and cheats &#8211; general.</term>
+              <term>K300. Thefts and cheats – general.</term>
             </item>
             <item resp="#FLSAI">
               <idno type="TMI">K420</idno>
@@ -216,9 +209,9 @@
   </teiHeader>
   <text>
     <body>
-      <p><anamyth><persName>Ono&#233;-noe</persName> is like a god, he is a Caduveo Indian, he pulled all the Indians out of a hole in the ground.</anamyth> <persName>Ono&#233;-noe</persName> lived in the bushes by a stream. He placed traps to catch <animal>fish</animal> in the pools along the stream. He was very lucky and always caught <animal>fish</animal>. One day, <persName>Ono&#233;-noe</persName> went to his <animal>fish</animal> trap and noticed that someone had stolen his <animal>fish</animal>. This happened for many days. <persName>Ono&#233;-noe</persName> then asked the <animal>&#233;tahaha</animal> [a large heron-like marsh <animal>bird</animal>] to watch the trap, but <animal>&#233;tahaha</animal> went to sleep. <persName>Ono&#233;-noe</persName> was angry and as punishment permitted <animal>&#233;tahaha</animal> to eat only <animal>lizards</animal>. <apartmyth>That is why this <animal>bird</animal> eats <animal>lizards</animal> today.</apartmyth> Next <persName>Ono&#233;-noe</persName> ordered the <animal>etoli-toli bird</animal> to watch the trap. He too fell asleep and as punishment the <animal>etoli-toli bird</animal> has had to live thereafter on <animal>locusts</animal>. Finally <persName>Ono&#233;-noe</persName> ordered the <animal>opokon&#243; bird</animal> to fly over his trap all night. At dawn <animal>opokon&#243;</animal> saw some people taking <animal>fish</animal> out of the trap. <animal>Opokon&#243;</animal> then began to cry out and went to <persName>Ono&#233;-noe</persName> to tell him what he had seen. <persName>Ono&#233;-noe</persName> gave <animal>opokon&#243;</animal> a <animal>snail</animal> to eat. <apartmyth>That is why <animal>opokon&#243;</animal> keeps crying and eating <animal>snails</animal> today.</apartmyth></p>
-      <p>Then <persName>Ono&#233;-noe</persName> got up, put on his sandals and with his two <animal>dogs</animal> went to the trap. The <animal>dogs</animal> took up the trail of the thieves and followed the tracks to a hole in the ground. <persName>Ono&#233;-noe</persName> took away the leaves covering the hole and found that it was full of people. He then pulled out all the people. He pulled out the Brazilians, Paraguayans, and all other nations. To the Terena he gave land and told them how to grow <plant>crops</plant>. He almost forgot the Caduveo and pulled them out last and told them to wait while he was giving the other people land. But the Caduveo ran off to hunt. <persName>Ono&#233;-noe</persName> was angry and said, "Now you must always wander about looking for <animal>animals</animal> to hunt." <apartmyth>That is why the Caduveo are still poor hunters.</apartmyth></p>
-      <p><persName>Ono&#233;-noe</persName> then evacuated and from his excrement came the Chamacoco, <epimyth>"That is why the Chamacoco are such stupid and dirty people."</epimyth></p>
+      <p><shift feature="anamyth"/><persName>Onoé-noe</persName> is like a god, he is a Caduveo Indian, he pulled all the Indians out of a hole in the ground.<shift feature="diegesis"/> <persName>Onoé-noe</persName> lived in the bushes by a stream. He placed traps to catch <rs type="animal">fish</rs> in the pools along the stream. He was very lucky and always caught <rs type="animal">fish</rs>. One day, <persName>Onoé-noe</persName> went to his <rs type="animal">fish</rs> trap and noticed that someone had stolen his <rs type="animal">fish</rs>. This happened for many days. <persName>Onoé-noe</persName> then asked the <rs type="animal">étahaha</rs> [a large heron-like marsh <rs type="animal">bird</rs>] to watch the trap, but <rs type="animal">étahaha</rs> went to sleep. <persName>Onoé-noe</persName> was angry and as punishment permitted <rs type="animal">étahaha</rs> to eat only <rs type="animal">lizards</rs>. <shift feature="apartmyth"/>That is why this <rs type="animal">bird</rs> eats <rs type="animal">lizards</rs> today.<shift feature="diegesis"/> Next <persName>Onoé-noe</persName> ordered the <rs type="animal">etoli-toli bird</rs> to watch the trap. He too fell asleep and as punishment the <rs type="animal">etoli-toli bird</rs> has had to live thereafter on <rs type="animal">locusts</rs>. Finally <persName>Onoé-noe</persName> ordered the <rs type="animal">opokonó bird</rs> to fly over his trap all night. At dawn <rs type="animal">opokonó</rs> saw some people taking <rs type="animal">fish</rs> out of the trap. <rs type="animal">Opokonó</rs> then began to cry out and went to <persName>Onoé-noe</persName> to tell him what he had seen. <persName>Onoé-noe</persName> gave <rs type="animal">opokonó</rs> a <rs type="animal">snail</rs> to eat. <shift feature="apartmyth"/>That is why <rs type="animal">opokonó</rs> keeps crying and eating <rs type="animal">snails</rs> today.</p>
+      <p><shift feature="diegesis"/>Then <persName>Onoé-noe</persName> got up, put on his sandals and with his two <rs type="animal">dogs</rs> went to the trap. The <rs type="animal">dogs</rs> took up the trail of the thieves and followed the tracks to a hole in the ground. <persName>Onoé-noe</persName> took away the leaves covering the hole and found that it was full of people. He then pulled out all the people. He pulled out the Brazilians, Paraguayans, and all other nations. To the Terena he gave land and told them how to grow <rs type="plant">crops</rs>. He almost forgot the Caduveo and pulled them out last and told them to wait while he was giving the other people land. But the Caduveo ran off to hunt. <persName>Onoé-noe</persName> was angry and said, "Now you must always wander about looking for <rs type="animal">animals</rs> to hunt." <shift feature="apartmyth"/>That is why the Caduveo are still poor hunters.</p>
+      <p><shift feature="diegesis"/><persName>Onoé-noe</persName> then evacuated and from his excrement came the Chamacoco, <shift feature="epimyth"/>"That is why the Chamacoco are such stupid and dirty people."</p>
     </body>
   </text>
 </TEI>

@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>"White Man and the Ghost"</title>
+        <editor ref="p:Salzmann9253" role="collector">Zdenek Salzmann</editor>
+        <editor ref="p:JohnBGoggles16021" role="narrator">John B. Goggles</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="9">About 9 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA054086</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Cowell, Andrew (2002): The Poetics of Arapaho Storytelling. In: Oral Tradition 17(1), 18-52. Quot. pp. 41-42.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="1">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA31604">Arapaho</name>
+          <date notAfter="1952" notBefore="1949" type="recorded">Recorded sometime between 1949 and 1952.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p><persName>White Man</persName> [traditional trickster figure] and the Ghost.</p>
+      <p><persName>White Man</persName> was walking around [root "isee": "to go"].</p>
+      <p>They say<note>"They say "is the translation of the narrative prefix" heeʼih-. "" Said" is the translation of "hee3eihok" and related forms.</note> he went down along the river ["isee"].</p>
+      <p>They say he went a long way ["isee"].</p>
+      <p>They say he couldn't find any place where he could stop for the night.</p>
+      <p>They say he was still walking ["isee"] and it was already dark.</p>
+      <p>They say he saw a tepee.</p>
+      <p>They say it was <rs type="color">light</rs> inside.</p>
+      <p>They say he went to it.</p>
+      <p>Where one enters this tepee, they say he stood there.</p>
+      <p>A person, they say he was walking around.</p>
+      <p>"I'm here," said <persName>White Man</persName>.</p>
+      <p>They say out came a woman.</p>
+      <p>"I'm tired, I'm hungry, can I stop here?" said <persName>White Man</persName>.</p>
+      <p>"I don't accept any visitors," she said.</p>
+      <p>"But you can come in and stay overnight," said this woman.</p>
+      <p>They say in went <persName>White Man</persName>.</p>
+      <p>They say he was fed.</p>
+      <p>"Where are you going?" she said.</p>
+      <p>"I'm looking for a woman to live with."</p>
+      <p>"I don't want to get married; that's why I'm always alone; you might leave me again," said this woman.</p>
+      <p>"I'll stay with you, I'll help you along," said <persName>White Man</persName>.</p>
+      <p>"If you mean it, I'll take you," said this woman.</p>
+      <p>"I mean it, I'll marry you," said <persName>White Man</persName>.</p>
+      <p><pb n="42"/>"All right, you can marry me, " said this woman.</p>
+      <p>"I want to go to sleep soon," said <persName>White Man</persName>.</p>
+      <p>They say they went to bed.</p>
+      <p>"Tell me stories, tell me about your life".</p>
+      <p>They say he told her stories, just a few.</p>
+      <p><persName>White Man</persName>, they say he fell asleep.</p>
+      <p>They say he woke up when it was morning.</p>
+      <p>They say he looked around; a skeleton they say he saw.</p>
+      <p>They say he ran out. They say he was scared. They say he started to run.</p>
+      <p>They say some place he stopped.</p>
+      <p>They say he heard a person. They say [the person] was walking toward him.</p>
+      <p><persName>White Man</persName>, I'm coming after you," said this woman.</p>
+      <p><persName>White Man</persName>, they say he was scared.</p>
+      <p>They say this woman laughed.</p>
+      <p>"I fooled you," said this woman.</p>
+      <p>They say <persName>White Man</persName> came to where people lived.</p>
+      <p>That's where he slept.</p>
+      <p>They say he was watched.</p>
+      <p>That's ["neeʼees"] the way of this life.</p>
+      <p>That's ["neʼ"] why people get married in the right way.</p>
+      <p>That's ["neeʼei'"] how this story ends.</p>
+    </body>
+  </text>
+</TEI>

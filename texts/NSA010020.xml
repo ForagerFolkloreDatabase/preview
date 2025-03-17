@@ -1,20 +1,19 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>The Result of Stealing Other People's Property</title>
         <editor ref="p:Roth394" role="collector">Walter E. Roth</editor>
-        <editor ref="p:unidentified0" role="informant">unidentified</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -25,43 +24,41 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NSA010020</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Roth, Walter E. (1915): An Inquiry into the Animism and Folk-Lore of the Guiana Indians. Extract from the Thirteenth Annual Report of the Bureau of American Ethnology, Washington, D.C.: Government Printing Office. Quot. p. 183.</bibl>
+        <bibl>Roth, Walter E. (1915): An Inquiry into the Animism and Folk-Lore of the Guiana Indians. Extract from the Thirteenth Annual Report of the Bureau of American Ethnology, Washington: Government Printing Office. Quot. p. 183.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="4">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="0">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="1">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="4">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -102,11 +99,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -164,7 +157,7 @@
   </teiHeader>
   <text>
     <body>
-      <p>Twenty men started out to hunt <animal>bush-hog</animal>, taking with them their hammocks, as they expected to be out some days. They soon picked up tracks and followed them until nightfall, when they camped. Next morning they continued on the tracks until about mid-day, when they noticed plenty of victuals all stacked ready for consumption: there were drink and meat, plenty of everything that an Indian can desire. They asked one another, "Are you going to eat of this?" Some said, "Of course I am. Why not? Isn't it all ready prepared for us?" But others said: "No. It is not ours. We will not eat what does not belong to us." The wishes of the majority prevailed, however, and all except two of the party partook of the fine food. When all was eaten, they resumed the trail until nightfall, and they again camped. The two, however, who had declined to eat, erected their banab at a distance apart from the others. And all, except these two, fell fast asleep. During the night the Hebu came along with a light in his hand, and approached the spot where the eighteen were sleeping. When he got close to the first man, he extinguished the light, and, sucking the air through his half-closed hand, extracted his victim's eyes, just as we suck the flesh out of one end of a <animal>crab</animal>-claw. He did the same thing in turn to each of the other seventeen, and then withdrew. The two who were camped in the banab apart from the others, kept awake, and watched everything that happened. Next morning early, as each of the eighteen woke, he exclaimed, "Me, eye out! Me, eye out!" The poor fellows who had thus been blinded called out to the other two who had not eaten of the food in question, and asked whether they had also lost their eyes. The latter said "Yes" at first, but being pressed again and again to tell the truth, were finally forced to admit that nothing evil had happened to them. Now, some of these blind people felt their trouble very keenly. Some of them had big women at home, and some had little girls there - little girls to whom they had looked forward to making their wives some day. Indeed, those of them who possessed such little girls grieved sorely, and said: " We have little girls at home, and as yet we have never had anything to do with them. Alas! Alas! If we had only made women of them before this trouble fell on us.<note>It is not an uncommon thing to see an Indian who has already a wife and family of young children bringing up a little girl who will be his second wife (Br, 352).</note> So as to get home again, the blind ones told their uninjured mates to loosen the strings from all their bows and tie their ends together so as to make one long string of them. The eighteen held on to this string, and the two led the way, and so they proceeded on their journey homeward. But the two uninjured ones led the way, not homeward, as they had been told to do, but toward a big pond that contained a large number of <animal latin="Pygocentrus piraya">pirai [Serrasalmo] fish</animal>. Reaching there, the two made the blind ones surround the sheet of water in the form of a circle, telling them that they were about to cross a river, and that when they heard a splash they must immediately rush in straight ahead. The two leaders then stepping behind, threw over the heads of their blind companions some heavy pieces of timber: as soon as these fell into the water, there was of course a splash, and all the eighteen blind ones rushed ahead only to knock up against one another in the middle of the pond, where the voracious <animal>fish</animal> mutilated and destroyed them. <epimyth>They were thus punished for taking food which did not belong to them.</epimyth></p>
+      <p>Twenty men started out to hunt <rs type="animal">bush-hog</rs>, taking with them their hammocks, as they expected to be out some days. They soon picked up tracks and followed them until nightfall, when they camped. Next morning they continued on the tracks until about mid-day, when they noticed plenty of victuals all stacked ready for consumption: there were drink and meat, plenty of everything that an Indian can desire. They asked one another, "Are you going to eat of this?" Some said, "Of course I am. Why not? Isn't it all ready prepared for us?" But others said: "No. It is not ours. We will not eat what does not belong to us." The wishes of the majority prevailed, however, and all except two of the party partook of the fine food. When all was eaten, they resumed the trail until nightfall, and they again camped. The two, however, who had declined to eat, erected their banab at a distance apart from the others. And all, except these two, fell fast asleep. During the night the Hebu came along with a light in his hand, and approached the spot where the eighteen were sleeping. When he got close to the first man, he extinguished the light, and, sucking the air through his half-closed hand, extracted his victim's eyes, just as we suck the flesh out of one end of a <rs type="animal">crab</rs>-claw. He did the same thing in turn to each of the other seventeen, and then withdrew. The two who were camped in the banab apart from the others, kept awake, and watched everything that happened. Next morning early, as each of the eighteen woke, he exclaimed, "Me, eye out! Me, eye out!" The poor fellows who had thus been blinded called out to the other two who had not eaten of the food in question, and asked whether they had also lost their eyes. The latter said "Yes" at first, but being pressed again and again to tell the truth, were finally forced to admit that nothing evil had happened to them. Now, some of these blind people felt their trouble very keenly. Some of them had big women at home, and some had little girls there - little girls to whom they had looked forward to making their wives some day. Indeed, those of them who possessed such little girls grieved sorely, and said: " We have little girls at home, and as yet we have never had anything to do with them. Alas! Alas! If we had only made women of them before this trouble fell on us.<note>It is not an uncommon thing to see an Indian who has already a wife and family of young children bringing up a little girl who will be his second wife (Br, 352).</note> So as to get home again, the blind ones told their uninjured mates to loosen the strings from all their bows and tie their ends together so as to make one long string of them. The eighteen held on to this string, and the two led the way, and so they proceeded on their journey homeward. But the two uninjured ones led the way, not homeward, as they had been told to do, but toward a big pond that contained a large number of <rs type="animal" key="Pygocentrus piraya">pirai [Serrasalmo] fish</rs>. Reaching there, the two made the blind ones surround the sheet of water in the form of a circle, telling them that they were about to cross a river, and that when they heard a splash they must immediately rush in straight ahead. The two leaders then stepping behind, threw over the heads of their blind companions some heavy pieces of timber: as soon as these fell into the water, there was of course a splash, and all the eighteen blind ones rushed ahead only to knock up against one another in the middle of the pond, where the voracious <rs type="animal">fish</rs> mutilated and destroyed them. <shift feature="epimyth"/>They were thus punished for taking food which did not belong to them.</p>
     </body>
   </text>
 </TEI>

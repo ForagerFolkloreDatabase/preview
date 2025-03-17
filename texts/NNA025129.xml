@@ -1,21 +1,20 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Bluejay and Lizard and the Grizzly-Bears</title>
         <editor ref="p:Dixon1051" role="collector">Roland B. Dixon</editor>
-        <editor ref="p:OldWool4761" role="informant">"Old Wool"</editor>
-        <editor ref="p:CharleyGreen4760" role="informant">Charley Green</editor>
+        <editor ref="p:OldWool4761" role="narrator">"Old Wool"</editor>
+        <editor ref="p:CharleyGreen4760" role="narrator">Charley Green</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -26,9 +25,9 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA025129</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Dixon, Roland B. (1908): Achomawi and Atsugewi Tales. In: The Journal of American Folk-Lore 21(81), 159-177. Quot. pp. 168-169.</bibl>
@@ -37,32 +36,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="40">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="4">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="0">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="44">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -103,11 +100,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -122,9 +115,9 @@
   </teiHeader>
   <text>
     <body>
-      <p>Some <animal>Grizzly-Bears</animal> lived in a sweat-house near where <animal>Bluejay</animal> and <animal>Lizard</animal> lived. These latter had all kinds of food stored in bags of tule. The <animal>Grizzly-Bears</animal> had only <plant>acorns</plant>, and used to have to go to the other house to get <animal>salmon</animal> and meat. A <animal>Grizzly-Bear</animal> went over at sundown and sat down, saying, "I was sent over for scraps;" then <animal>Bluejay</animal> would say, "All right, get out some <animal>salmon</animal>," and <animal>Lizard</animal> would give <animal>Grizzly-Bear</animal> a large pile of it. When he got back home, the others would say, "They always give us a lot." In the morning another <animal>Grizzly</animal> went, and came back with a huge basket of <plant>pine</plant>-nuts; and in the evening then another would go, to get a lot of <plant>sunflower</plant>-seeds. In this way <animal>Bluejay</animal> and <animal>Lizard</animal> gave away all the food they had, and began to get hungry. <animal>Lizard</animal>, however, had been afraid that this would happen, so he had hidden ten <animal>salmon</animal> under his pillow while <animal>Bluejay</animal> had gone after wood one day. When all the rest of the food was gone, <animal>Lizard</animal> produced this reserve supply, and the two lived on this for a time. The <animal>Grizzly-Bears</animal> had saved much of the food they had begged, and feasted while the others were starving. The <animal>Grizzly-Bears</animal> hoped the others would die.</p>
-      <p><animal>Bluejay</animal> soon got very weak, but <animal>Lizard</animal> was still able to get about. One day <animal>Lizard</animal> covered up the coals with ashes in their house, closed the smoke-hole, and, taking his knife, crept over to the house where the <animal>Grizzly-Bears</animal> were, all asleep. <animal>Lizard</animal> looked in and saw all the food they had there in storage. Then he went into the house, picked out the <pb n="169"/>largest <animal>Grizzly-Bear</animal>, crawled into his anus, and cut out his heart. He brought the heart out, then skinned the body of the <animal>bear</animal>, the others meanwhile sleeping on. <animal>Lizard</animal> baked the liver quickly in the ashes, and ate it, then, leaning a pole up against the door, he walked on this, so that the <animal>Grizzly-Bears</animal> could not see his tracks. He took all the <animal>Grizzly-Bear</animal> meat home with him, and one basket of <plant>acorns</plant>. He found <animal>Bluejay</animal> almost dead; but he cooked some meat, and gave him some, and, after getting a little stronger, he was able to eat a great deal; and the two ate nearly all night.</p>
-      <p>In the morning the <animal>Grizzly-Bears</animal> woke up, and missed one of their number, but thought he had merely gone out of the house for a time. So they were not worried, but built a fire and sweated. <animal>Lizard</animal> and <animal>Bluejay</animal> kept quiet in their house, and did not move out. Every night <animal>Lizard</animal> did the same thing, killing one of the <animal>Bears</animal> until he had killed four of them, - two on each side of the door as they slept. The <animal>Grizzly-Bears</animal> did not suspect what the trouble was, for they thought both <animal>Lizard</animal> and <animal>Bluejay</animal> were dead. Thus <animal>Lizard</animal> and <animal>Bluejay</animal> lived through the winter.</p>
+      <p>Some <rs type="animal">Grizzly-Bears</rs> lived in a sweat-house near where <rs type="animal">Bluejay</rs> and <rs type="animal">Lizard</rs> lived. These latter had all kinds of food stored in bags of tule. The <rs type="animal">Grizzly-Bears</rs> had only <rs type="plant">acorns</rs>, and used to have to go to the other house to get <rs type="animal">salmon</rs> and meat. A <rs type="animal">Grizzly-Bear</rs> went over at sundown and sat down, saying, "I was sent over for scraps;" then <rs type="animal">Bluejay</rs> would say, "All right, get out some <rs type="animal">salmon</rs>," and <rs type="animal">Lizard</rs> would give <rs type="animal">Grizzly-Bear</rs> a large pile of it. When he got back home, the others would say, "They always give us a lot." In the morning another <rs type="animal">Grizzly</rs> went, and came back with a huge basket of <rs type="plant">pine</rs>-nuts; and in the evening then another would go, to get a lot of <rs type="plant">sunflower</rs>-seeds. In this way <rs type="animal">Bluejay</rs> and <rs type="animal">Lizard</rs> gave away all the food they had, and began to get hungry. <rs type="animal">Lizard</rs>, however, had been afraid that this would happen, so he had hidden ten <rs type="animal">salmon</rs> under his pillow while <rs type="animal">Bluejay</rs> had gone after wood one day. When all the rest of the food was gone, <rs type="animal">Lizard</rs> produced this reserve supply, and the two lived on this for a time. The <rs type="animal">Grizzly-Bears</rs> had saved much of the food they had begged, and feasted while the others were starving. The <rs type="animal">Grizzly-Bears</rs> hoped the others would die.</p>
+      <p><rs type="animal">Bluejay</rs> soon got very weak, but <rs type="animal">Lizard</rs> was still able to get about. One day <rs type="animal">Lizard</rs> covered up the coals with ashes in their house, closed the smoke-hole, and, taking his knife, crept over to the house where the <rs type="animal">Grizzly-Bears</rs> were, all asleep. <rs type="animal">Lizard</rs> looked in and saw all the food they had there in storage. Then he went into the house, picked out the <pb n="169"/>largest <rs type="animal">Grizzly-Bear</rs>, crawled into his anus, and cut out his heart. He brought the heart out, then skinned the body of the <rs type="animal">bear</rs>, the others meanwhile sleeping on. <rs type="animal">Lizard</rs> baked the liver quickly in the ashes, and ate it, then, leaning a pole up against the door, he walked on this, so that the <rs type="animal">Grizzly-Bears</rs> could not see his tracks. He took all the <rs type="animal">Grizzly-Bear</rs> meat home with him, and one basket of <rs type="plant">acorns</rs>. He found <rs type="animal">Bluejay</rs> almost dead; but he cooked some meat, and gave him some, and, after getting a little stronger, he was able to eat a great deal; and the two ate nearly all night.</p>
+      <p>In the morning the <rs type="animal">Grizzly-Bears</rs> woke up, and missed one of their number, but thought he had merely gone out of the house for a time. So they were not worried, but built a fire and sweated. <rs type="animal">Lizard</rs> and <rs type="animal">Bluejay</rs> kept quiet in their house, and did not move out. Every night <rs type="animal">Lizard</rs> did the same thing, killing one of the <rs type="animal">Bears</rs> until he had killed four of them, - two on each side of the door as they slept. The <rs type="animal">Grizzly-Bears</rs> did not suspect what the trouble was, for they thought both <rs type="animal">Lizard</rs> and <rs type="animal">Bluejay</rs> were dead. Thus <rs type="animal">Lizard</rs> and <rs type="animal">Bluejay</rs> lived through the winter.</p>
     </body>
   </text>
 </TEI>

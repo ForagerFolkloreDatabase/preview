@@ -1,0 +1,145 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Porcupine Woman</title>
+        <editor ref="p:Howell48" role="collector">Signe Howell</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="15">About 15 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NEE023296</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+          <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Howell, Signe (1982): Chewong Myths and Legends. Kuala Lumpur: Art Printing Works (The Malaysian Branch of the Royal Asiatic Society Monographs, 11). Quot. pp. 34-36.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="33">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CEE20501">Chewong</name>
+          <date notAfter="1979" notBefore="1977" type="recorded">Recorded sometime between 1977 and 1979.</date>
+        </setting>
+      </settingDesc>
+      <textClass>
+        <keywords scheme="URLtoOurTMI">
+          <!-- link to our TMI once its online -->
+          <list>
+            <item resp="#FFDB">
+              <idno type="TMI">B600</idno>
+              <term>B600. Marriage of person to animal. Extremely common. Only a few references are given.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">B630</idno>
+              <term>B630. Offspring of marriage to animal.</term>
+            </item>
+            <item resp="#FFDB">
+              <idno type="TMI">D110+WS12</idno>
+              <term>D110+WS12. Transformation: man to porcupine.</term>
+            </item>
+          </list>
+        </keywords>
+      </textClass>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Porcupines were eating <persName>Bongso</persName>'s <rs type="plant" key="manihot utilissima">tapioca</rs>. Every night they arrived and dug up the <rs type="plant">tubers</rs>. <persName>Bongso</persName> made <rs type="animal">porcupine</rs> spear traps and set them up in his fields. The following morning he went to inspect them. They had been dismantled. Not one had hit a <rs type="animal">porcupine</rs>. He prepared the spear traps and went again the next morning to inspect them. He looked, and saw that they had been dismantled yet again. They had not hit any <rs type="animal">porcupines</rs>, but they were all destroyed and more <rs type="plant" key="manihot utilissima">tapioca</rs> had been taken. So <persName>Bongso</persName> made new traps and placed them close to some large boulders where he thought the <rs type="animal">porcupines</rs> might live. In the morning he went to have a look; but the traps were broken and none had hit a <rs type="animal">porcupine</rs>. "What is going on?" <persName>Bongso</persName> asked himself as he looked at the pieces of his destroyed traps. The strings were torn, the <rs type="plant">bamboo</rs> spears had fallen over; there was nothing left of the spear traps that he had made so carefully. He repaired them all and went into the jungle hunting <rs type="animal">monkeys</rs>. In the evening he returned home with some <rs type="animal">monkey</rs> meat which he cooked together with <rs type="plant">rice</rs>. Having eaten, <persName>Bongso</persName> lay down and went to sleep.</p>
+      <p>In the night a <rs type="animal">porcupine</rs> woman came to his house. She sat next to him on his sleeping mat. <persName>Bongso</persName> opened his eyes and looked around him. He could tell that someone was there. When she knew he was awake, the <rs type="animal">porcupine</rs> woman said to <persName>Bongso</persName>, "I have come on an errand to you, brother-in-law. You are going to become someone's husband. Look, I have brought a headband from my older sister<note>A plaited head band is one of a young girl's gifts to her future husband.</note>. I shall be your sister-in-law from now on because you will be my sister's husband." "Oh, really," said <persName>Bongso</persName>. "Yes, I shall be your sister-in-law," repeated the <rs type="animal">porcupine</rs> woman. "Who are you then?" asked <persName>Bongso</persName>. "Oh, you have been making lots of spear traps, have you not?" she remarked, "and every morning they were destroyed, dismantled. This is so; every morning the traps in your fields have been dismantled. It was we who destroyed them. I and my sister and our mother. We came to take your <rs type="plant" key="manihot utilissima">tapioca</rs>. Yes, it was we who came and took them." "Ah, you! So, you are <rs type="animal">porcupine</rs> women. I see, you are nothing but <rs type="animal">porcupine</rs> women," said <persName>Bongso</persName> when he heard this.</p>
+      <p>The older sister came to <persName>Bongso</persName> and they slept together. <persName>Bongso</persName> slept with the <rs type="animal">Porcupine</rs> woman and she became his wife. After some time a child was born to them. <persName>Bongso</persName>'s mother who lived some distance away went one day to visit her son. When she arrived at his house she heard the noise of a child. She entered the <pb n="35"/>house and said to <persName>Bongso</persName>, "What is this, <persName>Bongso</persName>, do you have a child? Do you have a wife?" "Yes, I have a child," replied he. "Where did you meet your wife?" she wanted to know. "Oh, she is a jungle woman also, I met her over there," lied <persName>Bongso</persName>. "Oh," said his mother. She met her daughter-in-law, and she stayed at <persName>Bongso</persName>'s house for a while. After some time another child was born, and then <persName>Bongso</persName>'s mother returned to her husband.</p>
+      <p>After some time had passed, after more than one year, <persName>Bongso</persName>'s mother said to her husband, "I am going to return to my grand-children." She missed not being with them. So she went. <persName>Bongso</persName>'s father said to himself. "Ah, I think that I will go to <persName>Bongso</persName>'s settlement as well. I can cultivate my <rs type="plant" key="manihot utilissima">tapioca</rs> there, I can go hunting and shoot <rs type="animal">monkeys</rs> as well from there as from here." So he went as well.</p>
+      <p>Time passed and the two children became quite big. One day they went out into the jungle and dug up some yinröz fruit which they cooked in their grandmother's saucepan. But the yinröz fruit ruined the saucepan. When the grandmother saw what had happened, she became very angry. "Oh my saucepan, it is ruined," she exclaimed, "Oh you <rs type="animal">porcupine</rs> children you! Wanting to eat yinröz fruit, just like <rs type="animal">porcupines</rs>, and now you have ruined my saucepan. I am very unhappy." The children did not like to hear their grandmother being angry with them, and when their mother returned home in the evening they said to her that they wanted to help her fetch some firewood in order to cook the evening meal. There was <rs type="animal">monkey</rs> meat for dinner. "Well, you are certainly energetic," said the mother, "but there is lots of firewood already." "No, no, mother, let us go and fetch some more," they insisted. So their mother agreed, and off they went. "Oh, mother," they said when they were outside the house. "What?" "Oh, grandmother called us <rs type="animal">porcupine</rs> children when we ruined her saucepan with yinröz fruit." When their mother heard this she would not continue to live with her mother-in-law. "We will go back home," she told her children. They went to the house in the boulders. "Open the door, mother, we are coming home," she called out to her <rs type="animal">porcupine</rs> mother. The door was opened and they entered.</p>
+      <p>In the evening <persName>Bongso</persName> returned to the settlement. He listened for the voices of his children, but could hear nothing. Dusk was falling and <persName>Bongso</persName> kept listening for his family. Finally he said to his mother. "What have you done to the children, mother." "l have done nothing," replied she, "they ruined my saucepan by cooking yinrogen and yinröz<note>These two fruits are not eaten by humans, but are much favoured by <rs type="animal">porcupines</rs>.</note> fruit in it, and I called them <rs type="animal">porcupine</rs> children." "What!" exclaimed <persName>Bongso</persName>, "you knew that my wife was a <rs type="animal">porcupine</rs> woman. Now you have offended her." "No, I did not mean to offend," she replied. <persName>Bongso</persName> ran after his wife and came to the house in the boulders. He knew that she would no longer wish to live in his house, but would want to live in the house in the boulder. "Hey you, open the door, you are coming home," he said to his wife. "No, we have returned to being <rs type="animal">porcupines</rs>," she replied, "we are wearing our <pb n="36"/><rs type="animal">porcupine</rs>" cloaks "from now on. Why don't you come to live together with us?" she said to <persName>Bongso</persName>. She opened the door and <persName>Bongso</persName> entered. He put on a <rs type="animal">porcupine</rs> cloak, and they all became true <rs type="animal">porcupines</rs>. They were no longer able to wear human "cloaks".<note>This legend is rendered in Chewong in the Appendix.</note></p>
+    </body>
+  </text>
+</TEI>

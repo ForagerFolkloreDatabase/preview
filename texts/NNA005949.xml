@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Two Brothers who Went away Angry (They Who Go away Mad)</title>
+        <editor ref="p:Moser11151" role="collector">Edward W. Moser</editor>
+        <editor ref="p:RobertoHerraraT18783" role="narrator">Roberto Herrera Marcos</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="11">About 11 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority>The Forager Folklore Database</authority>
+        <idno type="FFDB">NNA005949</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by-nc/4.0">CC BY-NC</licence>
+        </availability>
+        <date when="2025">2025</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Moser, Edward W. (1963): The Two Brothers Who Went Away Angry. A Seri Legend. In: Tlalocan 4(2), 157-160. Quot. pp. 157-159.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="5">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="">
+          <!-- write a replacementPattern once glossaries are online -->
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA33401">Seri</name>
+          <date when="1957" type="recorded">Recorded in 1957.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>"Let's leave these people." "Let's leave them then." They left. They went to <placeName>Lower California</placeName>. They arrived at land, they disembarked. They went to the mountains; they arrived where there was some water. Sometime later two women [giants] arrived with them, they [the women] grabbed them. They put them inside the folds of their skirts [at the waist]. They carried them; they returned to camp. They arrived at camp but didn't say anything. As night came they lay down together, it was said. They didn't sleep; they were laughing in the night, it was said. Then one of the old women lying down spoke to them in this manner, it was said. "Shut up! There's much noise! Go to sleep! What is there touching you? Why don't you go to <pb n="158"/>sleep?" In the morning they talked, it was said. They spoke in this manner, it was said: "We found pretty things. We found such very little, real-looking people. They are small, but they have whiskers." Then they took them out. When they took them out, they prepared them; they scraped the soles of their feet and the palms of their hands. They stopped when blood seeped out. They also scraped their fontanelles. Next they rubbed <rs type="animal">whale</rs> brains into the palms of their hands and the soles of their feet and their fontanelles, it was said. Sometime later they changed in size every morning, it was said. Sometime later they were the size of the giants, it was said. The finders who brought them to camp married them, it was said. Then they mounted their balsas, they killed <rs type="animal">whales</rs>, they ate them, it was said. After they were living for a long time the younger said in this manner, it was said. "My brother, the end of the year has arrived. The <rs type="plant" key="Stegnosperma halimifolium" ref="q:Q17243141">chapa color</rs> is bearing fruit. Let's return home." But the older returned alone, it was said. He disembarked <pb n="159"/>[on <placeName>Tiburón Island</placeName>] in front of <placeName>San Esteban Island</placeName> at the place called <placeName>kyáxox</placeName>, it was said. Seated on a large balsa, he arrived where some of the people were living, it was said. He inquired about his wife, it was said. Then they told him, it was said, the place where she lives. "She lives in <placeName>rnit</placeName>." Sometime later he went, it was said. The one had married the woman [the giant's first wife], when the giant arrived at the camp, he strung his bow as he thought to protect himself [from the giant]. He [the giant] grabbed him, he put him in his armpit, as he squeezed him he squashed open his [the man's] side, it was said. Then there was a long cloth. He prepared it. He tied a band around his head, it was said. He put his wife and children inside his headband. He left, it was said.<note>The story may be condensed in the following way: 1) Two brothers decided to leave the Seri people and crossed over to Lower California. Once they had arrived they climbed up into the mountains. 2) There the brothers met two giant women who grabbed them and having tied the brothers up in the folds of their skirts carried them away to their camp. 3) During the first night they spent in the camp of the giants, the brothers laughed a great deal and the women complained about this. 4) On the next day the women spoke to the other giants saying, "We found these pretty little things! They are very much like people and with whiskers too!" <pb n="160"/>5) The women then took the two brothers and scraped the soles of their feet, the palms of their hands and their skulls. They also rubbed <rs type="animal">whale</rs> brains into them. 6) The men became giants and married the giant women. The brothers went about on their balsa crafts, killing <rs type="animal">whales</rs> and eating them. 7) But after a year had passed, the youngest said to his brother, "Let us go home." 8) In spite of his advice it was only the elder that returned to the Seri tribe. He landed on <placeName>Tiburón Island</placeName> and asked where his wife was. When he was told that she lived in a certain place he went there and saw that she had a new husband, or lover. When the latter tried to shoot arrows at him, the giant squeezed him in his armpit and killed him. 9) So it was that the giant returned to his wife and children. He took a piece of cloth and wound it about his head, putting all his family in it. Then he went away to other parts. (F. H.)</note></p>
+    </body>
+  </text>
+</TEI>

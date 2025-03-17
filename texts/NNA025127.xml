@@ -1,21 +1,20 @@
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://raw.githubusercontent.com/KatjaMellmann/FFDB/main/schema/FFDB.rng" type="application/xml" 
-    schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
   <teiHeader>
     <fileDesc>
       <titleStmt>
         <title>Hawk-Man</title>
         <editor ref="p:Dixon1051" role="collector">Roland B. Dixon</editor>
-        <editor ref="p:OldWool4761" role="informant">"Old Wool"</editor>
-        <editor ref="p:CharleyGreen4760" role="informant">Charley Green</editor>
+        <editor ref="p:OldWool4761" role="narrator">"Old Wool"</editor>
+        <editor ref="p:CharleyGreen4760" role="narrator">Charley Green</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
         <principal>
           <persName>Katja Mellmann</persName>
           <persName>Michelle Scalise Sugiyama</persName>
         </principal>
         <respStmt>
-          <resp>XML templates, digitization architecture, and automated inline tagging</resp>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
           <persName>Jan Jokisch</persName>
         </respStmt>
       </titleStmt>
@@ -26,9 +25,9 @@
         <authority>The Forager Folklore Database</authority>
         <idno type="FFDB">NNA025127</idno>
         <availability status="free">
-          <licence target="https://creativecommons.org/publicdomain/mark/1.0/">public domain</licence>
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
-        <date when="2023">2023</date>
+        <date when="2025">2025</date>
       </publicationStmt>
       <sourceDesc>
         <bibl>Dixon, Roland B. (1908): Achomawi and Atsugewi Tales. In: The Journal of American Folk-Lore 21(81), 159-177. Quot. pp. 163-165.</bibl>
@@ -37,32 +36,30 @@
     <encodingDesc>
       <projectDesc>
         <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
-                    offers a basis for a systematic study of narrative universals,
-                    the evolutionary origin of storytelling, and (comparative) folklore studies.</p>
+                    offers a basis for a systematic study of narrative universals, the evolutionary 
+                    origin of storytelling, and (comparative) folklore studies.</p>
       </projectDesc>
       <samplingDecl>
         <p>The narrative was selected for being a genuine piece of oral literature recorded
-                    directly, or mediated by an interpreter, from an informant who either lived or
+                    directly, or mediated by an interpreter, from a narrator who either lived or
                     grew up as a member of a culture whose subsistence at the time of recording was,
                     or until recently had been, depending primarily on hunting, gathering, and/or
                     fishing. Care was taken to ensure the quality of the recording and the relative
                     absence of external cultural influences.</p>
       </samplingDecl>
       <tagsDecl>
-        <namespace name="">
-          <tagUsage gi="animal" occurs="30">Used to mark animal names mentioned in the text.</tagUsage>
-          <tagUsage gi="plant" occurs="5">Used to mark plant names mentioned in the text.</tagUsage>
-          <tagUsage gi="color" occurs="0">Used to mark colors (adjectives and nouns) mentioned in the
-                        text.</tagUsage>
-          <tagUsage gi="persName" occurs="0">Used to mark personal names (usually characters)
-                        mentioned in the text.</tagUsage>
-          <tagUsage gi="placeName" occurs="1">Used to mark named place names mentioned in the text.</tagUsage>
-          <tagUsage gi="anamyth" occurs="0">Used to mark a framing metacommentary at the beginning of
-                        a narrative.</tagUsage>
-          <tagUsage gi="apartmyth" occurs="0">Used to mark comments or asides within the course of a
-                        narrative.</tagUsage>
-          <tagUsage gi="epimyth" occurs="0">Used to mark a framing metacommentary at the end of a
-                        narrative.</tagUsage>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="35">Referencing strings are used to mark up animal names, plant names, 
+                        and colors. The <att>type</att> attribute correspondingly takes one of the following 
+                        values:
+                        <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to the 
+                        diegesis. The <att>feature</att> attributes takes one of the following values:
+                        <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
         </namespace>
       </tagsDecl>
       <listPrefixDef>
@@ -103,11 +100,7 @@
                         said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
         </quotation>
         <interpretation>
-          <p>Animals, plants, colors, characters, and place names were automatically
-                        tagged using a semantic tagger based on WordNet and self-provided word
-                        lists, and were subsequently checked manually. They are tagged with <gi>
-                        animal</gi>, <gi>plant</gi>, <gi>color</gi>, <gi>persName</gi>, and <gi>
-                        placeName</gi>, respectively.</p>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
         </interpretation>
       </editorialDecl>
     </encodingDesc>
@@ -122,10 +115,10 @@
   </teiHeader>
   <text>
     <body>
-      <p>Sun had a wife, Shell-Woman. She said to her husband, "There are two chiefs living over there. Let our children go and marry them." So Sun agreed; and Shell-Woman said, "Now, go ye! There are many chiefs there. They have much to eat. Ye must go to <animal>Pine-Marten</animal>. He is the best." Then the sisters got ready, put in their pack-baskets of shell, <animal>salmon</animal> and <plant>acorn</plant>-bread and <plant>manzanita</plant>-berries for food, and came from the west hitherward, across the Fall River. As they came around the point of woods in the valley, <animal>Coyote</animal> was burning down a <plant>tree</plant>, and saw them. The youngest sister knew at once who he was, but the oldest fell in love at once. The youngest said, "Go on! Don't stop! That is <animal>Coyote</animal>." Then <animal>Coyote</animal> said to himself, "I wish that she should not know who I am," and ran ahead, calling for all kinds of fine clothing to come to him. At once they were there, at his hand, and, putting them on, he disguised himself so that he looked different, covering up a dimple which he had. But when he again met the sisters, the youngest knew him again at once. She said, "Go on! Don't stop! That is <animal>Coyote</animal>." So they went on.</p>
-      <p>By and by they saw smoke rising. "Some one lives there. Let us go and visit, and find out where to go." So they went, and found in the house <animal>Hawk</animal>-Man. He was a shaman, and lay with his back to the fire. "Where do you come from?" he said. "Where are you going?" - "Our father and mother told us to go to <placeName>Plat&#700;thtau&#700;ika</placeName>," said the oldest, "to the <animal>Pine-Marten</animal> brothers, who defecate only dentalia. To them they told us to go." - "Ah!" said <animal>Hawk</animal>-Man, "I think they must have meant me. I am Hawk-Man, and I defecate only beads. I am a chief. I go out to hunt, and send my people out to hunt and get wood. What kind of a house did your father say this man lived in to whom you were going?" Then the oldest sister said, "At the house there is a post on which hangs a bear-hide, they told us." - "Yes," said <animal>Hawk</animal>-Man, "I am the one they meant. The bear-hide hangs there. Wait a moment, I will prove to you that I am the one. Hold out your caps." Then they held out their caps, and he ran up and defecated in them. He defecated rattles into the caps. Then he said, "Close your eyes," and they did so; and when they heard the rattling, they thought it was dentalia. And Hawk-Man said, "Let us go!" and they said, "Yes."</p>
-      <p>They put on their packs and started. "Do ye go slowly. I will go on ahead." So they went; and he hurried on, and reached there first. The post with the bear-hide was standing outside the door of the house opposite his, and so he quickly pulled it up and set it by his door. Then the sisters arrived, and saw the post and the hide, and went at once to <pb n="164"/>his house and took off their packs. Now, <animal>Hawk</animal>-Man had a wife; and he told her to go over and sit on the opposite side of the house, and not to call him husband, but son. And she promised. When the sisters came in, <animal>Hawk</animal>-Man told them to sit in the wife's place, and they did. Then people came, bringing <animal>deer</animal>, and piled it up, and sent a boy to <animal>Hawk</animal>-Man's to call him. When the boy came, <animal>Hawk</animal>-Man made a noise with some dried <plant>grass</plant>, so that the sisters should not hear what the boy said. Then he told them that he had to go out to divide up the meat. "I only took what I wanted for myself before, for I had no wife," he said. "Now I shall have to bring more." So he went out, and took a basket with him. Going over to where the people were, he sat down, and opened his mouth. As they ate their meat, they tossed the bones to him, and he swallowed them; while they joked him, saying, "Did you hear that some girls were coming to marry you?" Then they laughed. After they had finished, he went off, sat down behind the house, and sliced the flesh off of his thighs, and put it into the basket. He carried it back, and his wives cooked the meat; and although it smelled and tasted very badly, yet they ate it, thinking it was <animal>deer</animal>. Then they went to sleep. In the morning he went off, as he said, to hunt, but instead cut off more of his flesh, and put it and his entrails into the basket. In the evening when he got back, his wives again cooked the meat, and ate. Again the boy came and called him to come out, and, as before, he made a noise so that the women should not hear. He went out, and the people threw him bones, taunting him as they had the previous night. Meanwhile the youngest sister crawled softly after him, and saw what was going on, and came back and told her sister. "You always do what you want. You will not take advice. I know that the chief we were to marry lives opposite. This man we live with came on ahead of us, he took down the bear-hide, and brought it over here." Then <animal>Hawk</animal>-Man came in again with his basket of flesh, but they would not eat any.</p>
-      <p>In the morning he went off to hunt again. Then the two sisters destroyed their children, dressed themselves up finely, took their baskets, and went out. They went across to the other house, and, going in, sat down by <animal>Pine-Marten</animal>'s side. By and by the people came in from the hunt, and brought <animal>deer</animal>. They skinned and cut it up, cooked it, and ate supper. <animal>Weasel</animal>, however, did not like it that these two women, <animal>Hawk</animal>-Man's wives, should sit by his brother <animal>Pine-Marten</animal>. But <animal>Marten</animal> just sat there and said nothing, but smoked <plant>marrow</plant> all the time. Meanwhile <animal>Hawk</animal>-Man came back, and found that his wives had gone. He grew very angry, and at once put on his shaman's ornaments, and began to dance, and to sing, "K&#275;tj k&#275;tja wi&#700;n&#299;no, ketj ketja wi&#700;n&#299;no." At once it began to rain. Only <animal>Weasel</animal> noticed it and spoke of it. All night it poured. The water rose higher and higher till it ran in at the door. "Tell them to go back, these two women! That <animal>Hawk</animal>-Man will kill us, he <pb n="165"/>will drown us." But <animal>Pine-Marten</animal> said nothing until morning. Then he said, "I do not like this. Where is a brave man? I want him to go over and kill <animal>Hawk</animal>-Man." So a man got up and went over, taking a knife and a shield. Meanwhile <animal>Hawk</animal>-Man was dancing harder and harder, and at every leap his head came up through the smoke-hole. The man crept nearer and nearer, and finally struck <animal>Hawk</animal>-Man and cut off his head. And at once the rain stopped, and the cloud cleared away, and the water sank. Then the people said to each other, "If a shaman is bad, we will kill him. That is how it shall be." Then they went off to hunt.</p>
+      <p>Sun had a wife, Shell-Woman. She said to her husband, "There are two chiefs living over there. Let our children go and marry them." So Sun agreed; and Shell-Woman said, "Now, go ye! There are many chiefs there. They have much to eat. Ye must go to <rs type="animal">Pine-Marten</rs>. He is the best." Then the sisters got ready, put in their pack-baskets of shell, <rs type="animal">salmon</rs> and <rs type="plant">acorn</rs>-bread and <rs type="plant">manzanita</rs>-berries for food, and came from the west hitherward, across the Fall River. As they came around the point of woods in the valley, <rs type="animal">Coyote</rs> was burning down a <rs type="plant">tree</rs>, and saw them. The youngest sister knew at once who he was, but the oldest fell in love at once. The youngest said, "Go on! Don't stop! That is <rs type="animal">Coyote</rs>." Then <rs type="animal">Coyote</rs> said to himself, "I wish that she should not know who I am," and ran ahead, calling for all kinds of fine clothing to come to him. At once they were there, at his hand, and, putting them on, he disguised himself so that he looked different, covering up a dimple which he had. But when he again met the sisters, the youngest knew him again at once. She said, "Go on! Don't stop! That is <rs type="animal">Coyote</rs>." So they went on.</p>
+      <p>By and by they saw smoke rising. "Some one lives there. Let us go and visit, and find out where to go." So they went, and found in the house <rs type="animal">Hawk</rs>-Man. He was a shaman, and lay with his back to the fire. "Where do you come from?" he said. "Where are you going?" - "Our father and mother told us to go to <placeName>Platʼthtauʼika</placeName>," said the oldest, "to the <rs type="animal">Pine-Marten</rs> brothers, who defecate only dentalia. To them they told us to go." - "Ah!" said <rs type="animal">Hawk</rs>-Man, "I think they must have meant me. I am Hawk-Man, and I defecate only beads. I am a chief. I go out to hunt, and send my people out to hunt and get wood. What kind of a house did your father say this man lived in to whom you were going?" Then the oldest sister said, "At the house there is a post on which hangs a bear-hide, they told us." - "Yes," said <rs type="animal">Hawk</rs>-Man, "I am the one they meant. The bear-hide hangs there. Wait a moment, I will prove to you that I am the one. Hold out your caps." Then they held out their caps, and he ran up and defecated in them. He defecated rattles into the caps. Then he said, "Close your eyes," and they did so; and when they heard the rattling, they thought it was dentalia. And Hawk-Man said, "Let us go!" and they said, "Yes."</p>
+      <p>They put on their packs and started. "Do ye go slowly. I will go on ahead." So they went; and he hurried on, and reached there first. The post with the bear-hide was standing outside the door of the house opposite his, and so he quickly pulled it up and set it by his door. Then the sisters arrived, and saw the post and the hide, and went at once to <pb n="164"/>his house and took off their packs. Now, <rs type="animal">Hawk</rs>-Man had a wife; and he told her to go over and sit on the opposite side of the house, and not to call him husband, but son. And she promised. When the sisters came in, <rs type="animal">Hawk</rs>-Man told them to sit in the wife's place, and they did. Then people came, bringing <rs type="animal">deer</rs>, and piled it up, and sent a boy to <rs type="animal">Hawk</rs>-Man's to call him. When the boy came, <rs type="animal">Hawk</rs>-Man made a noise with some dried <rs type="plant">grass</rs>, so that the sisters should not hear what the boy said. Then he told them that he had to go out to divide up the meat. "I only took what I wanted for myself before, for I had no wife," he said. "Now I shall have to bring more." So he went out, and took a basket with him. Going over to where the people were, he sat down, and opened his mouth. As they ate their meat, they tossed the bones to him, and he swallowed them; while they joked him, saying, "Did you hear that some girls were coming to marry you?" Then they laughed. After they had finished, he went off, sat down behind the house, and sliced the flesh off of his thighs, and put it into the basket. He carried it back, and his wives cooked the meat; and although it smelled and tasted very badly, yet they ate it, thinking it was <rs type="animal">deer</rs>. Then they went to sleep. In the morning he went off, as he said, to hunt, but instead cut off more of his flesh, and put it and his entrails into the basket. In the evening when he got back, his wives again cooked the meat, and ate. Again the boy came and called him to come out, and, as before, he made a noise so that the women should not hear. He went out, and the people threw him bones, taunting him as they had the previous night. Meanwhile the youngest sister crawled softly after him, and saw what was going on, and came back and told her sister. "You always do what you want. You will not take advice. I know that the chief we were to marry lives opposite. This man we live with came on ahead of us, he took down the bear-hide, and brought it over here." Then <rs type="animal">Hawk</rs>-Man came in again with his basket of flesh, but they would not eat any.</p>
+      <p>In the morning he went off to hunt again. Then the two sisters destroyed their children, dressed themselves up finely, took their baskets, and went out. They went across to the other house, and, going in, sat down by <rs type="animal">Pine-Marten</rs>'s side. By and by the people came in from the hunt, and brought <rs type="animal">deer</rs>. They skinned and cut it up, cooked it, and ate supper. <rs type="animal">Weasel</rs>, however, did not like it that these two women, <rs type="animal">Hawk</rs>-Man's wives, should sit by his brother <rs type="animal">Pine-Marten</rs>. But <rs type="animal">Marten</rs> just sat there and said nothing, but smoked <rs type="plant">marrow</rs> all the time. Meanwhile <rs type="animal">Hawk</rs>-Man came back, and found that his wives had gone. He grew very angry, and at once put on his shaman's ornaments, and began to dance, and to sing, "Kētj kētja wiʼnīno, ketj ketja wiʼnīno." At once it began to rain. Only <rs type="animal">Weasel</rs> noticed it and spoke of it. All night it poured. The water rose higher and higher till it ran in at the door. "Tell them to go back, these two women! That <rs type="animal">Hawk</rs>-Man will kill us, he <pb n="165"/>will drown us." But <rs type="animal">Pine-Marten</rs> said nothing until morning. Then he said, "I do not like this. Where is a brave man? I want him to go over and kill <rs type="animal">Hawk</rs>-Man." So a man got up and went over, taking a knife and a shield. Meanwhile <rs type="animal">Hawk</rs>-Man was dancing harder and harder, and at every leap his head came up through the smoke-hole. The man crept nearer and nearer, and finally struck <rs type="animal">Hawk</rs>-Man and cut off his head. And at once the rain stopped, and the cloud cleared away, and the water sank. Then the people said to each other, "If a shaman is bad, we will kill him. That is how it shall be." Then they went off to hunt.</p>
     </body>
   </text>
 </TEI>
