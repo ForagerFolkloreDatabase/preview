@@ -1,0 +1,123 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Bluejay and Lizard and the Grizzly-Bears</title>
+        <editor ref="p:Dixon1051" role="collector">Roland B. Dixon</editor>
+        <editor ref="p:OldWool4761" role="narrator">"Old Wool"</editor>
+        <editor ref="p:CharleyGreen4760" role="narrator">Charley Green</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="10">About 10 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NN02691680</idno>
+        <idno type="URLWeb">NN02691680</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Dixon, Roland B. (1908): Achomawi and Atsugewi Tales. In: The Journal of American Folk-Lore 21(81), 159-177. Quot. pp. 168-169.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="44">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA29602">Achumawi</name>
+          <date notBefore="1900" notAfter="1903" type="recorded">Recorded sometime between 1900 and 1903.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Some <rs type="animal">Grizzly-Bears</rs> lived in a sweat-house near where <rs type="animal">Bluejay</rs> and <rs type="animal">Lizard</rs> lived. These latter had all kinds of food stored in bags of tule. The <rs type="animal">Grizzly-Bears</rs> had only <rs type="plant">acorns</rs>, and used to have to go to the other house to get <rs type="animal">salmon</rs> and meat. A <rs type="animal">Grizzly-Bear</rs> went over at sundown and sat down, saying, "I was sent over for scraps;" then <rs type="animal">Bluejay</rs> would say, "All right, get out some <rs type="animal">salmon</rs>," and <rs type="animal">Lizard</rs> would give <rs type="animal">Grizzly-Bear</rs> a large pile of it. When he got back home, the others would say, "They always give us a lot." In the morning another <rs type="animal">Grizzly</rs> went, and came back with a huge basket of <rs type="plant">pine</rs>-nuts; and in the evening then another would go, to get a lot of <rs type="plant">sunflower</rs>-seeds. In this way <rs type="animal">Bluejay</rs> and <rs type="animal">Lizard</rs> gave away all the food they had, and began to get hungry. <rs type="animal">Lizard</rs>, however, had been afraid that this would happen, so he had hidden ten <rs type="animal">salmon</rs> under his pillow while <rs type="animal">Bluejay</rs> had gone after wood one day. When all the rest of the food was gone, <rs type="animal">Lizard</rs> produced this reserve supply, and the two lived on this for a time. The <rs type="animal">Grizzly-Bears</rs> had saved much of the food they had begged, and feasted while the others were starving. The <rs type="animal">Grizzly-Bears</rs> hoped the others would die.</p>
+      <p><rs type="animal">Bluejay</rs> soon got very weak, but <rs type="animal">Lizard</rs> was still able to get about. One day <rs type="animal">Lizard</rs> covered up the coals with ashes in their house, closed the smoke-hole, and, taking his knife, crept over to the house where the <rs type="animal">Grizzly-Bears</rs> were, all asleep. <rs type="animal">Lizard</rs> looked in and saw all the food they had there in storage. Then he went into the house, picked out the <pb n="169"/>largest <rs type="animal">Grizzly-Bear</rs>, crawled into his anus, and cut out his heart. He brought the heart out, then skinned the body of the <rs type="animal">bear</rs>, the others meanwhile sleeping on. <rs type="animal">Lizard</rs> baked the liver quickly in the ashes, and ate it, then, leaning a pole up against the door, he walked on this, so that the <rs type="animal">Grizzly-Bears</rs> could not see his tracks. He took all the <rs type="animal">Grizzly-Bear</rs> meat home with him, and one basket of <rs type="plant">acorns</rs>. He found <rs type="animal">Bluejay</rs> almost dead; but he cooked some meat, and gave him some, and, after getting a little stronger, he was able to eat a great deal; and the two ate nearly all night.</p>
+      <p>In the morning the <rs type="animal">Grizzly-Bears</rs> woke up, and missed one of their number, but thought he had merely gone out of the house for a time. So they were not worried, but built a fire and sweated. <rs type="animal">Lizard</rs> and <rs type="animal">Bluejay</rs> kept quiet in their house, and did not move out. Every night <rs type="animal">Lizard</rs> did the same thing, killing one of the <rs type="animal">Bears</rs> until he had killed four of them, - two on each side of the door as they slept. The <rs type="animal">Grizzly-Bears</rs> did not suspect what the trouble was, for they thought both <rs type="animal">Lizard</rs> and <rs type="animal">Bluejay</rs> were dead. Thus <rs type="animal">Lizard</rs> and <rs type="animal">Bluejay</rs> lived through the winter.</p>
+    </body>
+  </text>
+</TEI>

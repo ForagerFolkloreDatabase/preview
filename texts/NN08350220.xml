@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Burning Down of a Country</title>
+        <editor ref="p:Morice5252" role="collector">Adrien Gabriel Morice</editor>
+        <editor ref="p:Abel302" role="narrator">Abel</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB" quantity="12">About 12 kilobytes</measure>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NN08350220</idno>
+        <idno type="URLWeb">NN08350220</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Morice, Adrien G. (1898): Three Carrier Myths. In: Transactions of the Canadian Institute 5, 1-36. Quot. pp. 22-24.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="27">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA28412">Central Carrier</name>
+          <date notBefore="1859" notAfter="1898" type="recorded">Recorded sometime between 1859 and 1898.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>A young man was living with a young woman. All the other women were bringing to their husbands basketsful<note>Tcaꞁyaꞁ tîzpǝn. The tcaꞁyaꞁ cannot quite properly be called a basket, but it is its equivalent among our Indians. For figure and description of the utensil, see "Notes on the Western Dénés," Trans. Can. Inst., Vol. IV., p. 120.</note> of ʼkǝrmih<note>The ʼkǝrmih is the sap or cambium layer of the <rs type="plant" key="Pinus contorta">scrub pine</rs> (P. contorta), scraped off in thin shavings by means of a bone scraper. Op. cit., p. 76.</note> or sap; and yet his wife used to come home with a single shaving of it which she brought him in the hand. He wished to ascertain the reason of this; therefore he followed her one day at a distance. As soon as her fellow-women had reached a place in the woods planted with <rs type="plant" key="Pinus contorta">scrub pines</rs>, he saw her proceed on her way, while the others were busying themselves with the scraping of the sap.</p>
+      <p>When she had reached the trunk of a <rs type="plant">tree</rs>, dried up but still standing, she commenced striking it with a stick, repeating each time: kǝꞁéꞁ! kǝꞁéꞁ!<note>Words now devoid of meaning, at least among our Indians.</note>. Soon a beautiful young man, <rs type="color">white</rs> as daylight, came out of the top of the <rs type="plant">tree</rs> and played with her.</p>
+      <p>Thus the young man knew why his wife used to bring him so little sap; so he returned home and arrived there before she got back. Then his wife scraped off as usual a single ribbon of ʼkǝrmih, and took it home to her husband, carrying it in the hand.</p>
+      <p>One day that she was to return with the other women to collect sap the young man said to her: "Really you do bring me too little ʼkǝrmih. See how the other women are always loaded when they come home. Therefore, lend me your blanket<note>That is her outer garment.</note> and your scraper: I will go for it, myself."</p>
+      <p>So he said, and then he clothed himself with his wife's garments and went with the other women, packing an empty tcaꞁyaꞁ<note>See first note above.</note>. But he stopped not with them among the <rs type="plant" key="Pinus contorta">scrub pines</rs>; he went on as far as the dried up <pb n="23"/><rs type="plant">tree</rs>. Immediately he set upon striking it with a stick, repeating the words he had heard his wife utter.</p>
+      <p>Soon enough the beautiful young man <rs type="color">white</rs> as daylight made his appearance, fell down upon the disguised husband and played with him as one would with a woman. He was trying to know him<note>In the Biblical sense of the word.</note>, when the husband cut his head and testicles off with a knife he had kept concealed in his bosom<note>In the Carrier mythology, weapons carried in the bosom are always for a nefarious purpose. See first legend, p. 4, also "Notes on the Western Dénés," p. 52.</note>. The head was no sooner separated from the trunk than it was changed into a <rs type="animal" key="Sphyrapicus varius"><rs type="color">red</rs> woodpecker</rs>'s scalp. Then he scraped off a great quantity of sap. When he had filled up his tcaꞁyaꞁ therewith, he hid among the shavings of the ʼkǝrmih what he had torn from the daylight young man.</p>
+      <p>Home again, he presented his wife with the whole, saying: "See what a load of sap I have brought you. Eat it." She therefore began to eat of the ʼkǝrmih, suspecting nothing. But as soon as she had seen the <rs type="animal" key="Sphyrapicus varius"><rs type="color">red</rs> woodpecker</rs>'s scalp, she hung down her head, refused to eat any more and commenced to weep. "What ails you?<note>Tâmqa? lit., "What are you feeling?"</note> Why weep you?" asked her husband. But she answered not and continued weeping.</p>
+      <p>At the same time columns of smoke were seen all around and tongues of fire appeared on all sides. They soon concentrated themselves towards the point where the couple stood. Very many men perished by fire; only a few escaped.</p>
+      <p>Meanwhile the <rs type="animal" key="Melanerpes erythrocephalus"><rs type="color">red</rs>-headed woodpecker</rs><note>Melanerpes erythrocephalus; in Carrier, <rs type="animal" key="Melanerpes erythrocephalus">tsèlʼkǝn, "<rs type="color">red</rs>-head."</rs></note> was flying to and fro amidst the smoke and flames repeating its usual cry: tcan! tcan!<note>Tcan, which to the native ear represents that <rs type="animal">bird</rs>'s cry, means "rain" in Carrier.</note> This caused a few drops of rain to fall which, however, had no marked effect on the conflagration. Then he was heard to say: "Let the scalp of my cousin<note>I.e., the <rs type="animal" key="Sphyrapicus varius"><rs type="color">red</rs> woodpecker (Sphyrapicus varius)</rs>.</note> be given back to me!" For a time people did not know what he meant. At last some one remarked: "Since he wants his cousin's scalp, let it be thrown up<note>To throw to and present with are rendered by the same word in Carrier.</note> to him!" Therefore, while the little <rs type="animal" key="Melanerpes erythrocephalus">woodpecker</rs> was flying amidst the flames, the <rs type="animal" key="Sphyrapicus varius"><rs type="color">red</rs> woodpecker</rs>'s head<note>The similarity of names renders this part of the myth rather obscure in English. This is not the case in Carrier, where the smaller <rs type="animal" key="Melanerpes erythrocephalus">woodpecker</rs> is called <rs type="animal" key="Melanerpes erythrocephalus">tsèlʼkǝn</rs>, whilst its "cousin" goes by the name of <rs type="animal" key="Sphyrapicus varius">întziꞁ</rs>.</note> was thrown up to him.</p>
+      <p>A shower fell at once, which soon extinguished the fire. But in his <pb n="24"/>efforts to attract attention, the little <rs type="animal" key="Melanerpes erythrocephalus">woodpecker</rs> got the end of his tail burnt, and this explains why it is to this day <rs type="color">coal-coloured</rs>.</p>
+    </body>
+  </text>
+</TEI>
