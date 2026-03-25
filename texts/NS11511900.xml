@@ -18,12 +18,12 @@
         </respStmt>
       </titleStmt>
       <extent>
-        <measure unit="KB" quantity="10">About 10 kilobytes</measure>
+        <measure unit="KB" quantity="11">About 11 kilobytes</measure>
       </extent>
       <publicationStmt>
         <authority xml:id="FFDB">The Forager Folklore Database</authority>
         <idno type="FFDB">NS11511900</idno>
-        <idno type="URLWeb">NS11511900</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NS11511900</idno>
         <availability status="free">
           <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>

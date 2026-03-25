@@ -23,7 +23,7 @@
       <publicationStmt>
         <authority xml:id="FFDB">The Forager Folklore Database</authority>
         <idno type="FFDB">NE00350080</idno>
-        <idno type="URLWeb">NE00350080</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NE00350080</idno>
         <availability status="free">
           <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
           <p>Note that the CC licence only applies to the XML file. Users should also cite the original source of the text.</p>

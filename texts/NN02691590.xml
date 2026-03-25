@@ -24,7 +24,7 @@
       <publicationStmt>
         <authority xml:id="FFDB">The Forager Folklore Database</authority>
         <idno type="FFDB">NN02691590</idno>
-        <idno type="URLWeb">NN02691590</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NN02691590</idno>
         <availability status="free">
           <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
