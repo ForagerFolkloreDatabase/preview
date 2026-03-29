@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Old Man of Nutchek</title>
+        <editor ref="p:Lavrischeff3931" role="collector">Tikhon I. Lavrischeff</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NN06971220</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NN06971220</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Lavrischeff, T. I. (1928): Two Aleut Tales. In: American Anthropologist NS 30(1), 121-124. Quot. pp. 122-124.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="21">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CNA27710">Aleut</name>
+          <date notBefore="1925" notAfter="1928" type="recorded">Recorded sometime between 1925 and 1928.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>Long, long ago rich <persName>Anoogne</persName> lived in the village on <placeName>Hinchinbrook island</placeName>, keeping rough storehouses with their stone shelves <pb n="123"/>filled with valuable furs, many clothes and all kinds of native foods. He preserved many <rs type="animal">fish</rs> and eggs in the ground, for sour <rs type="animal">fish</rs> dug from the earth formed his favorite repast.</p>
+      <p>All of the villages about worked for the <persName>Anoogne</persName> and often he gave feasts in his house and the guests praised him highly for his generous deeds.</p>
+      <p>One evening the <persName>Anoogne</persName> took a walk on the seashore. The sky was <rs type="color">blue</rs>, the sea was calm and the old man enjoyed his slow promenade. Suddenly his foot slipped and he fell. He had stepped on a dead <rs type="animal">fish</rs> cast on the beach.</p>
+      <p><persName>Anoogne</persName> started to complain bitterly, but a voice came from on high, saying: "Do not scold. Do not curse the old <rs type="animal">fish</rs>. If I did not give to you the same <rs type="animal">fish</rs> for your food you will starve."</p>
+      <p>"If you did not send this <rs type="animal">fish</rs>, I will not starve," the <persName>Anoogne</persName> replied.</p>
+      <p>"Why not?" the voice asked.</p>
+      <p>The old man told him, "I have all kinds of <rs type="animal">fish</rs>. I have all kinds of meat, enough to keep me forever. My stores are filled with <rs type="animal">halibut</rs>, <rs type="animal">seal</rs>, <rs type="animal">bear</rs>, <rs type="animal">salmon</rs>, <rs type="animal">codfish</rs>, and <rs type="animal">mountain goats</rs>. I shall not lose the food I have stored."</p>
+      <p>But the voice continued, "Remember, <persName>Anoogne</persName>, very soon you shall be the most miserable man and thy riches shall not be of use to thyself."</p>
+      <p>"Never, never," replied the excited <persName>Anoogne</persName>. "I am the wealthiest of the natives and I shall never grow poor."</p>
+      <p>"What will you eat if your food freezes over?" he was asked.</p>
+      <p>"I have dried <rs type="animal">fish</rs> and meat and have buried <rs type="animal">fish</rs> eggs, a reserve that will last a long time."</p>
+      <p>"I can send the deep snow to cover the earth," he was told.</p>
+      <p>"Do not think you can even cover the <rs type="plant">koongat</rs>, the edible <rs type="plant">trees</rs>?" the haughty <persName>Anoogne</persName> responded.</p>
+      <p>No reply came, only repeated in gradually dying echoes, the sound of the word "ahtat."</p>
+      <p>Then the big flakes of snow started to fall softly over the earth. When the <persName>Anoogne</persName> approached his house the snow was up to his knees. His food had frozen and become like paper. The old man and his helpers started to shovel the <rs type="color">white</rs> blanket, <pb n="124"/>but such great flakes fell this work soon appeared useless. The snow even passed through the roof and filled the barabaras.</p>
+      <p>Again came the voice from on high, "There you have it."</p>
+      <p>All of the island was covered by deep snow for twenty-four months. All living <rs type="animal">creatures</rs> perished. There was no food on land, there were no <rs type="animal">fish</rs> in the sea.</p>
+      <p><persName>Anoogne</persName> began to starve. Greatly did he regret his mistake and his conceit. He called his neighbors and confessed his sin.</p>
+      <p>Then the voice came again, saying, "Do not speak bad words. Do not curse the food I send you. Do not grumble against fate."</p>
+      <p>So ended the story of the richest old man of the ancient village of <placeName>Nutchek</placeName>.</p>
+    </body>
+  </text>
+</TEI>

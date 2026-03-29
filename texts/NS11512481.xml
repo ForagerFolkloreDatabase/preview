@@ -1,0 +1,120 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>How the Water Woman Secured a Landsman for Husband</title>
+        <editor ref="p:Roth394" role="collector">Walter E. Roth</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NS11512481</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NS11512481</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Roth, Walter E. (1915): An Inquiry into the Animism and Folk-Lore of the Guiana Indians. In: Thirtieth Annual Report of the Bureau of American Ethnology, 1908-1909. Washington: Government Printing Office, 103-386. Quot. p. 248.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="7">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CSA36701">Warao</name>
+          <date notBefore="1906" notAfter="1913" type="recorded">Recorded sometime between 1906 and 1913.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <text>
+    <body>
+      <p>A corialful of men were paddling down the river to catch <rs type="animal">crabs</rs>. They reached the sea, and while hunting in and among the <rs type="plant">bushes</rs> one of the party heard a noise behind him, and turning around was much surprised to see a young woman there, and still more so when he heard her say: "Brother! I am come.<note>For this mode of address, see Sect. 116.</note> My father sent me to you to give me a quake of <rs type="animal">crabs</rs>." Having handed them over to her, she paid him with the loan of her body. Before taking her departure she told him that, while the boat containing him and his friends would be passing up the creek on the way home, it would suddenly stop of itself in a certain spot: he was then to jump into the water and join her, and she would bring him to his own home later on. This is exactly what did occur. When the man and his friends had filled their quakes and boarded the corial, he told them that he had acted in an evil way to a girl among the <rs type="animal">crab</rs> <rs type="plant">bushes</rs>, and that when the boat suddenly stopped of its own accord, he would have to jump out, but that he would join them later on. After a while the corial suddenly came to a standstill, our friend jumped out, and his friends left him standing in the water where the girl was holding him up. They reached home at last, and on arrival at the landing-place their women were waiting to carry the <rs type="animal">crabs</rs> up to the house. The one who was disappointed at not seeing her husband asked what had become of him. They told her that he had acted wrongly with a girl, and that they had left him behind. In the meantime the erring spouse was taken by the Ho-aránni girl [Sect. 177] to her people below, and her father told him that he had been sent for because his daughter wanted him. But he added: "You can go home to your own people this very day, and enjoy the feast of <rs type="animal">crabs</rs> that you and your friends have been gathering. I make only this one condition. If there is any disturbance or fighting at the sport, you must come back here at once: otherwise, you may remain with your own people, and we will not trouble you further. I am sending both my daughters with you." And so it came to pass that the two girls took him to his own landing-place, and when they got near, they told him to shut his eyes. As soon as he opened them again he found himself on land, close to his house. He entered, and telling everyone "how day?" sat down: his wife brought him food and drink. But as the evening progressed, the people all began to be quarrelsome in their cups, with the result that his brothers-in-law, sisters-in-law, and wife all threatened to beat him for sporting with the strange girl. This was quite enough for him. He rushed out of the place right back to the landing, where the two Water Women were awaiting him, and who asked why he was not enjoying himself at the party. But when he told them how his people had commenced to interfere, and had threatened to beat him, they took him back into the water, where the old Ho-aránni father said, "Take my two daughters to wife."</p>
+    </body>
+  </text>
+</TEI>

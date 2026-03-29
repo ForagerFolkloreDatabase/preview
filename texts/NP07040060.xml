@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Galah, and Oolah the Lizard</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040060</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040060</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 6-7.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="36">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="3">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.009">
+        <gloss>Bindeah</gloss>
+        <desc>a prickle or small thorn.</desc>
+      </item>
+      <item xml:id="GP0704.016">
+        <gloss>Boomerang</gloss>
+        <desc>a curved weapon used in hunting and in warfare by the blacks ; called Burren by the Narran blacks.</desc>
+      </item>
+      <item xml:id="GP0704.023">
+        <gloss>Bubberah</gloss>
+        <desc>boomerang that returns.</desc>
+      </item>
+      <item xml:id="GP0704.058">
+        <gloss>Galah or Gilah</gloss>
+        <desc>a French grey and rose-coloured cockatoo.</desc>
+      </item>
+      <item xml:id="GP0704.112">
+        <gloss>Oolah</gloss>
+        <desc>red prickly lizard.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p><rs type="animal" ref="g:GP0704.112">Oolah</rs> the <rs type="animal">lizard</rs> was tired of lying in the sun, doing nothing. So he said, "I will go and play." He took his boomerangs out, and began to practise throwing them. While he was doing so a <rs type="animal" ref="g:GP0704.058">Galah</rs> came up, and stood near, watching the boomerangs come flying back, for the kind of <rs ref="g:GP0704.016">boomerangs</rs> <rs type="animal" ref="g:GP0704.112">Oolah</rs> was throwing were the <rs ref="g:GP0704.023">bubberahs</rs>. <shift feature="apartmyth"/>They are smaller than others, and more curved, and when they are properly thrown they return to the thrower, which other <rs ref="g:GP0704.016">boomerangs</rs> do not.</p>
+      <p><shift feature="diegesis"/><rs type="animal" ref="g:GP0704.112">Oolah</rs> was proud of having the gay <rs type="animal" ref="g:GP0704.058">Galah</rs> to watch his skill. In his pride he gave the <rs ref="g:GP0704.023">bubberah</rs> an extra twist, and threw it with all his might. Whizz, whizzing through the air, back it came, hitting, as it passed her, the <rs type="animal" ref="g:GP0704.058">Galah</rs> on the top of her head, taking both feathers and skin clean off. The <rs type="animal" ref="g:GP0704.058">Galah</rs> set up a hideous, cawing, croaking shriek, and flew about, stopping every few minutes to knock her head on the ground like a mad <rs type="animal">bird</rs>. <rs type="animal" ref="g:GP0704.112">Oolah</rs> was so frightened when he saw what he had done, and noticed that the blood was flowing from the <rs type="animal" ref="g:GP0704.058">Galah</rs>'s head, that he glided away to hide under a <rs type="plant" ref="g:GP0704.009">bindeah bush</rs>. But the <rs type="animal" ref="g:GP0704.058">Galah</rs> saw him. She never stopped the hideous noise she was making for a <pb n="7"/>minute, but, still shrieking, followed <rs type="animal" ref="g:GP0704.112">Oolah</rs>. When she reached the <rs type="plant" ref="g:GP0704.009">bindeah bush</rs> she rushed at <rs type="animal" ref="g:GP0704.112">Oolah</rs>, seized him with her beak, rolled him on the <rs type="plant">bush</rs> until every <rs ref="g:GP0704.009">bindeah</rs> had made a hole in his skin. Then she rubbed his skin with her own bleeding head. "Now then," she said, "you <rs type="animal" ref="g:GP0704.112">Oolah</rs> shall carry <rs ref="g:GP0704.009">bindeahs</rs> on you always, and the stain of my blood."</p>
+      <p>"And you," said <rs type="animal" ref="g:GP0704.112">Oolah</rs>, as he hissed with pain from the tingling of the prickles, "shall be a bald-headed <rs type="animal">bird</rs> as long as I am a <rs type="color">red</rs> prickly <rs type="animal">lizard</rs>."</p>
+      <p><shift feature="epimyth"/>So to this day, underneath the <rs type="animal" ref="g:GP0704.058">Galah</rs>'s crest you can always find the bald patch which the <rs ref="g:GP0704.023">bubberah</rs> of <rs type="animal" ref="g:GP0704.112">Oolah</rs> first made. And in the country of the <rs type="animal" ref="g:GP0704.058">Galahs</rs> are <rs type="animal">lizards</rs> coloured <rs type="color">reddish</rs> <rs type="color">brown</rs>, and covered with spikes like <rs ref="g:GP0704.009">bindeah</rs> prickles.</p>
+    </body>
+  </text>
+</TEI>
