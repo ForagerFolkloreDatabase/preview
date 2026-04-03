@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Mooregoo the Mopoke, and Mooninguggahgul the Mosquito Bird</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040860</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040860</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 86-89.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="46">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="3">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.016">
+        <gloss>Boomerang</gloss>
+        <desc>a curved weapon used in hunting and in warfare by the blacks; called Burren by the Narran blacks.</desc>
+      </item>
+      <item xml:id="GP0704.096">
+        <gloss>Mooninguggahgul</gloss>
+        <desc>mosquito-calling bird.</desc>
+      </item>
+      <item xml:id="GP0704.098">
+        <gloss>Mooregoo</gloss>
+        <desc>mopoke.</desc>
+      </item>
+      <item xml:id="GP0704.101">
+        <gloss>Mubboo</gloss>
+        <desc>beefwood-tree.</desc>
+      </item>
+      <item xml:id="GP0704.133">
+        <gloss>Wurrawilberoo</gloss>
+        <desc>whirlwind with a devil in it; also clouds of Magellan.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p>An old man lived with his two wives, the <rs type="animal" ref="g:GP0704.096">Mooninguggahgul</rs> sisters, and his two sons. The old man spent all his time making <rs ref="g:GP0704.016">boomerangs</rs>, until at last he had four nets full of these weapons. The two boys used to go out hunting <rs type="animal">opossums</rs> and <rs type="animal">iguanas</rs>, which they would cook in the bush, and eat, without thinking of bringing any home to their parents. The old man asked them one day to bring him home some fat to rub his <rs ref="g:GP0704.016">boomerangs</rs> with. This the boys did, but they brought only the fat, having eaten the rest of the <rs type="animal">iguanas</rs> from which they had taken the fat. The old man was very angry that his sons were so greedy, but he said nothing, though he determined to punish them, for he thought "when they were young, and could not hunt, I hunted for them and fed them well; now that they can hunt and I am old and cannot so well, they give me nothing." Thinking of his treatment at the hands of his sons, he greased all his <rs ref="g:GP0704.016">boomerangs</rs>, and when he had finished them he said to the boys: "You take these <rs ref="g:GP0704.016">boomerangs</rs> down on to the plain and try them; see if I have <pb n="87"/>made them well. Then come back and tell me. I will stay here."</p>
+      <p>The boys took the <rs ref="g:GP0704.016">boomerangs</rs>. They threw them one after another; but to their surprise not one of the <rs ref="g:GP0704.016">boomerangs</rs> they threw touched the ground, but, instead, went whirling up out of sight. When they had finished throwing the <rs ref="g:GP0704.016">boomerangs</rs>, all of which acted in the same way, whirling up through space, they prepared to start home again. But as they looked round they saw a huge whirlwind coming towards them. They were frightened and called out "<rs ref="g:GP0704.133">Wurrawilberoo</rs>," for they knew there was a devil in the whirlwind. They laid hold of <rs type="plant">trees</rs> near at hand that it might not catch them. But the whirlwind spread out first one arm and rooted up one <rs type="plant">tree</rs>, then another arm, and rooted up another. The boys ran in fear from <rs type="plant">tree</rs> to <rs type="plant">tree</rs>, but each <rs type="plant">tree</rs> that they went to was torn up by the whirlwind. At last they ran to two <rs type="plant" ref="g:GP0704.101">mubboo</rs> or <rs type="plant">beef-wood trees</rs>, and clung tightly to them. After them rushed the whirlwind, sweeping all before it, and when it reached the <rs type="plant" ref="g:GP0704.101">mubboo trees</rs>, to which the boys were clinging, it tore them from their roots and bore them upward swiftly, giving the boys no time to leave go, so they were borne upward clinging to the <rs type="plant" ref="g:GP0704.101">mubboo trees</rs>. On the whirlwind bore them until they reached the sky, where it placed the two <rs type="plant">trees</rs> with the boys still clinging to them. <shift feature="apartmyth"/>And there they still are, near the Milky Way, and known as <rs ref="g:GP0704.133">Wurrawilberoo</rs>. The <rs ref="g:GP0704.016">boomerangs</rs> are scattered all along the Milky Way, for the whirlwind had gathered them all together in its rush through space. <shift feature="diegesis"/>Having placed them all in the sky, down came the whirlwind, retaking its natural shape, which was that of the old man, for so had <pb n="88"/>he wreaked his vengeance on his sons for neglecting their parents.</p>
+      <p>As time went on, the mothers wondered why their sons did not return. It struck them as strange that the old man expressed no surprise at the absence of the boys, and they suspected that he knew more than he cared to say. For he only sat in the camp smiling while his wives discussed what could have happened to them, and he let the women go out and search alone. The mothers tracked their sons to the plain. There they saw that a big whirlwind had lately been, for <rs type="plant">trees</rs> were uprooted and strewn in every direction. They tracked their sons from <rs type="plant">tree</rs> to <rs type="plant">tree</rs> until at last they came to the place where the <rs type="plant" ref="g:GP0704.101">mubboos</rs> had stood. They saw the tracks of their sons beside the places whence the <rs type="plant">trees</rs> had been uprooted, but of the <rs type="plant">trees</rs> and their sons they saw no further trace. Then they knew that they had all been borne up together by the whirlwind, and taken whither they knew not. Sadly they returned to their camp. When night came they heard cries which they recognised as made by the voices of their sons, though they sounded as if coming from the sky. As the cries sounded again the mothers looked up whence they came, and there they saw the <rs type="plant" ref="g:GP0704.101">mubboo trees</rs> with their sons beside them. Then well they knew that they would see no more their sons on earth, and great was their grief, and wroth were they with their husband, for well they knew now that he must have been the devil in the whirlwind, who had so punished the boys. They vowed to avenge the loss of their boys.</p>
+      <p>The next day they went out and gathered a lot of pine gum, and brought it back to the camp. When they reached the camp the old man called to one of his wives to <pb n="89"/>come and tease his hair, as his head ached, and that alone would relieve the pain. One of the women went over to him, took his head on her lap, and teased his hair until at last the old man was soothed and sleepy. In the meantime the other wife was melting the gum. The one with the old man gave her a secret sign to come near; then she asked the old man to lie on his back, that she might tease his front hair better. As he did so, she signed to the other woman, who quickly came, gave her some of the melted gum, which they both then poured hot into his eyes, filling them with it. In agony the old man jumped up and ran about, calling out, "<rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs>, <rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">mooregoo</rs>," as he ran. Out of the camp he ran and far away, still crying out in his agony, as he went. And never again did his wives see him though every night they heard his cry of "<rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs>, <rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">mooregoo</rs>." But though they never saw their husband, they saw a <rs type="animal">night hawk</rs>, the <rs type="animal" ref="q:Q908909" key="Ninox novaeseelandiae">Mopoke</rs>, and as that cried always, "<rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs>, moregoo," as their husband had cried in his agony, they knew that he must have turned into the bird.</p>
+      <p>After a time the women were changed into <rs type="animal" ref="g:GP0704.096">Mooninguggahgul</rs>, or <rs type="animal">mosquito birds</rs>. <shift feature="epimyth"/>These <rs type="animal">birds</rs> are marked on the wings just like a <rs type="animal">mosquito</rs>, and every summer night you can hear them cry out incessantly, "<rs type="animal" ref="g:GP0704.096">Mooninguggahgul</rs>," which cry is the call for the <rs type="animal">mosquitoes</rs> to answer by coming out and buzzing in chorus. And as quickly the <rs type="animal">mosquitoes</rs> come out in answer to the summons, the <rs type="animal" ref="g:GP0704.096">Mooninguggahgul</rs> bid them fly everywhere and bite all they can.</p>
+    </body>
+  </text>
+</TEI>

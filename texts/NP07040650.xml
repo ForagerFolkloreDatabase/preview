@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>The Galah, and Oolah the Lizard</title>
+        <title>Goomblegubbon, Beeargah, and Ouyan</title>
         <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
         <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
@@ -22,15 +22,15 @@
       </extent>
       <publicationStmt>
         <authority xml:id="FFDB">The Forager Folklore Database</authority>
-        <idno type="FFDB">NP07040060</idno>
-        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040060</idno>
+        <idno type="FFDB">NP07040650</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040650</idno>
         <availability status="free">
           <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
         <date when="2026">2026</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 6-7.</bibl>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 65-67.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,11 +51,11 @@
         <namespace name="http://www.tei-c.org/ns/1.0">
           <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
           <tagUsage gi="placeName">Used to mark place names.</tagUsage>
-          <tagUsage gi="rs" occurs="36">Referencing strings are used to mark up animal names, plant
+          <tagUsage gi="rs" occurs="27">Referencing strings are used to mark up animal names, plant
                         names, and colors. The <att>type</att> attribute correspondingly takes one
                         of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
                     </tagUsage>
-          <tagUsage gi="shift" occurs="3">Used to mark shifts towards a metatextual level or back to
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
                         the diegesis. The <att>feature</att> attributes takes one of the following
                         values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
                     </tagUsage>
@@ -114,34 +114,49 @@
   </teiHeader>
   <standOff>
     <list type="glossary">
-      <item xml:id="GP0704.009">
-        <gloss>Bindeah</gloss>
-        <desc>a prickle or small thorn.</desc>
+      <item xml:id="GP0704.002">
+        <gloss>Beeargah</gloss>
+        <desc>hawk.</desc>
       </item>
-      <item xml:id="GP0704.016">
-        <gloss>Boomerang</gloss>
-        <desc>a curved weapon used in hunting and in warfare by the blacks; called Burren by the Narran blacks.</desc>
+      <item xml:id="GP0704.043">
+        <gloss>Dayoorl</gloss>
+        <desc>large flat stone for grinding grass-seed upon.</desc>
       </item>
-      <item xml:id="GP0704.023">
-        <gloss>Bubberah</gloss>
-        <desc>boomerang that returns.</desc>
+      <item xml:id="GP0704.049">
+        <gloss>Doonburr</gloss>
+        <desc>a grass seed.</desc>
       </item>
-      <item xml:id="GP0704.058">
-        <gloss>Galah or Gilah</gloss>
-        <desc>a French grey and rose-coloured cockatoo.</desc>
+      <item xml:id="GP0704.052">
+        <gloss>Dungle</gloss>
+        <desc>water hole.</desc>
       </item>
-      <item xml:id="GP0704.112">
-        <gloss>Oolah</gloss>
-        <desc>red prickly lizard.</desc>
+      <item xml:id="GP0704.054">
+        <gloss>Durrie</gloss>
+        <desc>bread made from grass seed.</desc>
+      </item>
+      <item xml:id="GP0704.072">
+        <gloss>Goomblegubbon</gloss>
+        <desc>bustard or plain turkey.</desc>
+      </item>
+      <item xml:id="GP0704.073">
+        <gloss>Goomillah</gloss>
+        <desc>young girl's dress, consisting of waist strings made of opossum's sinews with strands of woven opossum's hair hanging about a foot square in front.</desc>
+      </item>
+      <item xml:id="GP0704.114">
+        <gloss>Ouyan</gloss>
+        <desc>curlew.</desc>
       </item>
     </list>
   </standOff>
   <text>
     <body>
-      <p><rs type="animal" ref="g:GP0704.112">Oolah</rs> the <rs type="animal">lizard</rs> was tired of lying in the sun, doing nothing. So he said, "I will go and play." He took his boomerangs out, and began to practise throwing them. While he was doing so a <rs type="animal" ref="g:GP0704.058">Galah</rs> came up, and stood near, watching the boomerangs come flying back, for the kind of <rs ref="g:GP0704.016">boomerangs</rs> <rs type="animal" ref="g:GP0704.112">Oolah</rs> was throwing were the <rs ref="g:GP0704.023">bubberahs</rs>. <shift feature="apartmyth"/>They are smaller than others, and more curved, and when they are properly thrown they return to the thrower, which other <rs ref="g:GP0704.016">boomerangs</rs> do not.</p>
-      <p><shift feature="diegesis"/><rs type="animal" ref="g:GP0704.112">Oolah</rs> was proud of having the gay <rs type="animal" ref="g:GP0704.058">Galah</rs> to watch his skill. In his pride he gave the <rs ref="g:GP0704.023">bubberah</rs> an extra twist, and threw it with all his might. Whizz, whizzing through the air, back it came, hitting, as it passed her, the <rs type="animal" ref="g:GP0704.058">Galah</rs> on the top of her head, taking both feathers and skin clean off. The <rs type="animal" ref="g:GP0704.058">Galah</rs> set up a hideous, cawing, croaking shriek, and flew about, stopping every few minutes to knock her head on the ground like a mad <rs type="animal">bird</rs>. <rs type="animal" ref="g:GP0704.112">Oolah</rs> was so frightened when he saw what he had done, and noticed that the blood was flowing from the <rs type="animal" ref="g:GP0704.058">Galah</rs>'s head, that he glided away to hide under a <rs type="plant" ref="g:GP0704.009">bindeah bush</rs>. But the <rs type="animal" ref="g:GP0704.058">Galah</rs> saw him. She never stopped the hideous noise she was making for a <pb n="7"/>minute, but, still shrieking, followed <rs type="animal" ref="g:GP0704.112">Oolah</rs>. When she reached the <rs type="plant" ref="g:GP0704.009">bindeah bush</rs> she rushed at <rs type="animal" ref="g:GP0704.112">Oolah</rs>, seized him with her beak, rolled him on the <rs type="plant">bush</rs> until every <rs ref="g:GP0704.009">bindeah</rs> had made a hole in his skin. Then she rubbed his skin with her own bleeding head. "Now then," she said, "you <rs type="animal" ref="g:GP0704.112">Oolah</rs> shall carry <rs ref="g:GP0704.009">bindeahs</rs> on you always, and the stain of my blood."</p>
-      <p>"And you," said <rs type="animal" ref="g:GP0704.112">Oolah</rs>, as he hissed with pain from the tingling of the prickles, "shall be a bald-headed <rs type="animal">bird</rs> as long as I am a <rs type="color">red</rs> prickly <rs type="animal">lizard</rs>."</p>
-      <p><shift feature="epimyth"/>So to this day, underneath the <rs type="animal" ref="g:GP0704.058">Galah</rs>'s crest you can always find the bald patch which the <rs ref="g:GP0704.023">bubberah</rs> of <rs type="animal" ref="g:GP0704.112">Oolah</rs> first made. And in the country of the <rs type="animal" ref="g:GP0704.058">Galahs</rs> are <rs type="animal">lizards</rs> coloured <rs type="color">reddish</rs> <rs type="color">brown</rs>, and covered with spikes like <rs ref="g:GP0704.009">bindeah</rs> prickles.</p>
+      <p><rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs> the <rs type="animal">bustard</rs>, his two wives, <rs type="animal" ref="g:GP0704.002">Beeargah</rs> the <rs type="animal">hawk</rs>, and <rs type="animal" ref="g:GP0704.114">Ouyan</rs> the <rs type="animal">curlew</rs>, with the two children of <rs type="animal" ref="g:GP0704.002">Beeargah</rs>, had their camps right away in the bush; their only water supply was a small <rs ref="g:GP0704.052">dungle</rs>, or gilguy hole. The wives and children camped in one camp, and <rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs> a short distance off in another. One day the wives asked their husband to lend them the <rs ref="g:GP0704.043">dayoorl</rs> stone, that they might grind some <rs type="plant" ref="g:GP0704.049">doonburr</rs> to make <rs ref="g:GP0704.054">durrie</rs>. But he would not lend it to them, though they asked him several times. They knew he did not want to use it himself, for they saw his <rs ref="g:GP0704.054">durrie</rs> on a piece of bark, between two fires, already cooking. They determined to be revenged, so said: </p>
+      <p>"We will make some water bags of the opossum skins; we will fill them with water, then some day when <rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs> is out hunting we will empty the <rs ref="g:GP0704.052">dungle</rs> of water, take the children, and run away! When he returns he will find his wives and children gone and the <rs ref="g:GP0704.052">dungle</rs> empty; then he will be sorry that he would not lend us the <rs ref="g:GP0704.043">dayoorl</rs>."</p>
+      <p>The wives soon caught some <rs type="animal">opossums</rs>, killed and skinned them, plucked all the hair from the skins, saving <pb n="66"/>it to roll into string to make <rs ref="g:GP0704.073">goomillahs</rs>, cleaned the skins of all flesh, sewed them up with the sinews, leaving only the neck opening. When finished, they blew into them, filled them with air, tied them up and left them to dry for a few days. When they were dry and ready to be used, they chose a day when <rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs> was away, filled the water bags, emptied the <rs ref="g:GP0704.052">dungle</rs>, and started towards the river.</p>
+      <p>Having travelled for some time, they at length reached the river. They saw two black fellows on the other side, who, when they saw the runaway wives and the two children, swam over to them and asked whence they had come and whither they were going.</p>
+      <p>"We are running away from our husband <rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs>, who would lend us no <rs ref="g:GP0704.043">dayoorl</rs> to grind our <rs type="plant" ref="g:GP0704.049">doonburr</rs> on, and we ran away lest we and our children should starve, for we could not live on meat alone. But whither we are going we know not, except that it must be far away, lest <rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs> follow and kill us. " </p>
+      <p>The black fellows said they wanted wives, and would each take one, and both care for the children. The women agreed. The black fellows swam back across the river, each taking a child first, and then a woman, for as they came from the back country, where no creeks were, the women could not swim.</p>
+      <p><rs type="animal" ref="g:GP0704.072">Goomblegubbon</rs> came back from hunting, and, seeing no wives, called aloud for them, but heard no answer. Then he went to their camp, and found them not. Then turning towards the <rs ref="g:GP0704.052">dungle</rs> he saw that it was empty. Then he saw the tracks of his wives and children going towards the river. Great was his anger, and vowing he would kill them when <pb n="67"/>he found them, he picked up his spears and followed their tracks, until he too reached the river. There on the other side he saw a camp, and in it he could see strange black fellows, his wives, and his children. He called aloud for them to cross him over, for he too could not swim. But the sun went down and still they did not answer. He camped where he was that night, and in the morning he saw the camp opposite had been deserted and set fire to; the country all round was burnt so that not even the tracks of the black fellows and his wives could be found, even had he been able to cross the river. And never again did he see or hear of his wives or his children.</p>
     </body>
   </text>
 </TEI>

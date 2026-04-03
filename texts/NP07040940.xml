@@ -1,0 +1,237 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Borah of Byamee</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040940</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040940</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 94-105.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="151">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="9">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.006">
+        <gloss>Bibbil</gloss>
+        <desc>shiny-leaved box-tree.</desc>
+      </item>
+      <item xml:id="GP0704.016">
+        <gloss>Boomerang</gloss>
+        <desc>a curved weapon used in hunting and in warfare by the blacks; called Burren by the Narran blacks.</desc>
+      </item>
+      <item xml:id="GP0704.018">
+        <gloss>Borah</gloss>
+        <desc>a large gathering of blacks where the boys are initiated into the mysteries which make them young men.</desc>
+      </item>
+      <item xml:id="GP0704.032">
+        <gloss>Byamee</gloss>
+        <desc>man's name, meaning "big man.'"</desc>
+      </item>
+      <item xml:id="GP0704.037">
+        <gloss>Corrobboree</gloss>
+        <desc>black fellows' dance.</desc>
+      </item>
+      <item xml:id="GP0704.043">
+        <gloss>Dayoorl</gloss>
+        <desc>large flat stone for grinding grass-seed upon.</desc>
+      </item>
+      <item xml:id="GP0704.049">
+        <gloss>Doonburr</gloss>
+        <desc>a grass seed.</desc>
+      </item>
+      <item xml:id="GP0704.051">
+        <gloss>Dummerh</gloss>
+        <desc>pigeons.</desc>
+      </item>
+      <item xml:id="GP0704.055">
+        <gloss>Eär moonän</gloss>
+        <desc>long sharp teeth.</desc>
+      </item>
+      <item xml:id="GP0704.059">
+        <gloss>Gayandy</gloss>
+        <desc>borah devil.</desc>
+      </item>
+      <item xml:id="GP0704.061">
+        <gloss>Girrahween</gloss>
+        <desc>place of flowers.</desc>
+      </item>
+      <item xml:id="GP0704.064">
+        <gloss>Googoolguyyah</gloss>
+        <desc>turn into trees.</desc>
+      </item>
+      <item xml:id="GP0704.065">
+        <gloss>Googoorewon</gloss>
+        <desc>place of trees.</desc>
+      </item>
+      <item xml:id="GP0704.082">
+        <gloss>Gurraymy</gloss>
+        <desc>borah devil.</desc>
+      </item>
+      <item xml:id="GP0704.086">
+        <gloss>Mahthi</gloss>
+        <desc>dog.</desc>
+      </item>
+      <item xml:id="GP0704.111">
+        <gloss>Ooboon</gloss>
+        <desc>blue-tongued lizard.</desc>
+      </item>
+      <item xml:id="GP0704.121">
+        <gloss>Wahn</gloss>
+        <desc>crow.</desc>
+      </item>
+      <item xml:id="GP0704.128">
+        <gloss>Wirree</gloss>
+        <desc>small piece of bark, canoe-shaped.</desc>
+      </item>
+      <item xml:id="GP0704.129">
+        <gloss>Wirreenun</gloss>
+        <desc>priest or doctor.</desc>
+      </item>
+      <item xml:id="GP0704.131">
+        <gloss>Wondah</gloss>
+        <desc>spirit or ghost.</desc>
+      </item>
+      <item xml:id="GP0706.014">
+        <gloss>Boondee</gloss>
+        <desc>club-headed weapon.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p>Word had been passed from tribe to tribe, telling, now that the season was good, there must be a great gathering of the tribes. And the place fixed for the gathering was <placeName ref="g:GP0704.065">Googoorewon</placeName>. The old men whispered that it should be the occasion for a <rs ref="g:GP0704.018">borah</rs>, but this the women must not know. Old <persName ref="g:GP0704.032">Byamee</persName>, who was a great <rs ref="g:GP0704.129">Wirreenun</rs>, said he would take his two sons, <persName>Ghindahindahmoee</persName> and <persName>Boomahoomahnowee</persName>, to the gathering of the tribes, for the time had come when they should be made young men, that they might be free to marry wives, eat <rs type="animal">emu</rs> flesh, and learn to be warriors.</p>
+      <p>As tribe after tribe arrived at <placeName ref="g:GP0704.065">Googoorewon</placeName>, each took up a position at one of the various points of the ridges, surrounding the clear open space where the <rs ref="g:GP0704.037">corrobborees</rs> were to be. The <rs type="animal" ref="g:GP0704.121">Wähn</rs>, <rs type="animal">crows</rs>, had one point; the <rs type="animal" ref="g:GP0704.051">Dummerh</rs>, <rs type="animal">pigeons</rs>, another; the <rs type="animal" ref="g:GP0704.086">Mahthi</rs>, <rs type="animal">dogs</rs>, another, and so on; <persName ref="g:GP0704.032">Byamee</persName> and his tribe, Byahmul the <rs type="animal" key="Cygnus atratus" ref="q:Q131044">black swans</rs> tribe, <rs type="animal" ref="g:GP0704.111">Oooboon</rs>, the <rs type="animal">blue tongued lizard</rs>, and many other chiefs and their tribes, each had their camp on a different point. When all had arrived there were hundreds and hundreds assembled, and many and varied were the nightly <pb n="95"/><rs ref="g:GP0704.037">corrobborees</rs>, each tribe trying to excel the other in the fancifulness of their painted get-up, and the novelty of their newest song and dance. By day there was much hunting and feasting, by night much dancing and singing; pledges of friendship exchanged, a dillibag for a <rs ref="g:GP0704.016">boomerang</rs>, and so on; young daughters given to old warriors, old women given to young men, unborn girls promised to old men, babies in arms promised to grown men; many and diverse were the compacts entered into, and always were the <rs ref="g:GP0704.129">Wirreenun</rs>, or doctors of the tribes consulted.</p>
+      <p>After some days the <rs ref="g:GP0704.129">Wirreenun</rs> told the men of the tribes that they were going to hold a <rs ref="g:GP0704.018">borah</rs>. But on no account must the innerh, or women, know. Day by day they must all go forth as if to hunt and then prepare in secret the <rs ref="g:GP0704.018">borah</rs> ground. Out went the man each day. They cleared a very large circle quite clear, then they built an earthen dam round this circle, and cleared a pathway leading into the thick bush from the circle, and built a dam on either side of this pathway.</p>
+      <p>When all these preparations were finished, they had, as usual, a <rs ref="g:GP0704.037">corrobboree</rs> at night. After this had been going on for some time, one of the old <rs ref="g:GP0704.129">Wirreenun</rs> walked right away from the crowd as if he were sulky. He went to his camp, to where he was followed by another <rs ref="g:GP0704.129">Wirreenun</rs>, and presently the two old fellows began fighting. Suddenly, when the attention of the blacks was fixed on this fight, there came a strange, whizzing, whirring noise from the scrub round. The women and children shrank together, for the sudden, uncanny noise frightened them. And they knew that it was made by the spirits who were coming to assist at the initiation of the boys into young manhood. <shift feature="apartmyth"/>The noise really sounded, <pb n="96"/>if you had not the dread of spirits in your mind, just as if some one had a circular piece of wood at the end of a string and were whirling it round and round.</p>
+      <p><shift feature="diegesis"/>As the noise went on, the women said, in an awestricken tone, "<rs ref="g:GP0704.082">Gurraymy</rs>," that is "<rs ref="g:GP0704.018">borah</rs> devil," and clutched their children tighter to them. The boys said "<rs ref="g:GP0704.059">Gayandy</rs>," and their eyes extended with fear. <shift feature="apartmyth"/>"<rs ref="g:GP0704.059">Gayandy</rs>" meant <rs ref="g:GP0704.018">borah</rs> devil too, but the women must not even use the same word as the boys and men to express the <rs ref="g:GP0704.018">borah</rs> spirit, for all concerning the mysteries of <rs ref="g:GP0704.018">borah</rs> are sacred from the ears, eyes, or tongues of women.</p>
+      <p><shift feature="diegesis"/>The next day a shift was made of the camps. They were moved to inside the big ring that the black fellows had made. This move was attended with a certain amount of ceremony. In the afternoon, before the move had taken place, all the black fellows left their camps and went away into the scrub. Then just about sundown they were all to be seen walking in single file out of the scrub, along the path which they had previously banked on each side. Every man had a fire stick in one hand and a <rs type="color">green</rs> switch in the other. When these men reached the middle of the enclosed ring was the time for the young people and women to leave the old camps, and move into the <rs ref="g:GP0704.018">borah</rs> ring. Inside this ring they made their camps, had their suppers and <rs ref="g:GP0704.037">corrobboreed</rs>, as on previous evenings, up to a certain stage. Before, on this occasion, that stage arrived, <persName ref="g:GP0704.032">Byamee</persName>, who was greatest of the <rs ref="g:GP0704.129">Wirreenun</rs> present, had shown his power in a remarkable way. For some days the <rs type="animal" ref="g:GP0704.086">Mahthi</rs> had been behaving with a great want of respect for the wise men of the tribes. Instead of treating their sayings and doings with the silent awe the <rs ref="g:GP0704.129">Wirreenun</rs> expect, they had kept <pb n="97"/>up an incessant chatter and laughter amongst themselves, playing and shouting as if the tribes were not contemplating the solemnisation of their most sacred rites. Frequently the <rs ref="g:GP0704.129">Wirreenun</rs> sternly bade them be silent. But admonitions were useless, gaily chattered and laughed the <rs type="animal" ref="g:GP0704.086">Mahthi</rs>. At length <persName ref="g:GP0704.032">Byamee</persName>, mightiest and most famous of the <rs ref="g:GP0704.129">Wirreenun</rs>, rose, strode over to the camp of <rs type="animal" ref="g:GP0704.086">Mahthi</rs>, and said fiercely to them: "I, <persName ref="g:GP0704.032">Byamee</persName>, whom all the tribes hold in honour, have thrice bade you <rs type="animal" ref="g:GP0704.086">Mahthi</rs> cease your chatter and laughter. But you heeded me not. To my voice were added the voices of the <rs ref="g:GP0704.129">Wirreenun</rs> of other tribes. But you heeded not. Think you the <rs ref="g:GP0704.129">Wirreenun</rs> will make any of your tribe young men when you heed not their words? No, I tell you. From this day forth no <rs type="animal" ref="g:GP0704.086">Mahthi</rs> shall speak again as men speak. You wish to make noise, to be a noisy tribe and a disturber of men; a tribe who cannot keep quiet when strangers are in the camp; a tribe who understand not sacred things. So be it. You shall, and your descendants, for ever make a noise, but it shall not be the noise of speech, or the noise of laughter. It shall be the noise of barking and the noise of howling. And from this day if ever a <rs type="animal" ref="g:GP0704.086">Mahthi</rs> speaks, woe to those who hear him, for even as they hear shall they be turned to stone."</p>
+      <p>And as the <rs type="animal" ref="g:GP0704.086">Mahthi</rs> opened their mouths, and tried to laugh and speak derisive words, they found, even as <persName ref="g:GP0704.032">Byamee</persName> said, so were they. They could but bark and howl; the powers of speech and laughter had they lost. And as they realised their loss, into their eyes came a look of yearning and dumb entreaty which will be seen in the eyes of their descendants for ever. A feeling of wonder and awe fell <pb n="98"/>on the various camps as they watched <persName ref="g:GP0704.032">Byamee</persName> march back to his tribe.</p>
+      <p>When <persName ref="g:GP0704.032">Byamee</persName> was seated again in his camp, he asked the women why they were not grinding <rs type="plant" ref="g:GP0704.049">doonburr</rs>. And the women said: "Gone are our <rs ref="g:GP0704.043">dayoorls</rs>, and we know not where."</p>
+      <p>"You lie," said <persName ref="g:GP0704.032">Byamee</persName>. "You have lent them to the <rs type="animal" ref="g:GP0704.051">Dummerh</rs>, who came so often to borrow, though I bade you not lend."</p>
+      <p>"No, <persName ref="g:GP0704.032">Byamee</persName>, we lent them not."</p>
+      <p>"Go to the camp of the <rs type="animal" ref="g:GP0704.051">Dummerh</rs>, and ask for your <rs ref="g:GP0704.043">dayoorl</rs>."</p>
+      <p>The women, with the fear of the fate of the <rs type="animal" ref="g:GP0704.086">Mahthi</rs> did they disobey, went, though well they knew they had not lent the <rs ref="g:GP0704.043">dayoorl</rs>. As they went they asked at each camp if the tribe there would lend them a <rs ref="g:GP0704.043">dayoorl</rs>, but at each camp they were given the same answer, namely, that the <rs ref="g:GP0704.043">dayoorls</rs> were gone and none knew where. The <rs type="animal" ref="g:GP0704.051">Dummerh</rs> had asked to borrow them, and in each instance been refused, yet had the stones gone.</p>
+      <p>As the women went on they heard a strange noise, as of the cry of spirits, a sound like a smothered "Oom, oom, oom, oom." The cry sounded high in the air through the tops of <rs type="plant">trees</rs>, then low on the ground through the <rs type="plant">grasses</rs>, until it seemed as if the spirits were everywhere. The women clutched tighter their fire sticks, and said: "Let us go back. The <rs ref="g:GP0704.131">Wondah</rs> are about." And swiftly they sped towards their camp, hearing ever in the air the "Oom, oom, oom" of the spirits.</p>
+      <p>They told <persName ref="g:GP0704.032">Byamee</persName> that all the tribes had lost their <rs ref="g:GP0704.043">dayoorls</rs>, and that the spirits were about, and even as they spoke came <pb n="99"/>the sound of "Oom, oom, oom, oom," at the back of their own camp.</p>
+      <p>The women crouched together, but <persName ref="g:GP0704.032">Byamee</persName> flashed a fire stick whence came the sound, and as the light flashed on the place he saw no one, but stranger than all, he saw two <rs ref="g:GP0704.043">dayoorls</rs> moving along, and yet could see no one moving them, and as the <rs ref="g:GP0704.043">dayoorls</rs> moved swiftly away, louder and louder rose the sound of "Oom, oom, oom, oom," until the air seemed full of invisible spirits. Then <persName ref="g:GP0704.032">Byamee</persName> knew that indeed the <rs ref="g:GP0704.131">Wondah</rs> were about, and he too clutched his fire stick and went back into his camp.</p>
+      <p>In the morning it was seen that not only were all the <rs ref="g:GP0704.043">dayoorls</rs> gone, but the camp of the <rs type="animal" ref="g:GP0704.051">Dummerh</rs> was empty and they too had gone. When no one would lend the <rs type="animal" ref="g:GP0704.051">Dummerh</rs> <rs ref="g:GP0704.043">dayoorls</rs>, they had said, "Then we can grind no <rs type="plant" ref="g:GP0704.049">doonburr</rs> unless the <rs ref="g:GP0704.131">Wondah</rs> bring us stones." And scarcely were the words said before they saw a <rs ref="g:GP0704.043">dayoorl</rs> moving towards them. At first they thought it was their own skill which enabled them only to express a wish to have it realised. But as <rs ref="g:GP0704.043">dayoorl</rs> after <rs ref="g:GP0704.043">dayoorl</rs> glided into their camp, and, passing through there, moved on, and as they moved was the sound of "Oom, oom, oom, oom," to be heard everywhere they knew it was the <rs ref="g:GP0704.131">Wondah</rs> at work. And it was borne in upon them that where the <rs ref="g:GP0704.043">dayoorl</rs> went they must go, or they would anger the spirits who had brought them through their camp.</p>
+      <p>They gathered up their belongings and followed in the track of the <rs ref="g:GP0704.043">dayoorls</rs>, which had cut a pathway from <placeName ref="g:GP0704.065">Googoorewon</placeName> to <placeName ref="g:GP0704.061">Girrahween</placeName>, down which in high floods is now a water-course. From <placeName ref="g:GP0704.061">Girrahween</placeName>, on the <rs ref="g:GP0704.043">dayoorls</rs> went to <placeName>Dirangibirrah</placeName>, and after them the <rs type="animal" ref="g:GP0704.051">Dummerh</rs>. <pb n="100"/><shift feature="apartmyth"/><placeName>Dirangibirrah</placeName> is between <placeName>Brewarrina</placeName> and <placeName>Widda Murtee</placeName>, and there the <rs ref="g:GP0704.043">dayoorls</rs> piled themselves up into a mountain, and there for the future had the blacks to go when they wanted good <rs ref="g:GP0704.043">dayoorls</rs>. <shift feature="diegesis"/>And the <rs type="animal" ref="g:GP0704.051">Dummerh</rs> were changed into <rs type="animal">pigeons</rs>, with a cry like the spirits of "Oom, oom, oom."</p>
+      <p>Another strange thing happened at this big <rs ref="g:GP0704.018">borah</rs>. A tribe, called <rs type="animal" ref="g:GP0704.111">Ooboon</rs>, were camped at some distance from the other tribes. When any stranger went to their camp, it was noticed that the chief of the <rs type="animal" ref="g:GP0704.111">Ooboon</rs> would come out and flash a light on him, which killed him instantly. And no one knew what this light was, that carried death in its gleam. At last, <rs type="animal" ref="g:GP0704.121">Wähn</rs>, the <rs type="animal">crow</rs> said "I will take my biggest booreen and go and see what this means. You others, do not follow me too closely, for though I have planned how to save myself from the deadly gleam, I might not be able to save you."</p>
+      <p><rs type="animal" ref="g:GP0704.121">Wähn</rs> walked into the camp of the <rs type="animal" ref="g:GP0704.111">Ooboon</rs>, and as their chief turned to flash the light on him, he put up his booreen and completely shaded himself from it, and called aloud in a deep voice "Wäh, wäh, wäh, wäh" which so startled <rs type="animal" ref="g:GP0704.111">Ooboon</rs> that he dropped his light, and said "What is the matter? You startled me. I did not know who you were and might have hurt you, though I had no wish to, for the <rs type="animal" ref="g:GP0704.121">Wähn</rs> are my friends."</p>
+      <p>"I cannot stop now," said the <rs type="animal" ref="g:GP0704.121">Wähn</rs>, "I must go back to my camp. I have forgotten something I wanted to show you. I'll be back soon." And so saying, swiftly ran <rs type="animal" ref="g:GP0704.121">Wähn</rs> back to where he had left his <rs ref="g:GP0706.014">boondee</rs>, then back he came almost before <rs type="animal" ref="g:GP0704.111">Ooboon</rs> realised that he had gone. Back he came, and stealing up behind <rs type="animal" ref="g:GP0704.111">Ooboon</rs> dealt him a blow with <pb n="101"/>his <rs ref="g:GP0706.014">boondee</rs> that avenged amply the victims of the deadly light, by stretching the chief of the <rs type="animal" ref="g:GP0704.111">Ooboon</rs> a corpse on the ground at his feet. Then crying triumphantly, "Wäh, wäh, wäh," back to his camp went <rs type="animal" ref="g:GP0704.121">Wähn</rs> and told what he had done.</p>
+      <p>This night, when the <rs ref="g:GP0704.018">Borah</rs> <rs ref="g:GP0704.037">corrobboree</rs> began, all the women relations of the boys to be made young men, <rs ref="g:GP0704.037">corrobboreed</rs> all night. Towards the end of the night all the young women were ordered into bough humpies, which had been previously made all round the edge of the embankment surrounding the ring. The old women stayed on.</p>
+      <p>The men who were to have charge of the boys to be made young men, were told now to be ready to seize hold each of his special charge, to carry him off down the beaten track to the scrub. When every man had, at a signal, taken his charge on his shoulder, they all started dancing round the ring. Then the old women were told to come and say good-bye to the boys, after which they were ordered to join the young women in the humpies. About five men watched them into the humpies, then pulled the boughs down on the top of them that they might see nothing further.</p>
+      <p>When the women were safely imprisoned beneath the boughs, the men carrying the boys swiftly disappeared down the track into the scrub. When they were out of sight the five black fellows came and pulled the boughs away and released the women, who went now to their camps. But however curious these women were as to what rites attended the boys' initiation into manhood, they knew no questions would elicit any information. In some months' time they might see their boys return minus, perhaps, a <pb n="102"/>front tooth, and with some extra scarifications on their bodies, but beyond that, and a knowledge of the fact that they had not been allowed to look on the face of woman since their disappearance into the scrub, they were never enlightened.</p>
+      <p>The next day the tribes made ready to travel to the place of the little <rs ref="g:GP0704.018">borah</rs>, which would be held in about four days' time, at about ten or twelve miles distance from the scene of the big <rs ref="g:GP0704.018">borah</rs>.</p>
+      <p>At the place of the little <rs ref="g:GP0704.018">borah</rs> a ring of <rs type="plant">grass</rs> is made instead of one of earth. The tribes all travel together there, camp, and have a <rs ref="g:GP0704.037">corrobboree</rs>. The young women are sent to bed early, and the old women stay until the time when the boys bade farewell to them at the big <rs ref="g:GP0704.018">borah</rs>, at which hour the boys are brought into the little <rs ref="g:GP0704.018">borah</rs> and allowed to say a last good-bye to the old women. Then they are taken away by the men who have charge of them together. They stay together for a short time, then probably separate, each man with his one boy going in a different direction. The man keeps strict charge of the boy for at least six months, during which time he may not even look at his own mother. At the end of about six months he may come back to his tribe, but the effect of his isolation is that he is too wild and frightened to speak even to his mother, from whom he runs away if she approaches him, until by degrees the strangeness wears off.</p>
+      <p>But at this <rs ref="g:GP0704.018">borah</rs> of <persName ref="g:GP0704.032">Byamee</persName> the tribes were not destined to meet the boys at the little <rs ref="g:GP0704.018">borah</rs>. Just as they were gathering up their goods for a start, into the camp staggered <persName>Millindooloonubbah</persName>, the widow, crying, "You all left me, widow that I was, with my large family of children, to travel <pb n="103"/>alone. How could the little feet of my children keep up to you? Can my back bear more than one goolay? Have I more than two arms and one back? Then how could I come swiftly with so many children? Yet none of you stayed to help me. And as you went from each water hole you drank all the water. When, tired and thirsty, I reached a water hole and my children cried for a drink, what did I find to give them? Mud, only mud. Then thirsty and worn, my children crying and their mother helpless to comfort them; on we came to the next hole. What did we see, as we strained our eyes to find water? Mud, only mud. As we reached hole after hole and found only mud, one by one my children laid down and died; died for want of a drink, which <persName>Millindooloonubbah</persName> their mother could not give them."</p>
+      <p>As she spoke, swiftly went a woman to her with a <rs ref="g:GP0704.128">wirree</rs> of water. "Too late, too late," she said. "Why should a mother live when her children are dead?" And she lay back with a groan. But as she felt the water cool her parched lips and soften her swollen tongue, she made a final effort, rose to her feet, and waving her hands round the camps of the tribes, cried aloud: "You were in such haste to get here. You shall stay here. <rs ref="g:GP0704.064">Googoolguyyah</rs>. <rs ref="g:GP0704.064">Googoolguyyah</rs>. Turn into <rs type="plant">trees</rs>. Turn into <rs type="plant">trees</rs>." Then back she fell, dead. And as she fell, the tribes that were standing round the edge of the ring, preparatory to gathering their goods and going, and that her hand pointed to as it waved round, turned into <rs type="plant">trees</rs>. <shift feature="anamyth"/>There they now stand. The tribes in the background were changed each according to the name they were known by, into that <rs type="animal">bird</rs> or <rs type="animal">beast</rs> of the same name. The barking <rs type="animal" ref="g:GP0704.086">Mahthi</rs> into <rs type="animal">dogs</rs>; the <pb n="104"/>Byahmul into <rs type="animal" key="Cygnus atratus" ref="q:Q131044">black swans</rs>; the <rs type="animal" ref="g:GP0704.121">Wähns</rs> into <rs type="animal">crows</rs>, and so on. And there at the place of the big <rs ref="g:GP0704.018">borah</rs>, you can see the <rs type="plant">trees</rs> standing tall and gaunt, sad-looking in their sombre hues, waving with a sad wailing their branches towards the lake which covers now the place where the <rs ref="g:GP0704.018">borah</rs> was held. And it bears the name of <placeName ref="g:GP0704.065">Googoorewon</placeName>, the place of <rs type="plant">trees</rs>, and round the edge of it is still to be seen the remains of the <rs ref="g:GP0704.018">borah</rs> ring of earth. And it is known as a great place of meeting for the <rs type="animal">birds</rs> that bear the names of the tribes of old. The Byahmuls sail proudly about; the <rs type="animal">pelicans</rs>, their water rivals in point of size and beauty; the <rs type="animal">ducks</rs>, and many others too numerous to mention. The <rs type="animal" ref="g:GP0704.111">Ooboon</rs>, or <rs type="animal">blue-tongued lizards</rs>, glide in and out through the <rs type="plant">grass</rs>. Now and then is heard the "Oom, oom, oom," of the <rs type="animal" ref="g:GP0704.051">dummerh</rs>, and occasionally a cry from the <rs type="animal">bird</rs> <persName>Millindooloonubbah</persName> of "<rs ref="g:GP0704.064">Googoolguyyah</rs>, <rs ref="g:GP0704.064">googoolguyyah</rs>." And in answer comes the wailing of the gloomy-looking <rs type="plant">balah trees</rs>, and then a rustling shirr through the <rs type="plant" ref="g:GP0704.006">bibbil</rs> branches, until at last every <rs type="plant">tree</rs> gives forth its voice and makes sad the margin of the lake with echoes of the past.</p>
+      <p><shift feature="diegesis"/>But the men and boys who were at the place of the little <rs ref="g:GP0704.018">borah</rs> escaped the metamorphosis. They waited long for the arrival of the tribes who never came.</p>
+      <p>At last <persName ref="g:GP0704.032">Byamee</persName> said: "Surely mighty enemies have slain our friends, and not one escapes to tell us of their fate. Even now these enemies may be upon our track; let us go into a far country."</p>
+      <p>And swiftly they went to <placeName>Noondoo</placeName>. Hurrying along with them, a <rs type="animal">dog</rs> of <persName ref="g:GP0704.032">Byamee</persName>'s, which would fain have lain by the roadside rather than have travelled so swiftly, but <pb n="105"/><persName ref="g:GP0704.032">Byamee</persName> would not leave her and hurried her on. When they reached the springs of <placeName>Noondoo</placeName>, the <rs type="animal">dog</rs> sneaked away into a thick scrub, and there were born her litter of <rs type="animal">pups</rs>. But such <rs type="animal">pups</rs> as surely man never looked at before. The bodies of <rs type="animal">dogs</rs>, and the heads of <rs type="animal">pigs</rs>, and the fierceness and strength of devils. <shift feature="epimyth"/>And gone is the life of a man who meets in a scrub of <placeName>Noondoo</placeName> an <rs ref="g:GP0704.055">earmoonän</rs>, for surely will it slay him. Not even did <persName ref="g:GP0704.032">Byamee</persName> ever dare to go near the breed of his old <rs type="animal">dog</rs>. And <persName ref="g:GP0704.032">Byamee</persName>, the mighty <rs ref="g:GP0704.129">Wirreenun</rs>, lives for ever. But no man must look upon his face, lest surely will he die. So alone in a thick scrub, on one of the <placeName>Noondoo</placeName> ridges, lives this old man, <persName ref="g:GP0704.032">Byamee</persName>, the mightiest of <rs ref="g:GP0704.129">Wirreenun</rs>.</p>
+    </body>
+  </text>
+</TEI>

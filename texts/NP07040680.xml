@@ -4,7 +4,7 @@
   <teiHeader>
     <fileDesc>
       <titleStmt>
-        <title>The Galah, and Oolah the Lizard</title>
+        <title>Mooregoo the Mopoke, and Bahloo the Moon</title>
         <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
         <editor ref="p:unidentified0" role="narrator">unidentified</editor>
         <funder>Deutsche Forschungsgemeinschaft</funder>
@@ -22,15 +22,15 @@
       </extent>
       <publicationStmt>
         <authority xml:id="FFDB">The Forager Folklore Database</authority>
-        <idno type="FFDB">NP07040060</idno>
-        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040060</idno>
+        <idno type="FFDB">NP07040680</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040680</idno>
         <availability status="free">
           <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
         </availability>
         <date when="2026">2026</date>
       </publicationStmt>
       <sourceDesc>
-        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 6-7.</bibl>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 68-69.</bibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
@@ -51,11 +51,11 @@
         <namespace name="http://www.tei-c.org/ns/1.0">
           <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
           <tagUsage gi="placeName">Used to mark place names.</tagUsage>
-          <tagUsage gi="rs" occurs="36">Referencing strings are used to mark up animal names, plant
+          <tagUsage gi="rs" occurs="18">Referencing strings are used to mark up animal names, plant
                         names, and colors. The <att>type</att> attribute correspondingly takes one
                         of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
                     </tagUsage>
-          <tagUsage gi="shift" occurs="3">Used to mark shifts towards a metatextual level or back to
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
                         the diegesis. The <att>feature</att> attributes takes one of the following
                         values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
                     </tagUsage>
@@ -114,34 +114,40 @@
   </teiHeader>
   <standOff>
     <list type="glossary">
-      <item xml:id="GP0704.009">
-        <gloss>Bindeah</gloss>
-        <desc>a prickle or small thorn.</desc>
+      <item xml:id="GP0704.001">
+        <gloss>Bahloo</gloss>
+        <desc>moon.</desc>
       </item>
       <item xml:id="GP0704.016">
         <gloss>Boomerang</gloss>
         <desc>a curved weapon used in hunting and in warfare by the blacks; called Burren by the Narran blacks.</desc>
       </item>
-      <item xml:id="GP0704.023">
-        <gloss>Bubberah</gloss>
-        <desc>boomerang that returns.</desc>
+      <item xml:id="GP0704.041">
+        <gloss>Dardurr</gloss>
+        <desc>bark, humpy or shed.</desc>
       </item>
-      <item xml:id="GP0704.058">
-        <gloss>Galah or Gilah</gloss>
-        <desc>a French grey and rose-coloured cockatoo.</desc>
+      <item xml:id="GP0704.098">
+        <gloss>Mooregoo</gloss>
+        <desc>mopoke.</desc>
       </item>
-      <item xml:id="GP0704.112">
-        <gloss>Oolah</gloss>
-        <desc>red prickly lizard.</desc>
+      <item xml:id="GP0704.108">
+        <gloss>Nullah nullah</gloss>
+        <desc>a club or heavyheaded weapon.</desc>
       </item>
     </list>
   </standOff>
   <text>
     <body>
-      <p><rs type="animal" ref="g:GP0704.112">Oolah</rs> the <rs type="animal">lizard</rs> was tired of lying in the sun, doing nothing. So he said, "I will go and play." He took his boomerangs out, and began to practise throwing them. While he was doing so a <rs type="animal" ref="g:GP0704.058">Galah</rs> came up, and stood near, watching the boomerangs come flying back, for the kind of <rs ref="g:GP0704.016">boomerangs</rs> <rs type="animal" ref="g:GP0704.112">Oolah</rs> was throwing were the <rs ref="g:GP0704.023">bubberahs</rs>. <shift feature="apartmyth"/>They are smaller than others, and more curved, and when they are properly thrown they return to the thrower, which other <rs ref="g:GP0704.016">boomerangs</rs> do not.</p>
-      <p><shift feature="diegesis"/><rs type="animal" ref="g:GP0704.112">Oolah</rs> was proud of having the gay <rs type="animal" ref="g:GP0704.058">Galah</rs> to watch his skill. In his pride he gave the <rs ref="g:GP0704.023">bubberah</rs> an extra twist, and threw it with all his might. Whizz, whizzing through the air, back it came, hitting, as it passed her, the <rs type="animal" ref="g:GP0704.058">Galah</rs> on the top of her head, taking both feathers and skin clean off. The <rs type="animal" ref="g:GP0704.058">Galah</rs> set up a hideous, cawing, croaking shriek, and flew about, stopping every few minutes to knock her head on the ground like a mad <rs type="animal">bird</rs>. <rs type="animal" ref="g:GP0704.112">Oolah</rs> was so frightened when he saw what he had done, and noticed that the blood was flowing from the <rs type="animal" ref="g:GP0704.058">Galah</rs>'s head, that he glided away to hide under a <rs type="plant" ref="g:GP0704.009">bindeah bush</rs>. But the <rs type="animal" ref="g:GP0704.058">Galah</rs> saw him. She never stopped the hideous noise she was making for a <pb n="7"/>minute, but, still shrieking, followed <rs type="animal" ref="g:GP0704.112">Oolah</rs>. When she reached the <rs type="plant" ref="g:GP0704.009">bindeah bush</rs> she rushed at <rs type="animal" ref="g:GP0704.112">Oolah</rs>, seized him with her beak, rolled him on the <rs type="plant">bush</rs> until every <rs ref="g:GP0704.009">bindeah</rs> had made a hole in his skin. Then she rubbed his skin with her own bleeding head. "Now then," she said, "you <rs type="animal" ref="g:GP0704.112">Oolah</rs> shall carry <rs ref="g:GP0704.009">bindeahs</rs> on you always, and the stain of my blood."</p>
-      <p>"And you," said <rs type="animal" ref="g:GP0704.112">Oolah</rs>, as he hissed with pain from the tingling of the prickles, "shall be a bald-headed <rs type="animal">bird</rs> as long as I am a <rs type="color">red</rs> prickly <rs type="animal">lizard</rs>."</p>
-      <p><shift feature="epimyth"/>So to this day, underneath the <rs type="animal" ref="g:GP0704.058">Galah</rs>'s crest you can always find the bald patch which the <rs ref="g:GP0704.023">bubberah</rs> of <rs type="animal" ref="g:GP0704.112">Oolah</rs> first made. And in the country of the <rs type="animal" ref="g:GP0704.058">Galahs</rs> are <rs type="animal">lizards</rs> coloured <rs type="color">reddish</rs> <rs type="color">brown</rs>, and covered with spikes like <rs ref="g:GP0704.009">bindeah</rs> prickles.</p>
+      <p><rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs> the <rs type="animal" ref="q:Q908909" key="Ninox novaeseelandiae">Mopoke</rs> had been camped away by himself for a long time. While alone he had made a great number of <rs ref="g:GP0704.016">boomerangs</rs>, <rs ref="g:GP0704.108">nullah-nullahs</rs>, spears, neilahmans, and opossum rugs. Well had he carved the weapons with the teeth of <rs type="animal">opossums</rs>, and <rs type="color">brightly</rs> had he painted the inside of the rugs with <rs type="color">coloured</rs> designs, and strongly had he sewn them with the sinews of <rs type="animal">opossums</rs>, threaded in the needle made of the little bone taken from the leg of an <rs type="animal">emu</rs>. As <rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs> looked at his work he was proud of all he had done.</p>
+      <p>One night <rs ref="g:GP0704.001">Bahloo</rs> the moon came to his camp, and said: "Lend me one of your opossum rugs."</p>
+      <p>"No. I lend not my rugs."</p>
+      <p>"Then give me one."</p>
+      <p>"No. I give not my rugs."</p>
+      <p>Looking round, <rs ref="g:GP0704.001">Bahloo</rs> saw the beautifully carved weapons, so he said, "Then give me, <rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs>, some of your weapons."</p>
+      <p>"No, I give, never, what I have made, to another."</p>
+      <p><pb n="69"/>Again <rs ref="g:GP0704.001">Bahloo</rs> said, "The night is cold. Lend me a rug."</p>
+      <p>"I have spoken," said <rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs>. "I never lend my rugs."</p>
+      <p><rs ref="g:GP0704.001">Bahloo</rs> said no more, but went away, cut some bark and made a <rs ref="g:GP0704.041">dardurr</rs> for himself. When it was finished and he safely housed in it, down came the rain in torrents. And it rained without ceasing until the whole country was flooded. <rs type="animal" ref="g:GP0704.098 q:Q908909" key="Ninox novaeseelandiae">Mooregoo</rs> was drowned. His weapons floated about and drifted apart, and his rugs rotted in the water.</p>
     </body>
   </text>
 </TEI>

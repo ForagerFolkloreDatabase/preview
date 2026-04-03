@@ -1,0 +1,210 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Deegeenboyah the Soldier-Bird</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07041080</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07041080</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 108-114.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="103">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="0">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.016">
+        <gloss>Boomerang</gloss>
+        <desc>a curved weapon used in hunting and in warfare by the blacks; called Burren by the Narran blacks.</desc>
+      </item>
+      <item xml:id="GP0704.023">
+        <gloss>Bubberah</gloss>
+        <desc>boomerang that returns.</desc>
+      </item>
+      <item xml:id="GP0704.037">
+        <gloss>Corrobboree</gloss>
+        <desc>black fellows' dance.</desc>
+      </item>
+      <item xml:id="GP0704.044">
+        <gloss>Deegeenboyah</gloss>
+        <desc>soldier-bird.</desc>
+      </item>
+      <item xml:id="GP0704.066">
+        <gloss>Goolahbah</gloss>
+        <desc>grey-leaved box-tree.</desc>
+      </item>
+      <item xml:id="GP0704.097">
+        <gloss>Moonoon</gloss>
+        <desc>emu spear.</desc>
+      </item>
+      <item xml:id="GP0704.102">
+        <gloss>Mullyan</gloss>
+        <desc>eagle hawk.</desc>
+      </item>
+      <item xml:id="GP0704.103">
+        <gloss>Mullyangah</gloss>
+        <desc>the morning star.</desc>
+      </item>
+      <item xml:id="GP0704.104">
+        <gloss>Murgah muggui</gloss>
+        <desc>big grey spider.</desc>
+      </item>
+      <item xml:id="GP0706.014">
+        <gloss>Boondee</gloss>
+        <desc>club-headed weapon.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p><rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> was an old man, and getting past hunting much for himself; and he found it hard to keep his two wives and his two daughters supplied with food. He camped with his family away from the other tribes, but he used to join the men of the <rs type="animal" ref="g:GP0704.102">Mullyan</rs> tribe when they were going out hunting, and so get a more certain supply of food than if he had gone by himself. One day when the <rs type="animal" ref="g:GP0704.102">Mullyan</rs> went out, he was too late to accompany them. He hid in the scrub and waited for their return, at some little distance from their camp. When they were coming back he heard them singing the Song of the Setting <rs type="animal">Emu</rs>, a song which whoever finds the first <rs type="animal">emu</rs>'s nest of the season always sings before getting back to the camp. <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> jumped up as he heard the song, and started towards the camp of the <rs type="animal" ref="g:GP0704.102">Mullyan</rs> singing the same song, as if he too had found a nest. On they all went towards the camp sing joyously:</p>
+      <lg type="song">
+        <l>"Nurdoo, nurbber me derreen derreenbah, ah, ah, ah, ah, ah.</l>
+        <l>Garmbay booan yunnahdeh beahwah ah, ah, ah, ah, ah.</l>
+        <l>Gubbondee, dee, ee, ee, ee.</l>
+        <l>Neäh neän gulbeejah, ah, ah, ah, ah."</l>
+      </lg>
+      <p><pb n="109"/> Which song roughly translated means:</p>
+      <lg type="song">
+        <l>"I saw it first amongst the young <rs type="plant">trees</rs>,</l>
+        <l>The <rs type="color">white</rs> mark on its forehead,</l>
+        <l>The <rs type="color">white</rs> mark that before I had only seen as the <rs type="animal">emus</rs> moved together in the day-time.</l>
+        <l>Never did I see one camp before, only moving, moving always.</l>
+        <l>Now that we have found the nest</l>
+        <l>We must look out the <rs type="animal">ants</rs> do not get to the eggs.</l>
+        <l>If they crawl over them the eggs are spoilt."</l>
+      </lg>
+      <p>As the last echo of the song died away, those in the camp took up the refrain and sang it back to the hunters to let them know that they understood that they had found the first <rs type="animal">emu</rs>'s nest of the season.</p>
+      <p>When the hunters reached the camp, up came <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> too. The <rs type="animal" ref="g:GP0704.102">Mullyans</rs> turned to him, and said:</p>
+      <p>"Did you find an <rs type="animal">emu</rs>'s nest too?"</p>
+      <p>"Yes," said <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs>, "I did. I think you must have found the same, though after me, as I saw not your tracks. But I am older and stiff in my limbs, so came not back so quickly. Tell me, where is your nest?"</p>
+      <p>"In the clump of the <rs type="plant" ref="g:GP0704.066">Goolahbahs</rs>, on the edge of the plain," said the unsuspecting <rs type="animal" ref="g:GP0704.102">Mullyan</rs>.</p>
+      <p>"Ah, I thought so. That is mine. But what matter? We can share - there will be plenty for all. We must get the net and go and camp near the nest to-night, and to-morrow trap the <rs type="animal">emu</rs>."</p>
+      <p>The <rs type="animal" ref="g:GP0704.102">Mullyan</rs> got their <rs type="animal">emu</rs> trapping net, one made of thin rope about as thick as a thin clothes line, about five feet high, and between two and three hundred yards long. And off they set, accompanied by <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs>, to camp near where the <rs type="animal">emu</rs> was setting. When they had chosen a place to camp, they had their supper and a little <rs ref="g:GP0704.037">corrobboree</rs>, <pb n="110"/>illustrative of slaying <rs type="animal">emu</rs>, etc. The next morning at daylight they erected their net into a sort of triangular shaped yard, one side open. Black fellows were stationed at each end of the net, and at stated distances along it. The net was upheld by upright poles. When the net was fixed, some of the blacks made a wide circle round the <rs type="animal">emu</rs>'s nest, leaving open the side towards the net. They closed in gradually until they frightened the <rs type="animal">emu</rs> off the nest. The <rs type="animal">emu</rs> seeing black fellows on every side but one, ran in that direction. The blacks followed closely, and the <rs type="animal">bird</rs> was soon yarded. Madly the frightened <rs type="animal">bird</rs> rushed against the net. Up ran a black fellow, seized the <rs type="animal">bird</rs> and wrung its neck. Then some of them went back to the nest to get the eggs, which they baked in the ashes of their fire and ate. They made a hole to cook the <rs type="animal">emu</rs> in. They plucked the <rs type="animal">emu</rs>. When they had plenty of coals, they put a thick layer at the bottom of the hole, some twigs of leaves on top of the coals, some feathers on the top of them. Then they laid the <rs type="animal">emu</rs> in, more feathers on the top of it, leaves again on top of them, and over them a thick layer of coals, and lastly they covered all with earth.</p>
+      <p>It would be several hours in cooking, so <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> said, "I will stay and cook the <rs type="animal">emu</rs>, you young fellows take moonoons - <rs type="animal">emu</rs> spears - and try and get some more <rs type="animal">emu</rs>."</p>
+      <p>The <rs type="animal" ref="g:GP0704.102">Mullyan</rs> thought there was sense in this proposal, so they took a couple of long spears, with a jagged nick at one end, to hold the <rs type="animal">emu</rs> when they speared it; they stuck a few <rs type="animal">emu</rs> feathers on the end of each spear and went off. They soon saw a flock of <rs type="animal">emu</rs> coming past where they were waiting to water. Two of the party armed with the <rs ref="g:GP0704.097">moonoon</rs> climbed a <rs type="plant">tree</rs>, broke some boughs <pb n="111"/>and put these thickly beneath them, so as to screen them from the <rs type="animal">emu</rs>. Then as the <rs type="animal">emu</rs> came near to the men they dangled down their spears, letting the <rs type="animal">emu</rs> feathers on the ends wave to and fro. The <rs type="animal">emu</rs>, seeing the feathers, were curious as to how they got there, came over, craning their necks and sniffing right underneath the spears. The black fellows tightly grasped the <rs ref="g:GP0704.097">moonoons</rs> and drove them with force into the two <rs type="animal">emu</rs> they had picked. One <rs type="animal">emu</rs> dropped dead at once. The other ran with the spear in it for a short distance, but the black fellow was quickly after it, and soon caught and killed it outright. Then carrying the dead <rs type="animal">birds</rs>, back they went to where <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> was cooking the other <rs type="animal">emu</rs>. They cooked the two they had brought, and then all started for the camp in great spirits at their successful chase. They began throwing their mooroolahs as they went along, and playing with their <rs ref="g:GP0704.023">bubberahs</rs>, or returning <rs ref="g:GP0704.016">boomerangs</rs>. Old <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> said, "Here, give me the <rs type="animal">emus</rs> to carry, and then you will be free to have a really good game with your mooroolahs and <rs ref="g:GP0704.023">bubberahs</rs>, and see who is the best man."</p>
+      <p>They gave him the <rs type="animal">emus</rs>, and on they went, some throwing mooroolahs, and some showing their skill with <rs ref="g:GP0704.023">bubberahs</rs>. Presently <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> sat down. They thought he was just resting for a few minutes, so ran on laughing and playing, each good throw eliciting another effort, for none liked owning themselves beaten while they had a mooroolah left. As they got further away they noticed <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> was still sitting down, so they called out to him to know what was the matter. "All right," he said, "only having a rest; shall come on in a minute." So on they went. When they were quite out of sight <pb n="112"/><rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> jumped up quickly, took up the <rs type="animal">emus</rs> and made for an opening in the ground at a little distance. This opening was the door of the underground home of the <rs type="animal" ref="g:GP0704.104">Murgah Muggui spider</rs> - the opening was a neat covering, like a sort of trap door. Down though this he went, taking the <rs type="animal">emus</rs> with him, knowing there was another exit at some distance, out of which he could come up quite near his home, for it was the way he often took after hunting.</p>
+      <p>The <rs type="animal" ref="g:GP0704.102">Mullyans</rs> went home and waited, but no sign of <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs>. Then back on their tracks they went and called aloud, but got no answer, and saw no sign. At last <rs ref="g:GP0704.103">Mullyangah</rs> the chief of the <rs type="animal" ref="g:GP0704.102">Mullyans</rs>, said he would find him. Arming himself with his <rs ref="g:GP0706.014">boondees</rs> and spears, he went back to where he had last seen <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> sitting. He saw where his tracks turned off and where they disappeared, but could not account for their disappearance, as he did not notice the neat little trap-door of the <rs type="animal" ref="g:GP0704.104">Murgah Muggui</rs>. But he hunted round, determined to scour the bush until he found him. At last he saw a camp. He went up to it and saw only two little girls playing about, whom he knew were the daughters of <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs>.</p>
+      <p>"Where is your father?" he asked them.</p>
+      <p>"Out hunting," they said.</p>
+      <p>"Which way does he come home?"</p>
+      <p>"Our father comes home out of this;" and they showed him the <rs type="animal">spiders</rs>' trap-door.</p>
+      <p>"Where are your mothers?"</p>
+      <p>"Our mothers are out getting honey and <rs type="plant">yams</rs>." And off ran the little girls to a leaning <rs type="plant">tree</rs> on which they played, running up its bent trunk.</p>
+      <p><rs ref="g:GP0704.103">Mullyangah</rs> went and stood where the trunk was highest <pb n="113"/>from the ground and said: "Now, little girls, run up to here and jump, and I will catch you. Jump one at a time."</p>
+      <p>Off jumped one of the girls towards his outstretched arms, which, as she came towards him he dropped, and, stepping aside, let her come with her full force to the ground where she lay dead. Then he called to the horror-stricken child on the <rs type="plant">tree</rs>: "Come, jump. Your sister came too quickly. Wait till I call, then jump."</p>
+      <p>"No, I am afraid."</p>
+      <p>"Come on, I will be ready this time. Now come."</p>
+      <p>"I am afraid."</p>
+      <p>"Come on; I am strong." And he smiled quite kindly up at the child, who, hesitating no longer, jumped towards his arms, only to meet her sister's fate.</p>
+      <p>"Now," said <rs ref="g:GP0704.103">Mullyangah</rs>, "here come the two wives. I must silence them, or when they see their children their cries will warn their husband if he is within earshot." So he sneaked behind a <rs type="plant">tree</rs>, and as the two wives passed he struck them dead with his spears. Then he went to the trapdoor that the children had shown him, and sat down to wait for the coming of <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs>. He had not long to wait. The trap-door was pushed up and out came a cooked <rs type="animal">emu</rs>, which he caught hold of and laid on one side. <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> thought it was the girls taking it, as they had often watched for his coming and done before, so he pushed up another, which <rs ref="g:GP0704.103">Mullyangah</rs> took, then a third, and lastly came up himself, to find <rs ref="g:GP0704.103">Mullyangah</rs> confronting him spear and <rs ref="g:GP0706.014">boondee</rs> in hand. He started back, but the trap-door was shut behind him, and <rs ref="g:GP0704.103">Mullyangah</rs> barred his escape in front.</p>
+      <p><pb n="114"/>"Ah," said <rs ref="g:GP0704.103">Mullyangah</rs>, "you stole our food and now you shall die. I've killed your children."</p>
+      <p>Decgeenboyah looked wildly round, and, seeing the dead bodies of his girls beneath the leaning <rs type="plant">tree</rs>, he groaned aloud.</p>
+      <p>"And," went on <rs ref="g:GP0704.103">Mullyangah</rs>, "I've killed your wives."</p>
+      <p>Deegenboyah raised his head and looked again wildly round, and there, on their homeward path, he saw his dead wives. Then he called aloud, "Here <rs ref="g:GP0704.103">Mullyangah</rs> are your <rs type="animal">emus</rs>; take them and spare me. I shall steal no more, for I myself want little, but my children and my wives hungered. I but stole for them. Spare me, I pray you. I am old; I shall not live long. Spare me."</p>
+      <p>"Not so," said <rs ref="g:GP0704.103">Mullyangah</rs>, "no man lives to steal twice from a <rs type="animal" ref="g:GP0704.102">Mullyan</rs>;" and, so saying, he speared <rs type="animal" ref="g:GP0704.044">Deegeenboyah</rs> where he stood. Then he lifted up the <rs type="animal">emus</rs>, and, carrying them with him, went swiftly back to his camp.</p>
+      <p>And merry was the supper that night when the <rs type="animal" ref="g:GP0704.102">Mullyans</rs> ate the <rs type="animal">emus</rs>, and <rs ref="g:GP0704.103">Mullyangah</rs> told the story of his search and slaughter. And proud were the <rs type="animal" ref="g:GP0704.102">Mullyans</rs> of the prowess and cunning of their chief.</p>
+    </body>
+  </text>
+</TEI>

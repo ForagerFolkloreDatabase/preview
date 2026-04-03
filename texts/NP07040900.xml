@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Bougoodoogahdah the Rain Bird</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040900</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040900</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 90-93.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="56">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="3">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.019">
+        <gloss>Bou-gou-doo-gahdah</gloss>
+        <desc>the rain bird. Like the bower or mocking bird.</desc>
+      </item>
+      <item xml:id="GP0704.042">
+        <gloss>Dayah minyah</gloss>
+        <desc>carpet snake.</desc>
+      </item>
+      <item xml:id="GP0704.048">
+        <gloss>Dingo</gloss>
+        <desc>native dog.</desc>
+      </item>
+      <item xml:id="GP0704.100">
+        <gloss>Morilla or Moorillah</gloss>
+        <desc>pebbly ridges.</desc>
+      </item>
+      <item xml:id="GP0704.108">
+        <gloss>Nullah nullah</gloss>
+        <desc>a club or heavyheaded weapon.</desc>
+      </item>
+      <item xml:id="GP0704.124">
+        <gloss>Weedah</gloss>
+        <desc>bower or mocking-bird.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p><rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs> was an old woman who lived alone with her four hundred <rs type="animal" ref="g:GP0704.048">dingoes</rs>. From living so long with these <rs type="animal">dogs</rs> she had grown not to care for her fellow creatures except as food. She and the <rs type="animal">dogs</rs> lived on human flesh, and it was her cunning which gained such food for them all. She would sally forth from her camp with her two little <rs type="animal">dogs</rs>; she would be sure to meet some black fellows, probably twenty or thirty, going down to the creek. She would say, "I can tell you where there are lots of <rs type="animal" ref="q:Q668527">paddy melons</rs>." They would ask where, and she would answer, "Over there, on the point of that <rs ref="g:GP0704.100">moorillah</rs> or ridge. If you will go there and have your <rs ref="g:GP0704.108">nullahs</rs> ready, I will go with my two <rs type="animal">dogs</rs> and round them up towards you."</p>
+      <p>The black fellows invariably stationed themselves where she had told them, and off went <rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs> and her two <rs type="animal">dogs</rs>. But not to round up the <rs type="animal" ref="q:Q668527">paddy melons</rs>. She went quickly towards her camp, calling softly, "Birree, gougou," which meant "Sool ʼem, sool ʼem," and was the signal for the <rs type="animal">dogs</rs> to come out. Quickly they came and surrounded the black fellows, took them by surprise, flew at them, bit <pb n="91"/>and worried them to death. Then they and <rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs> dragged the bodies to their camp. There they were cooked and were food for the old woman and the <rs type="animal">dogs</rs> for some time. As soon as the supply was finished the same plan to obtain more was repeated.</p>
+      <p>The black fellows missed so many of their friends that they determined to find out what had become of them. They began to suspect the old woman who lived alone and hunted over the <rs ref="g:GP0704.100">moorillahs</rs> with her two little <rs type="animal">dogs</rs>. They proposed that the next party that went to the creek should divide and some stay behind in hiding and watch what went on. Those watching saw the old woman advance towards their friends, talk to them for a while, and then go off with her two <rs type="animal">dogs</rs>. They saw their friends station themselves at the point of the <rs ref="g:GP0704.100">moorillah</rs> or ridge, holding their <rs ref="g:GP0704.108">nullahs</rs> in readiness, as if waiting for something to come. Presently they heard a low cry from the old woman of "Birree gougou," which cry was quickly followed by <rs type="animal" ref="g:GP0704.048">dingoes</rs> coming out of the bush in every direction, in hundreds, surrounding the black fellows at the point.</p>
+      <p>The <rs type="animal" ref="g:GP0704.048">dingoes</rs> closed in, quickly hemming the black fellows in all round; then they made a simultaneous rush at them, tore them with their teeth, and killed them.</p>
+      <p>The black fellows watching, saw that when the <rs type="animal">dogs</rs> had killed their friends they were joined by the old woman, who helped them to drag off the bodies to their camp.</p>
+      <p>Having seen all this, back went the watchers to their tribe and told what they had seen. All the tribes round mustered up and decided to execute a swift vengeance. In order to do so, out they sallied well armed. A detachment went on to entrap the <rs type="animal">dogs</rs> and <rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>. Then just when <pb n="92"/>the usual massacre of the blacks was to begin and the <rs type="animal">dogs</rs> were closing in round them for the purpose, out rushed over two hundred black fellows, and so effectual was their attack that every <rs type="animal">dog</rs> was killed, as well as <rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs> and her two little dogs.</p>
+      <p>The old woman lay where she had been slain, but as the blacks went away they heard her cry "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>." So back they went and broke her bones, first they broke her legs and then left her. But again as they went they heard her cry "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>." Then back again they came, and again, until at last every bone in her body was broken, but still she cried "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>." So one man waited beside her to see whence came the sound, for surely, they thought, she must be dead. He saw her heart move and cry again "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>" and as it cried, out came a little <rs type="animal">bird</rs> from it. <shift feature="apartmyth"/>This little <rs type="animal">bird</rs> runs on the <rs ref="g:GP0704.100">moorillahs</rs> and calls at night "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>." All day it stays in one place, and only at night comes out. It is a little <rs type="color">greyish</rs> <rs type="animal">bird</rs>, something like a <rs type="animal" ref="g:GP0704.124">weedah</rs>. The blacks call it a <rs type="animal">rain-maker</rs>, for if any one steals its eggs it cries out incessantly "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>" until in answer to its call the rain falls. And when the country is stricken with a drought, the blacks look for one of these little <rs type="animal">birds</rs>, and finding it, chase it, until it cries aloud "<rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>, <rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs>" and when they hear its cry in the daytime they know the rain will soon fall.</p>
+      <p><shift feature="diegesis"/>As the little <rs type="animal">bird</rs> flew from the heart of the woman, all the dead <rs type="animal" ref="g:GP0704.048">dingoes</rs> were changed into <rs type="animal">snakes</rs>, many different kinds, all poisonous. The two little <rs type="animal">dogs</rs> were changed into <rs type="animal" ref="g:GP0704.042">dayah minyah</rs>, a very small kind of <rs type="animal">carpet snake</rs>, non-poisonous, <pb n="93"/>for these two little <rs type="animal">dogs</rs> had never bitten the blacks as the other <rs type="animal">dogs</rs> had done. <shift feature="epimyth"/>At the points of the <rs ref="g:GP0704.100">moorillahs</rs> where <rs type="animal" ref="g:GP0704.019">Bougoodoogahdah</rs> and her <rs type="animal" ref="g:GP0704.048">dingoes</rs> used to slay the blacks, are heaps of <rs type="color">white</rs> stones, which are supposed to be the fossilised bones of the massacred men.</p>
+    </body>
+  </text>
+</TEI>

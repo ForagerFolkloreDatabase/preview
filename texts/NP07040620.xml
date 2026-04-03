@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Mullyangah the Morning Star</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040620</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040620</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 62-64.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="44">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.005">
+        <gloss>Bibbee</gloss>
+        <desc>woodpecker, bird.</desc>
+      </item>
+      <item xml:id="GP0704.025">
+        <gloss>Buggoo</gloss>
+        <desc>flying squirrel.</desc>
+      </item>
+      <item xml:id="GP0704.094">
+        <gloss>Moodai</gloss>
+        <desc>opossum.</desc>
+      </item>
+      <item xml:id="GP0704.102">
+        <gloss>Mullyan</gloss>
+        <desc>eagle hawk.</desc>
+      </item>
+      <item xml:id="GP0704.103">
+        <gloss>Mullyangah</gloss>
+        <desc>the morning star.</desc>
+      </item>
+      <item xml:id="GP0704.105">
+        <gloss>Murrawondah</gloss>
+        <desc>climbing rat.</desc>
+      </item>
+      <item xml:id="GP0704.136">
+        <gloss>Yaraan</gloss>
+        <desc>white gum-tree.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p><rs type="animal" ref="g:GP0704.102">Mullyan</rs>, the <rs type="animal">eagle hawk</rs>, built himself a home high in a <rs type="plant" ref="g:GP0704.136">yaraan tree</rs>. There he lived apart from his tribe, with <rs type="animal" ref="g:GP0704.094">Moodai</rs> the <rs type="animal">opossum</rs>, his wife, and <rs type="animal" ref="g:GP0704.094">Moodai</rs> the <rs type="animal">opossum</rs>, his mother-in-law. With them too was <persName>Buttergah</persName>, a daughter of the <rs type="animal" ref="g:GP0704.025">Buggoo</rs> or <rs type="animal">flying squirrel</rs> tribe. <persName>Buttergah</persName> was a friend of <rs type="animal" ref="g:GP0704.094">Moodai</rs>, the wife of <rs type="animal" ref="g:GP0704.102">Mullyan</rs>, and a distant cousin to the <rs type="animal" ref="g:GP0704.094">Moodai</rs> tribe.</p>
+      <p><rs type="animal" ref="g:GP0704.102">Mullyan</rs> the <rs type="animal">eagle hawk</rs> was a cannibal. That was the reason of his living apart from the other blacks. In order to satisfy his cannibal cravings, he used to sally forth with a big spear, a spear about four times as big as an ordinary spear. If he found a black fellow hunting alone, he would kill him and take his body up to the house in the <rs type="plant">tree</rs>. There the <rs type="animal" ref="g:GP0704.094">Moodai</rs> and <persName>Buttergah</persName> would cook it, and all of them would eat the flesh; for the women as well as <rs type="animal" ref="g:GP0704.102">Mullyan</rs> were cannibals. This went on for some time, until at last so many black fellows were slain that their friends determined to find out what became of them, and they tracked the last one they missed. They tracked him to where he had evidently been slain; they took up the tracks of his slayer, and followed them right to the foot of <pb n="63"/>the <rs type="plant" ref="g:GP0704.136">yaraan tree</rs>, in which was built the home of <rs type="animal" ref="g:GP0704.102">Mullyan</rs>. They tried to climb the <rs type="plant">tree</rs>, but it was high and straight, and they gave up the attempt after many efforts. In their despair at their failure they thought of the Bibbees, a tribe noted for its climbing powers. They summoned two young <rs type="animal" ref="g:GP0704.005">Bibbees</rs> to their aid. One came, bringing with him his friend <rs type="animal" ref="g:GP0704.105">Murrawondah</rs> of the <rs type="animal">climbing rat</rs> tribe.</p>
+      <p>Having heard what the blacks wanted them to do, these famous climbers went to the <rs type="plant" ref="g:GP0704.136">yaraan tree</rs> and made a start at once. There was only light enough that first night for them to see to reach a fork in the <rs type="plant">tree</rs> about half-way up. There they camped, watched <rs type="animal" ref="g:GP0704.102">Mullyan</rs> away in the morning, and then climbed on. At last they reached the home of <rs type="animal" ref="g:GP0704.102">Mullyan</rs>. They watched their chance and then sneaked into his humpy.</p>
+      <p>When they were safely inside, they hastened to secrete a smouldering stick in one end of the humpy, taking care they were not seen by any of the women. Then they went quietly down again, no one the wiser of their coming or going. During the day the women heard sometimes a crackling noise, as of burning, but looking round they saw nothing, and as their own fire was safe, they took no notice, thinking it might have been caused by some <rs type="plant">grass</rs> having fallen into their fire.</p>
+      <p>After their descent from having hidden the smouldering fire stick, <rs type="animal" ref="g:GP0704.005">Bibbee</rs> and <rs type="animal" ref="g:GP0704.105">Murrawondah</rs> found the blacks and told them what they had done. Hearing that the plan was to burn out <rs type="animal" ref="g:GP0704.102">Mullyan</rs>, and fearing that the <rs type="plant">tree</rs> might fall, they all moved to some little distance, there to watch and wait for the end. Great was their joy at the thought that at last their enemy was circumvented. And proud were <pb n="64"/><rs type="animal" ref="g:GP0704.005">Bibbee</rs> and <rs type="animal" ref="g:GP0704.105">Murrawondah</rs> as the black fellows praised their prowess.</p>
+      <p>After dinner-time <rs type="animal" ref="g:GP0704.102">Mullyan</rs> came back. When he reached the entrance to his house he put down his big spear outside. Then he went in and threw himself down to rest, for long had he walked and little had he gained. In a few minutes he heard his big spear fall down. He jumped up and stuck it in its place again. He had no sooner thrown himself down, than again he heard it fall. Once more he rose and replaced it. As he reached his resting-place again, out burst a flame of fire from the end of his humpy. He called out to the three women, who were cooking, and they rushed to help him extinguish the flames. But in spite of their efforts the fire only blazed the brighter. <rs type="animal" ref="g:GP0704.102">Mullyan</rs>'s arm was burnt off. The <rs type="animal" ref="g:GP0704.094">Moodai</rs> had their feet burnt, and <persName>Buttergah</persName> was badly burnt too. Seeing they were helpless against the fire, they turned to leave the humpy to its fate, and make good their own escape. But they had left it too late. As they turned to descend the <rs type="plant">tree</rs>, the roof of the humpy fell on them. And all that remained when the fire ceased, were the charred bones of the dwellers in the <rs type="plant" ref="g:GP0704.136">yaraan tree</rs>. That was all that the blacks found of their enemies; <shift feature="epimyth"/>but their legend says that <rs type="animal" ref="g:GP0704.102">Mullyan</rs> the <rs type="animal">eagle hawk</rs> lives in the sky as <rs ref="g:GP0704.103">Mullyangah</rs> the morning star, on one side of which is a little star, which is his one arm; on the other a larger star, which is <rs type="animal" ref="g:GP0704.094">Moodai</rs> the <rs type="animal">opossum</rs>, his wife.</p>
+    </body>
+  </text>
+</TEI>
