@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Cookooburrahs and the Goolahgool</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040470</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040470</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 47-49.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="33">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="2">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.035">
+        <gloss>Cookooburrah</gloss>
+        <desc>laughing jackass.</desc>
+      </item>
+      <item xml:id="GP0704.063">
+        <gloss>Googarh</gloss>
+        <desc>iguana.</desc>
+      </item>
+      <item xml:id="GP0704.067">
+        <gloss>Goolahgool</gloss>
+        <desc>water-holding tree.</desc>
+      </item>
+      <item xml:id="GP0704.075">
+        <gloss>Goug gour gahgah</gloss>
+        <desc>laughing jackass. Literal meaning, "Take a stick."</desc>
+      </item>
+      <item xml:id="GP0704.094">
+        <gloss>Moodai</gloss>
+        <desc>opossum.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p><rs type="animal" ref="g:GP0704.063">Googarh</rs>, the <rs type="animal">iguana</rs>, was married to <rs type="animal" ref="g:GP0704.094">Moodai</rs>, the <rs type="animal">opossum</rs> and <rs type="animal" ref="g:GP0704.035">Cookooburrah</rs>, the <rs type="animal">laughing jackass</rs>. <rs type="animal" ref="g:GP0704.035">Cookooburrah</rs> was the mother of three sons, one grown up and living away from her, the other two only little boys. They had their camps near a <rs type="plant" ref="g:GP0704.067">goolahgool</rs>, whence they obtained water. <shift feature="apartmyth"/>A <rs type="plant" ref="g:GP0704.067">goolahgool</rs> is a water-holding <rs type="plant">tree</rs>, of the iron bark or box species. It is a <rs type="plant">tree</rs> with a split in the fork of it, and hollow below the fork. After heavy rain, this hollow trunk would be full of water, which water would have run into it through the split in the fork. A <rs type="plant" ref="g:GP0704.067">goolahgool</rs> would hold water for a long time. The blacks knew a <rs type="plant" ref="g:GP0704.067">goolahgool</rs>, amongst other <rs type="plant">trees</rs>, by the mark which the overflow of water made down the trunk of the <rs type="plant">tree</rs>, <rs type="color">discolouring</rs> the bark.</p>
+      <p><shift feature="diegesis"/>One day, <rs type="animal" ref="g:GP0704.063">Googarh</rs>, the <rs type="animal">iguana</rs>, and his two wives went out hunting, leaving the two little <rs type="animal" ref="g:GP0704.035">Cookooburrahs</rs> at the camp. They had taken out water for themselves in their opossum skin water bags, but they had left none for the children, who were too small to get any from the <rs type="plant" ref="g:GP0704.067">goolahgool</rs> <pb n="48"/>for themselves, so nearly perished from thirst. Their tongues were swollen in their mouths, and they were quite speechless, when they saw a man coming towards them. When he came near, they saw it was <rs type="animal" ref="g:GP0704.035">Cookooburrah</rs>, their big brother. They could not speak to him and answer, when he asked where his mother was. Then he asked them what was the matter. All they could do was to point towards the <rs type="plant">tree</rs>. He looked at it, and saw it was a <rs type="plant" ref="g:GP0704.067">goolahgool</rs>, so he said: "Did your mother leave you no water?" They shook their heads. He said: "Then you are perishing for want of a drink, my brothers?" They nodded. "Go," he said "a little way off, and you shall see how I will punish them for leaving my little brothers to perish of thirst." He went towards the <rs type="plant">tree</rs>, climbed up it, and split it right down. As he did so, out gushed the water in a swiftly running stream. Soon the little fellows quenched their thirst and then, in their joy, bathed in the water, which grew in volume every moment.</p>
+      <p>In the meantime, those who had gone forth to hunt were returning, and as they came towards their camp they met a running stream of water. "What is this?" they said, "our <rs type="plant" ref="g:GP0704.067">goolahgool</rs> must have burst," and they tried to dam the water, but it was running too strongly for them. They gave up the effort and hurried on towards their camp. But they found a deep stream divided them from their camp. The three <rs type="animal" ref="g:GP0704.035">Cookooburrahs</rs> saw them, and the eldest one said to the little fellows: "You call out and tell them to cross down there, where it is not deep." The little ones called out as they were told, and where they pointed <rs type="animal" ref="g:GP0704.063">Googarh</rs> and his wives waded into the stream. <pb n="49"/>Finding she was getting out of her depth, <rs type="animal" ref="g:GP0704.035">Cookooburrah</rs> the <rs type="animal">laughing jackass</rs> cried out: "<rs type="animal" ref="g:GP0704.075">Goug gour gah gah</rs>. <rs type="animal" ref="g:GP0704.075">Goug gour gah gah</rs>. Give me a stick. Give me a stick."</p>
+      <p>But from the bank her sons only answered in derision: "<rs type="animal" ref="g:GP0704.075">Goug gour gah gah</rs>. <rs type="animal" ref="g:GP0704.075">Goug gour gah gah</rs>." And the three hunters were soon engulfed in the rushing stream, drawn down by the current and drowned.</p>
+    </body>
+  </text>
+</TEI>

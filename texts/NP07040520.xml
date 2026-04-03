@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>The Bunbundoolooeys</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040520</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040520</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 52-54.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="34">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="2">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.012">
+        <gloss>Birrahlee</gloss>
+        <desc>baby.</desc>
+      </item>
+      <item xml:id="GP0704.028">
+        <gloss>Bunbundoolooey</gloss>
+        <desc>brown flock pigeon.</desc>
+      </item>
+      <item xml:id="GP0704.053">
+        <gloss>Dunnia</gloss>
+        <desc>wattle.</desc>
+      </item>
+      <item xml:id="GP0704.056">
+        <gloss>Euloo marah</gloss>
+        <desc>large tree grubs. Edible.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p>The mother <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs> put her child, a little boy <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, who could only just crawl, into her goolay. <shift feature="apartmyth"/>Goolay is a sort of small netted hammock, slung by black women on their backs, in which they carry their babies and goods in general. <shift feature="diegesis"/><rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, the <rs type="animal">pigeon</rs>, put her goolay across her back, and started out hunting.</p>
+      <p>When she had gone some distance she came to a clump of <rs type="plant">bunnia or wattle trees</rs>. At the foot of one of these she saw some large <rs type="animal" ref="g:GP0704.056">euloomarah or grubs</rs>, which were good to eat. She picked some up, and dug with her yam stick round the roots of the <rs type="plant">tree</rs> to get more. She went from <rs type="plant">tree</rs> to <rs type="plant">tree</rs>, getting <rs type="animal">grubs</rs> at every one. That she might gather them all, she put down her goolay, and hunted further round.</p>
+      <p>Soon in the excitement of her search, she forgot the goolay with the child in it, and wandered away. Further and further she went from the <rs type="plant" ref="g:GP0704.053">Dunnia</rs> clump, never once thinking of her poor <rs ref="g:GP0704.012">birrahlee</rs>, or baby. On and still on she went, until at length she reached a far country.</p>
+      <p>The <rs ref="g:GP0704.012">birrahlee</rs> woke up, and crawled out of the goolay. <pb n="53"/>First he only crawled about, but soon he grew stronger, and raised himself, and stood by a <rs type="plant">tree</rs>. Then day by day he grew stronger and walked alone, and stronger still he grew, and could run. Then he grew on into a big boy, and then into a man, and his mother he never saw while he was growing from <rs ref="g:GP0704.012">birrahlee</rs> to man.</p>
+      <p>But in the far country at length one day <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, the mother, remembered the <rs ref="g:GP0704.012">birrahlee</rs> she had left.</p>
+      <p>"Oh," she cried, "I forgot my <rs ref="g:GP0704.012">birrahlee</rs>. I left my <rs ref="g:GP0704.012">birrahlee</rs> where the <rs type="plant" ref="g:GP0704.053">Dunnias</rs> grow in a far country. I must go to my <rs ref="g:GP0704.012">birrahlee</rs>. My poor <rs ref="g:GP0704.012">birrahlee</rs>! I forgot it. Mad must I have been when I forgot him. My <rs ref="g:GP0704.012">birrahlee</rs>! My <rs ref="g:GP0704.012">birrahlee</rs>!"</p>
+      <p>And away went the mother as fast as she could travel back to the <rs type="plant" ref="g:GP0704.053">Dunnia</rs> clump in the far country. When she reached the spot she saw the tracks of her <rs ref="g:GP0704.012">birrahlee</rs>, first crawling, then standing, then walking, and then running. Bigger and bigger were the tracks she followed, until she saw they were the tracks of a man. She followed them until she reached a camp. No one was in the camp, but a fire was there, so she waited, and while waiting looked round. She saw her son had made himself many weapons, and many opossum rugs, which he had painted gaily inside.</p>
+      <p>Then at last she saw a man coming towards the camp, and she knew he was her <rs ref="g:GP0704.012">birrahlee</rs>, grown into a man. As he drew near she ran out to meet him, saying: </p>
+      <p>"<rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, I am your mother. The mother who forgot you as a <rs ref="g:GP0704.012">birrahlee</rs>, and left you. But now I have come to find you, my son. Long was the journey, my son, and your mother was weary, but now that she sees once <pb n="54"/>more her <rs ref="g:GP0704.012">birrahlee</rs>, who has grown into a man, she is no longer weary, but glad is her heart, and loud could she sing in her joy. Ah, <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, my son! <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, my son!"</p>
+      <p>And she ran forward with her arms out, as if to embrace him.</p>
+      <p>But stern was the face of <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs>, the son, and no answer did he make with his tongue. But he stooped to the ground and picked therefrom a big stone. This swiftly he threw at his mother, hitting her with such force that she fell dead to the earth.</p>
+      <p>Then on strode <rs type="animal" ref="g:GP0704.028">Bunbundoolooey</rs> to his camp.</p>
+    </body>
+  </text>
+</TEI>

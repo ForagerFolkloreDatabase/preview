@@ -1,0 +1,171 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="en">
+  <teiHeader>
+    <fileDesc>
+      <titleStmt>
+        <title>Narahdarn the Bat</title>
+        <editor ref="p:Parker1451" role="collector">K. Langloh Parker</editor>
+        <editor ref="p:unidentified0" role="narrator">unidentified</editor>
+        <funder>Deutsche Forschungsgemeinschaft</funder>
+        <principal>
+          <persName>Katja Mellmann</persName>
+          <persName>Michelle Scalise Sugiyama</persName>
+        </principal>
+        <respStmt>
+          <resp>XML template, digitization architecture, and automated inline tagging</resp>
+          <persName>Jan Jokisch</persName>
+        </respStmt>
+      </titleStmt>
+      <extent>
+        <measure unit="KB"/>
+      </extent>
+      <publicationStmt>
+        <authority xml:id="FFDB">The Forager Folklore Database</authority>
+        <idno type="FFDB">NP07040570</idno>
+        <idno type="URLWeb">https://oracleapex.com/ords/r/ffdb/ffdbwa/narrative-ds?p1010_n_id=NP07040570</idno>
+        <availability status="free">
+          <licence target="https://creativecommons.org/licenses/by/4.0">CC BY</licence>
+        </availability>
+        <date when="2026">2026</date>
+      </publicationStmt>
+      <sourceDesc>
+        <bibl>Parker, K. Langloh (1896): Australian Legendary Tales. Folk-Lore of the Noongahburrahs as Told by the Piccaninnies. With Introduction by Andrew Lang. Illustrations by a Native Artist, and Specimen of the Native Text. London: Nutt &amp; Melbourne: Melville, Mullen &amp; Slade. Quot. pp. 57-61.</bibl>
+      </sourceDesc>
+    </fileDesc>
+    <encodingDesc>
+      <projectDesc>
+        <p>Text digitized and encoded for use in the Forager Folklore Database. The FFDB
+                    offers a basis for a systematic study of narrative universals, the evolutionary
+                    origin of storytelling, and (comparative) folklore studies.</p>
+      </projectDesc>
+      <samplingDecl>
+        <p>The narrative was selected for being a genuine piece of oral literature recorded
+                    directly, or mediated by an interpreter, from a narrator who either lived or
+                    grew up as a member of a culture whose subsistence at the time of recording was,
+                    or until recently had been, depending primarily on hunting, gathering, and/or
+                    fishing. Care was taken to ensure the quality of the recording and the relative
+                    absence of external cultural influences.</p>
+      </samplingDecl>
+      <tagsDecl>
+        <namespace name="http://www.tei-c.org/ns/1.0">
+          <tagUsage gi="persName">Used to mark personal names (usually characters).</tagUsage>
+          <tagUsage gi="placeName">Used to mark place names.</tagUsage>
+          <tagUsage gi="rs" occurs="63">Referencing strings are used to mark up animal names, plant
+                        names, and colors. The <att>type</att> attribute correspondingly takes one
+                        of the following values: <list type="gloss"><label><val>animal</val></label><item>animal name</item><label><val>plant</val></label><item>plant name</item><label><val>color</val></label><item>color adjective or noun</item></list>
+                    </tagUsage>
+          <tagUsage gi="shift" occurs="1">Used to mark shifts towards a metatextual level or back to
+                        the diegesis. The <att>feature</att> attributes takes one of the following
+                        values: <list type="gloss"><label><val>anamyth</val></label><item>Shift to a framing metacommentary at the beginning of a narrative.</item><label><val>apartmyth</val></label><item>Shift to a comment or aside within the course of a narration.</item><label><val>epimyth</val></label><item>Shift to a framing metacommentary at the end of a narrative.</item><label><val>diegesis</val></label><item>Shift back to the diegesis of the tale.</item></list>
+                    </tagUsage>
+        </namespace>
+      </tagsDecl>
+      <listPrefixDef>
+        <prefixDef ident="p" matchPattern=".*" replacementPattern="../references/personography.xml#$1">
+          <p>Private URIs using the <code>p</code> prefix are pointers to <gi>person</gi>
+                        elements in the <name type="file">personography.xml</name> file.</p>
+        </prefixDef>
+        <prefixDef ident="q" matchPattern=".*" replacementPattern="https://www.wikidata.org/wiki/$1">
+          <p>URIs using the <code>q</code> prefix are <name ref="q:Q43649390">Wikidata Q
+                        identifiers</name> and refer to the respective entries on <orgName ref="https://www.wikidata.org/">Wikidata</orgName>.</p>
+        </prefixDef>
+        <prefixDef ident="g" matchPattern=".*" replacementPattern="#$1">
+          <p>Private URIs using the <code>g</code> prefix are pointers to the respective
+                        lemmas in the FFDB collection of glossaries. Glossaries were taken from the
+                        original text source.</p>
+        </prefixDef>
+      </listPrefixDef>
+      <editorialDecl>
+        <p>Footnotes are generally retained, but no effort has been made to link the
+                    narratives mentioned in comparative notes with corresponding records within the
+                    FFDB.</p>
+        <p>Page numbers have been retained, but page beginnings, <gi>pb</gi>, occurring
+                    within a word have been moved either before or after the word (or nominal
+                    phrase) on a case to case basis, without general rule.</p>
+        <normalization method="silent">
+          <p>Omissions as well as supplementations by the original editor are set in
+                        brackets. In all other cases, parentheses in the original are retained.</p>
+          <p>Latin passages in the original (usually to mask language and themes deemed
+                        indecent) are rendered in English.</p>
+        </normalization>
+        <hyphenation eol="none">
+          <p>End-of-line hyphenation has been removed. All other hyphenation has been
+                        retained.</p>
+        </hyphenation>
+        <quotation marks="all">
+          <p>All quotation marks have been retained. No effort was made to mark up
+                        passages in quotation marks as, for example, <gi>q</gi>, <gi>quote</gi>, <gi>
+                        said</gi>, <gi>cit</gi>, or <gi>soCalled</gi>.</p>
+        </quotation>
+        <interpretation>
+          <p>Refer to the <gi>tagsDecl</gi>.</p>
+        </interpretation>
+      </editorialDecl>
+    </encodingDesc>
+    <profileDesc>
+      <settingDesc>
+        <setting>
+          <name type="culture" key="CIPD0270">Yuwaalaraay</name>
+          <date notBefore="1875" notAfter="1895" type="recorded">Recorded sometime between 1875 and 1895.</date>
+        </setting>
+      </settingDesc>
+    </profileDesc>
+  </teiHeader>
+  <standOff>
+    <list type="glossary">
+      <item xml:id="GP0704.007">
+        <gloss>Bilber</gloss>
+        <desc>a large kind of rat.</desc>
+      </item>
+      <item xml:id="GP0704.016">
+        <gloss>Boomerang</gloss>
+        <desc>a curved weapon used in hunting and in warfare by the blacks ; called Burren by the Narran blacks.</desc>
+      </item>
+      <item xml:id="GP0704.034">
+        <gloss>Comeboo</gloss>
+        <desc>stone tomahawk.</desc>
+      </item>
+      <item xml:id="GP0704.037">
+        <gloss>Corrobboree</gloss>
+        <desc>black fellows' dance.</desc>
+      </item>
+      <item xml:id="GP0704.041">
+        <gloss>Dardurr</gloss>
+        <desc>bark, humpy or shed.</desc>
+      </item>
+      <item xml:id="GP0704.106">
+        <gloss>Narahdarn</gloss>
+        <desc>bat.</desc>
+      </item>
+      <item xml:id="GP0704.123">
+        <gloss>Waywah</gloss>
+        <desc>worn by men, consisting of a waistband made of opossum's sinews with bunches of strips of paddy melon skins hangingfrom it.</desc>
+      </item>
+      <item xml:id="GP0704.128">
+        <gloss>Wirree</gloss>
+        <desc>small piece of bark, canoe-shaped.</desc>
+      </item>
+      <item xml:id="GP0704.132">
+        <gloss>Wurranunnah</gloss>
+        <desc>wild bees.</desc>
+      </item>
+      <item xml:id="GP0706.014">
+        <gloss>Boondee</gloss>
+        <desc>club-headed weapon.</desc>
+      </item>
+    </list>
+  </standOff>
+  <text>
+    <body>
+      <p><rs type="animal" ref="g:GP0704.106">Narahdarn</rs>, the <rs type="animal">bat</rs>, wanted honey. He watched until he saw a <rs type="animal" ref="g:GP0704.132">Wurranunnah</rs>, or, <rs type="animal">bee</rs> alight. He caught it, stuck a <rs type="color">white</rs> feather between its hind legs, let it go and followed it. He knew he could see the <rs type="color">white</rs> feather, and so follow the <rs type="animal">bee</rs> to its nest. He ordered his two wives, of the <rs type="animal" ref="g:GP0704.007">Bilber</rs> tribe, to follow him with <rs ref="g:GP0704.128">wirrees</rs> to carry home the honey in. Night came on and <rs type="animal" ref="g:GP0704.132">Wurranunnah</rs> the <rs type="animal">bee</rs> had not reached home. <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> caught him, imprisoned him under bark, and kept him safely there until next morning. When it was <rs type="color">light</rs> enough to see, <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> let the <rs type="animal">bee</rs> go again, and followed him to his nest, in a <rs type="plant">gunnyanny tree</rs>. Marking the <rs type="plant">tree</rs> with his <rs ref="g:GP0704.034">comebo</rs> that he might know it again, he returned to hurry on his wives who were some way behind. He wanted them to come on, climb the <rs type="plant">tree</rs>, and chop out the honey. When they reached the marked <rs type="plant">tree</rs> one of the women climbed up. She called out to <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> that the honey was in a split in the <rs type="plant">tree</rs>. He called back to her to put her hand in and get it out. She put her arm in, but found she could not get it out again. <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> climbed up to help her, but found when he reached her that the only way to free her was to cut off her <pb n="58"/>arm. This he did before she had time to realise what he was going to do, and protest. So great was the shock to her that she died instantly. <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> carried down her lifeless body and commanded her sister, his other wife, to go up, chop out the arm, and get the honey. She protested, declaring the <rs type="animal">bees</rs> would have taken the honey away by now.</p>
+      <p>"Not so," he said; "go at once."</p>
+      <p>Every excuse she could think of, to save herself, she made. But her excuses were in vain, and <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> only became furious with her for making them, and, brandishing his <rs ref="g:GP0706.014">boondi</rs>, drove her up the <rs type="plant">tree</rs>. She managed to get her arm in beside her sister's, but there it stuck and she could not move it. <rs type="animal" ref="g:GP0704.106">Narahdarn</rs>, who was watching her, saw what had happened and followed her up the <rs type="plant">tree</rs>. Finding he could not pull her arm out, in spite of her cries, he chopped it off, as he had done her sister's. After one shriek, as he drove his <rs ref="g:GP0704.034">comebo</rs> through her arm, she was silent. He said, "Come down, and I will chop out the <rs type="animal">bees</rs>' nest." But she did not answer him, and he saw that she too was dead. Then he was frightened, and climbed quickly down the <rs type="plant">gunnyanny tree</rs>; taking her body to the ground with him, he laid it beside her sister's, and quickly he hurried from the spot, taking no further thought of the honey. As he neared his camp, two little sisters of his wives ran out to meet him, thinking their sisters would be with him, and that they would give them a taste of the honey they knew they had gone out to get. But to their surprise <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> came alone, and as he drew near to them they saw his arms were covered with blood. And his face had a fierce look on it, which frightened them from <pb n="59"/>even asking where their sisters were. They ran and told their mother that <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> had returned alone, that he looked fierce and angry, also his arms were covered with blood. Out went the mother of the <rs type="animal" ref="g:GP0704.007">Bilbers</rs>, and she said, " Where are my daughters, <rs type="animal" ref="g:GP0704.106">Narahdarn</rs>? Forth went they this morning to bring home the honey you found. You come back alone. You bring no honey. Your look is fierce, as of one who fights, and your arms are covered with blood. Tell me, I say, where are my daughters?"</p>
+      <p>"Ask me not, <rs type="animal" ref="g:GP0704.007">Bilber</rs>. Ask <rs type="animal" ref="g:GP0704.132">Wurranunnah</rs> the <rs type="animal">bee</rs>, he may know. <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> the <rs type="animal">bat</rs> knows nothing." And he wrapped himself in a silence which no questioning could pierce. Leaving him there, before his camp, the mother of the <rs type="animal" ref="g:GP0704.007">Bilbers</rs> returned to her <rs ref="g:GP0704.041">dardurr</rs> and told her tribe that her daughters were gone, and <rs type="animal" ref="g:GP0704.106">Narahdarn</rs>, their husband, would tell her nothing of them. But she felt sure he knew their fate, and certain she was that he had some tale to tell, for his arms were covered with blood.</p>
+      <p>The chief of her tribe listened to her. When she had finished and begun to wail for her daughters, whom she thought she would see no more, he said, "Mother of the <rs type="animal" ref="g:GP0704.007">Bilbers</rs>, your daughters shall be avenged if aught has happened to them at the hands of <rs type="animal" ref="g:GP0704.106">Narahdarn</rs>. Fresh are his tracks, and the young men of your tribe shall follow whence they have come, and finding what <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> has done, swiftly shall they return. Then shall we hold a <rs ref="g:GP0704.037">corrobboree</rs>, and if your daughters fell at his hand <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> shall be punished."</p>
+      <p>The mother of the <rs type="animal" ref="g:GP0704.007">Bilbers</rs> said: "Well have you spoken, oh my relation. Now speed ye the young men lest the rain fall or the dust blow and the tracks be lost." <pb n="60"/>Then forth went the fleetest footed and the keenest eyed of the young men of the tribe. Ere long, back they came to the camp with the news of the fate of the <rs type="animal" ref="g:GP0704.007">Bilbers</rs>.</p>
+      <p>That night was the <rs ref="g:GP0704.037">corrobboree</rs> held. The women sat round in a half-circle, and chanted a monotonous chant, keeping time by hitting, some of them, two <rs ref="g:GP0704.016">boomerangs</rs> together, and others beating their rolled up opossum rugs.</p>
+      <p>Big fires were lit on the edge of the scrub, throwing light on the dancers as they came dancing out from their camps, painted in all manner of designs, <rs ref="g:GP0704.123">waywahs</rs> round their waists, tufts of feathers in their hair, and carrying in their hands painted wands. Heading the procession as the men filed out from the scrub into a cleared space in front of the women, came <rs type="animal" ref="g:GP0704.106">Narahdarn</rs>. The light of the fires lit up the <rs type="plant">tree</rs> tops, the dark balahs showed out in fantastic shapes, and weird indeed was the scene as slowly the men danced round; louder clicked the <rs ref="g:GP0704.016">boomerangs</rs> and louder grew the chanting of the women; higher were the fires piled, until the flames shot their coloured tongues round the <pb n="61"/>trunks of the <rs type="plant">trees</rs> and high into the air. One fire was bigger than all, and towards it the dancers edged <rs type="animal" ref="g:GP0704.106">Narahdarn</rs>; then the voice of the mother of the <rs type="animal" ref="g:GP0704.007">Bilbers</rs> shrieked in the chanting, high above that of the other women. As <rs type="animal" ref="g:GP0704.106">Narahdarn</rs> turned from the fire to dance back he found a wall of men confronting him. These quickly seized him and hurled him into the madly-leaping fire before him, where he perished in the flames. <shift feature="epimyth"/>And so were the <rs type="animal" ref="g:GP0704.007">Bilbers</rs> avenged.</p>
+    </body>
+  </text>
+</TEI>
